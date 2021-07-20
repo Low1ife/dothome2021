@@ -378,6 +378,7 @@
     document.write(arr[1]);
     document.write(arr[2]);
 }
+
 </code></pre>
         </div>
     </div>
@@ -471,6 +472,102 @@
 </code></pre>
         </div>
     </div>
+    <div id="sample13" class="sample">
+        <h2>13. 객체 : 데이터 저장(키와 값) : 표현 방법5 : 배열 속에 객체<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = [
+    {a:100, b:200}, 
+    {c:"javascript"}
+    ];
+
+    document.write("*** 13. 객체 ***");
+    document.write(obj[0].a);
+    document.write(obj[0].b);
+    document.write(obj[1].c);
+}
+</code></pre>
+        </div>
+    </div>
+    
+    <hr>
+
+    <div id="sample14" class="sample">
+        <h2>14. 객체 : 데이터 저장(키와 값) : 표현 방법6 : 객체 속에 배열<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a : 100,
+        b : [200, 300],
+        c : "javascript"
+    }
+    document.write("*** 14. 객체 ***");
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.b[0]);
+    document.write(obj.b[1]);
+    document.write(obj.c);
+}
+</code></pre>
+        </div>
+    </div>
+    
+    <hr>
+
+    <div id="sample15" class="sample">
+        <h2>15. 객체 : 데이터 저장(키와 값) : 표현 방법7 : 객체 속에 변수<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    const a = 100;
+    const b = 200;
+    const c = "javascript";
+
+    const obj = { a, b, c }
+
+    document.write("*** 15. 객체 ***");
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.c);
+}
+</code></pre>
+        </div>
+    </div>
+    
+    <hr>
+
+    <div id="sample16" class="sample">
+        <h2>16. 객체 : 데이터 저장(키와 값) : 표현 방법8 : 객체 속에 함수<span class="dot"></span></h2>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: [200, 300],
+        c: "javascript",
+        d: function() {
+            document.write("javascript가 실행되었습니다.");
+        },
+        e: function() {
+            document.write( obj.c + "가 실행되었습니다.");
+        },
+        f: function() {
+            document.write( this.c + "가 실행되었습니다.");
+        }
+    }
+
+    document.write("*** 16. 객체 ***");
+    document.write(obj.a);
+    document.write(obj.b);
+    document.write(obj.b[0]);
+    document.write(obj.b[1]);
+    document.write(obj.c);
+    obj.d();
+    obj.e();
+    obj.f();
+}
+</code></pre>
+        </div>
+    </div>
+    
     <hr>
     <div id="sample10" class="sample">
         <h2>10. 배열 : 데이터 저장소 : 데이터 값이 변하지 않음 <span class="dot"></span></h2>
