@@ -1,45 +1,44 @@
-<!DOCTYPE html>
-<html lang="ko">
+!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃 연습6</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
         #header{
-            height: 110px;
-            background-color: #f8bbd0 ;
+            height: 115px;
+            background-color: #90CAF9;
         }
-        #banner{
+        #bannerp{
             height: 750px;
-            background-color: #f48fb1 ;
+            background-color: #64B5F6;
         }
-        
+        #content1{
+            height: 2280px;
+            background-color: #42A5F5;
+        }
+        #content2{
+            height: 1570px;
+            background-color: #2196F3;
+        }
+        #content3{
+            height: 530px;
+            background-color: #1E88E5;
+        }
         #footer{
             height: 270px;
-            background-color: #d81b60 ;  
-        }
-        .content1{
-            height: 2280px;
-            background-color: #f06292 ;
-        }
-        .content2{  
-            height: 1570px; 
-            background-color: #ec407a ;
-        }
-        .content3{
-            height: 530px;
-            background-color: #e91e63 ;
+            background-color: #1976D2;
         }
         .container{
-            width: 1200px;
-            height: inherit;
-            background-color: rgba(0, 0, 0, 0.5);
-            margin: 0 auto;
+             width: 1200px;
+             height: inherit;
+             background-color: rgba(0, 0, 0, 0.5);
+             margin: 0 auto;
         }
     </style>
 </head>
@@ -47,31 +46,31 @@
     <div id="wrap">
         <div id="header">
             <div class="container"></div>
-        </div>
-        <!--//header-->
+        </div><!-- //header-->
 
         <div id="banner">
-            <div class="container"></div>
+            <div id="container"></div>
         </div>
-        <!--//banner-->
+        <!-- //banner-->
 
         <div id="contents">
-            <div class="content1">
+            <div id="content1">
                 <div class="container"></div>
             </div>
-            <div class="content2">
+            <div id="content2">
                 <div class="container"></div>
             </div>
-            <div class="content3">
+            <div id="content3">
                 <div class="container"></div>
             </div>
-        </div>
-        <!--//contents-->
+        </div><!-- //contents-->
 
         <div id="footer">
             <div class="container"></div>
         </div>
-        <!--//footer-->
+        <!-- //footer-->
+        
     </div>
+    <!-- //wrap-->
 </body>
 </html>
