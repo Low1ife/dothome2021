@@ -525,8 +525,8 @@ for(let i=1; i <= 100; i++){
             document.write("" +sum+ "<br><br>");
         }
 
-        //sample06
-        //06. 테이블 만들기1
+        //sample07
+        //07. 테이블 만들기1
         {
             document.write("*** 06. 테이블 만들기 ***<br>");
 
@@ -548,8 +548,8 @@ for(let i=1; i <= 100; i++){
             document.write("<br>");
         }
 
-        //sample07
-        //07. 테이블 만들기2
+        //sample08
+        //08. 테이블 만들기2
         {
             document.write("*** 07. 테이블 만들기2 ***<br>");
 
@@ -572,13 +572,19 @@ for(let i=1; i <= 100; i++){
         }
 
         //sample08
-        //테이블 만들기3 : 짝수만
+        //08.테이블 만들기3 : 짝수만
         {
             document.write("*** 08. 테이블 만들기3 : 짝수만 ***<br>");
 
             let num = 100;
             let table = "<table>";
 
+                for( let i=1; i<=100; i++){
+                    if( i % 2 ==0)
+                    table += "<tr>";
+                    
+                }
+                document.write(table);
         }
     </script>
 </body>
