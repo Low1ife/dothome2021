@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //변수 : 데이터 저장소
+        //100, 200, 300 변수에 저장 출력
+        {
+        let x = 100;
+        let y = 200;
+        let z = 300;
+
+        document.write("1. 변수<br>");
+        document.write(x);
+        document.write(y);
+        document.write(z);
+        }
+
+        document.write("<br>");
+
+        //배열
+        //100 200 300
+
+        const arr=[100, 200, 300]
+
+        document.write("2.배열<br>");
+        document.write(arr[0]);
+        document.write(arr[1]);
+        document.write(arr[2]);
+
+        document.write("<br>");
+
+        // 객체
+        //100 200 300
+        {
+            const obj={
+                a:100,
+                b:200,
+                c:300
+            };
+
+            document.write("3.객체<br>");
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.c);
+            document.write("<br>");
+        }
+
+
+        //반복문
+        //for 1-50
+        {
+            document.write("4.for<br>");
+
+            for(let i=1; i<=50; i++){
+            document.write(i, " &nbsp;");    
+        }
+            document.write("<br>");
+        }
+
+
+        //반복문 50-1
+        {
+            document.write("5.for<br>");
+
+            for(let i=50; i>=1; i--){
+            document.write(i, " &nbsp;");
+        } 
+            document.write("<br>");
+        }
+
+
+
+
+        //반복문 1-50 짝수
+        {
+            document.write("6. 짝수 50<br>")
+
+            for(let i=1; i<=50; i++)
+                if(i % 2 ==0){
+                    document.write(i, " &nbsp;")
+                }
+                document.write("<br>");
+        }
+
+
+
+        //반복문 50-1 홀수
+        {
+            document.write("7. 홀수 50<br>")
+
+            for(let i=1; i<=50; i++)
+                if(i % 2 ==1){
+                    document.write(i, " &nbsp;")
+            }
+            document.write("<br>");
+        }
+
+        
+        //반복문 구구단 8단
+        {
+            document.write("8. 8단<br>")
+
+            for(let i=8; i==8; i++){
+                for(let j=1; j<=9; j++){
+                    let sum = i * j;
+                    document.write(i + " * " + j + "=" + sum, "<br>");
+                }
+            }
+            document.write("<br><br>");
+        }
+
+
+
+        // 5단 부터 8단
+        {
+            document.write("8. 5단~8단<br>")
+
+            for(let i=5; i<=8; i++){
+                for(let j=1; j<=9; j++){
+                    let sum = i * j;
+                    document.write(i + " * " + j + "=" + sum, "<br>");
+                }
+            }
+            document.write("<br><br>");
+        }
+    </script>
+</body>
+</html>
