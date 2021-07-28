@@ -129,6 +129,51 @@
             }
             document.write("<br><br>");
         }
+
+
+        //
+        {
+        const num =[100, 200, 300, 400, 500]
+        
+        document.write(num.length, "<br>");
+
+        //3번째 값만
+        document.write(num[2]);
+
+        for(let i=0; i<num.length; i++){
+            document.write(i);
+        }
+
+        
+
+        forEach((element,index,array)=>{
+            document.write(element);
+            document.write(index);
+            document.write(array);
+        });
+
+        for(let i in num){
+            document.write(i);
+        }
+    }
+
+
+    {
+        const num =[100, 200, 300, 400, 500]
+
+        num.forEach(function(el){
+            document.write(el);
+        })
+
+
+
+        forEach((element,index,array)=>{
+            document.write(element);
+            document.write(index);
+            document.write(array);
+        });
+    }
+    
     </script>
 </body>
 </html>
