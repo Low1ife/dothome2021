@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 속성 검색하기</title>
+
+
+    <style>
+        @font-face {
+            font-family: 'GyeonggiBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url(img/search_bg.jpg);
+            background-size: cover;
+            background-position: center bottom;
+        }
+        .girl {
+            width: 250px;
+            position: absolute;
+            bottom: -60px;
+            right: 20%;
+        }
+        .dog {
+            width: 150px;
+            position: absolute;
+            bottom: -40px;
+            left: 20%;
+        }
+        .board {
+            width: 60vw;
+            margin-right: 3%;
+            margin-left: 3%;
+
+            /* width = margin + padding + border */
+
+            height: 500px;
+            background-color: #f1f3f6;
+            border: 2px solid #000;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            padding: 3%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .board h1 {
+            font-family: 'TmonMonsori';
+            color: #223547;
+            font-size: 60px;
+            margin-top : 10px;
+            margin-bottom: 20px;
+           
+        }
+        .board span {
+            font-family: 'GyeonggiBatang';
+            color : #223547;
+            font-size: 20px;
+           
+        }
+        .board .search label {
+            background-color: #bfe6fe;
+            font-family: 'GyeonggiBatang';
+            font-size: 26px;
+            padding: 10px 30px;
+            border : 1px solid #000;
+            border-radius: 40px;
+        }
+        .board .search input {
+            font-family: 'GyeonggiBatang';
+            border : 1px solid #000;
+            font-size: 24px;
+            padding: 10px 10px 10px 20px;
+            border-radius: 40px;
+            outline: none;
+        }
+        .board .list {
+            text-align: left;
+            margin-top: 40px;
+        }
+        .board .list ul li{
+            font-family: 'GyeonggiBatang';
+            line-height: 1.6;
+            list-style: none;
+            background-color: #b6cedd;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        @media (max-width : 800px) {
+            .girl img {
+                right: 5%;
+            }
+
+            .dog img {
+                left: 5%;
+            }
+
+            .board {
+                width: 80vw;
+                padding: 5%;
+            }
+            .board h1{
+                font-size: 30px;
+                margin-top: 5px;
+            }
+            .board span{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="board">
+            <span>나에게 필요한!</span>
+            <h1>CSS 속성 검색하기</h1>
+            <div class="search">
+                <label>검색하기</label>
+                <input id="search-box" type="text">
+            </div>
+            <div class="list">
+                <ul>
+                    <li>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</li>
+                    <li>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</li>
+                    <li>align-self 속성은 콘텐츠의 정렬 상태를 정의합니다.</li>
+                    <li>all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다.</li>
+                    <li>animation 속성은 애니메이션을 정의합니다.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="girl">
+            <img src="img/search_girl.png" alt="">
+        </div>
+        <div class="dog">
+            <img src="img/search_dog.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
