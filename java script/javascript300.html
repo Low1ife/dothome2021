@@ -388,8 +388,8 @@
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
     const func = () => {
-        document.write("*** 06. 화살표 함수 : 익명 함수 ***<br>");
-        document.write("함수가 실행되었습니다.<br><br>");
+        document.write("*** 06. 화살표 함수 : 익명 함수 ***");
+        document.write("함수가 실행되었습니다.");
     }
     func();      
 }
@@ -417,8 +417,8 @@
         const str = "함수가 실행되었습니다"
         return str;
     }
-    document.write("*** 07. 화살표 함수 : 리턴값 함수 ***<br>");
-    document.write(func(), "<br>");
+    document.write("*** 07. 화살표 함수 : 리턴값 함수 ***");
+    document.write(func());
 }
 </code></pre>
     </div>
@@ -432,12 +432,12 @@
     <h2>08. 화살표 함수 :  익명함수 + 매게변수 + 리턴값  <span class="dot"></span></h2>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
-    document.write("*** 08. 화살표 함수 : 익명함수 + 매게변수 + 리턴값 ***<br>");
+    document.write("*** 08. 화살표 함수 : 익명함수 + 매게변수 + 리턴값 ***");
 
     const func = (str) => {
         return str;
     }
-    document.write(func("함수가 실행되었습니다.<br>"));           
+    document.write(func("함수가 실행되었습니다."));           
 }
 </code></pre>
     </div>
@@ -451,12 +451,12 @@
     <h2>09. 화살표 함수 : 익명함수 + 매게변수 + 리턴값 + 괄호 생략 <span class="dot"></span></h2>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
-    document.write("*** 09. 화살표 함수 : 익명함수 + 매게변수 + 리턴값 + 괄호 생략 ***<br>");
+    document.write("*** 09. 화살표 함수 : 익명함수 + 매게변수 + 리턴값 + 괄호 생략 ***");
 
     const func = str => {
         return str;
     }
-    document.write(func("함수가 실행되었습니다.<br>"));       
+    document.write(func("함수가 실행되었습니다."));       
 }
 </code></pre>
     </div>
@@ -470,11 +470,11 @@
     <h2>10. 화살표 함수 : 익명함수 + 매게변수 + 리턴값 + 괄호 생략 + 리턴 생략  <span class="dot"></span></h2>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
-    document.write("*** 10. 화살표 함수 : 익명함수 + 매게변수 + 리턴값 + 괄호 생략 + 리턴 생략***<br>");
+    document.write("*** 10. 화살표 함수 : 익명함수 + 매게변수 + 리턴값 + 괄호 생략 + 리턴 생략***");
 
     const func = str => str;
 
-    document.write(func("함수가 실행되었습니다.<br>"));         
+    document.write(func("함수가 실행되었습니다."));         
 }
 </code></pre>
     </div>
@@ -488,11 +488,11 @@
     <h2>11. 화살표 함수 :  선언적함수 + 매게변수 + 리턴값 + 괄호 생략 + 리턴 생략 <span class="dot"></span></h2>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
-    document.write("*** 11. 화살표 함수 : 선언적함수 + 매게변수 + 리턴값 + 괄호 생략 + 리턴 생략***<br>");
+    document.write("*** 11. 화살표 함수 : 선언적함수 + 매게변수 + 리턴값 + 괄호 생략 + 리턴 생략***");
 
     func = str => str;
 
-    document.write(func("함수가 실행되었습니다.<br>"));     
+    document.write(func("함수가 실행되었습니다."));     
 }
 </code></pre>
     </div>
@@ -613,7 +613,7 @@
                 return str;
             }
             document.write("*** 07. 화살표 함수 : 리턴값 함수 ***<br>");
-            document.write(func(), "<br>");
+            document.write(func(), "<br><br>");
         }
 
         //sample08
@@ -624,7 +624,7 @@
             const func = (str) => {
                 return str;
             }
-            document.write(func("함수가 실행되었습니다.<br>"));
+            document.write(func("함수가 실행되었습니다.<br><br>"));
         }
 
         //sample09
@@ -635,7 +635,7 @@
             const func = str => {
                 return str;
             }
-            document.write(func("함수가 실행되었습니다.<br>"));
+            document.write(func("함수가 실행되었습니다.<br><br>"));
         }
 
         //sample10
@@ -645,7 +645,7 @@
 
             const func = str => str;
 
-            document.write(func("함수가 실행되었습니다.<br>"));
+            document.write(func("함수가 실행되었습니다.<br><br>"));
         }
 
         //sample11
@@ -655,7 +655,7 @@
 
             func = str => str;
 
-            document.write(func("함수가 실행되었습니다.<br>"));
+            document.write(func("함수가 실행되었습니다.<br><br>"));
         }
     </script>
 </body>
