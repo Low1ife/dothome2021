@@ -52,7 +52,7 @@
         }
 
         .board {
-            margin: 10vw;
+            margin: 5vw 10vw 10vw 10vw;
             width: 80vw;
             background-color: #F1F3F6;
             border: 2px solid #000;
@@ -82,6 +82,7 @@
             padding: 10px 30px;
             border: 1px solid #000;
             border-radius: 40px;
+            display: none;
         }
 
         .board .search input {
@@ -112,17 +113,10 @@
         }
 
         @media (max-width: 800px) {
-            .girl img {
-                right: 5%;
-            }
-
-            .dog img {
-                left: 5%;
-            }
-
             .board {
                 width: 80vw;
-                padding: 5%;
+                padding:6% 3% 3% 3%;
+                margin: 4vw;
             }
 
             .board h1 {
@@ -131,7 +125,22 @@
             }
 
             .board span {
-                font-size: 18px;
+                font-size: 12px;
+            }
+            .board .search input {
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 16px;
+                padding: 10px 10px 10px 20px;
+            }
+            .board .list {
+                margin-top: 20px;
+            }
+            .girl {
+                width: 200px;
+            }
+            .dog {
+                width: 100px;
             }
         }
     </style>
@@ -246,65 +255,69 @@
                     <li data-name="font-strech" data-topic="폰트">font-stretch</li>
                     <li data-name="font-style" data-topic="폰트">font-style</li>
                     <li data-name="font-variant" data-topic="폰트">font-variant</li>
-                    <li data-name="font-weight" data-topic="폰트">font-weight</li>
+                    <li data-name="font-weight" data-topic="폰트">font-weight</li>     
+                    <li data-name="grid" data-topic="그리드">grid</li>
+                    <li data-name="grid-area" data-topic="그리드">grid-area</li>
+                    <li data-name="grid-auto-columns" data-topic="그리드">grid-auto-columns</li>
+                    <li data-name="grid-auto-flow" data-topic="그리드">grid-auto-flow</li>
+                    <li data-name="grid-auto-rows" data-topic="그리드">grid-auto-rows</li>
+                    <li data-name="grid-column" data-topic="그리드">grid-column</li>
+                    <li data-name="grid-column-end" data-topic="그리드">grid-column-end</li>
+                    <li data-name="grid-column-gap" data-topic="그리드">grid-column-gap</li>
+                    <li data-name="grid-column-start" data-topic="그리드">grid-column-start</li>
+                    <li data-name="grid-gap" data-topic="그리드">grid-gap</li>
+                    <li data-name="grid-row" data-topic="그리드">grid-row</li>
+                    <li data-name="grid-row-end" data-topic="그리드">grid-row-end</li>
+                    <li data-name="grid-row-gap" data-topic="그리드">grid-row-gap</li>
+                    <li data-name="grid-row-start" data-topic="그리드">grid-row-start</li>
+                    <li data-name="grid-template" data-topic="그리드">grid-template</li>
+                    <li data-name="grid-template-areas" data-topic="그리드">grid-template-areas</li>
+                    <li data-name="grid-template-columns" data-topic="그리드">grid-template-columns</li>
+                    <li data-name="grid-template-rows" data-topic="그리드">grid-template-rows</li>
+                    <li data-name="hanging-punctuation" data-topic="">hanging-punctuation</li>
+                    <li data-name="height" data-topic="높이">height</li>
+                    <li data-name="hyphens" data-topic="하이픈">hyphens</li>
+                    <li data-name="isolation" data-topic="">isolation</li>
+                    <li data-name="justify-content" data-topic="">justify-content</li>
+                    <li data-name="left" data-topic="왼쪽">left</li>
+                    <li data-name="letter-spacing" data-topic="">letter-spacing</li>
+                    <li data-name="line-height" data-topic="줄 높이">line-height</li>
+                    <li data-name="list-style" data-topic="목록 스타일">list-style</li>
+                    <li data-name="list-style-image" data-topic="목록 스타일">list-style-image</li>
+                    <li data-name="list-style-position" data-topic="목록 스타일">list-style-position</li>
+                    <li data-name="list-style-type" data-topic="목록 스타일">list-style-type</li>
+                    <li data-name="margin" data-topic="여백">margin</li>
+                    <li data-name="margin-bottom" data-topic="여백">margin-bottom</li>
+                    <li data-name="margin-left" data-topic="여백">margin-left</li>
+                    <li data-name="margin-right" data-topic="여백">margin-right</li>
+                    <li data-name="margin-top" data-topic="여백">margin-top</li>
+                    <li data-name="max-height" data-topic="최대">max-height</li>
+                    <li data-name="max-width" data-topic="최대">max-width </li>
+                    <li data-name="minj-height" data-topic="최소">min-height</li>
+                    <li data-name="min-width" data-topic="최소">min-width</li>
+                    <li data-name="mix-blend-mode" data-topic="">mix-blend-mode</li>
+                    <li data-name="object-fit" data-topic="">object-fit</li>
                     <!--
-                    <li>grid</li>
-                    <li>grid-area</li>
-                    <li>grid-auto-columns</li>
-                    <li>grid-auto-flow</li>
-                    <li>grid-auto-rows</li>
-                    <li>grid-column</li>
-                    <li>grid-column-end</li>
-                    <li>grid-column-gap</li>
-                    <li>grid-column-start</li>
-                    <li>grid-gap</li>
-                    <li>grid-row</li>
-                    <li>grid-row-end</li>
-                    <li>grid-row-gap</li>
-                    <li>grid-row-start</li>
-                    <li>grid-template</li>
-                    <li>grid-template-areas</li>
-                    <li>grid-template-columns</li>
-                    <li>grid-template-rows</li>
-                    <li>hanging-punctuation</li>
-                    <li>height</li>
-                    <li>hyphens</li>
-                    <li>isolation</li>
-                    <li>justify-content</li>
-                    <li>left</li>
-                    <li>letter-spacing</li>
-                    <li>line-height</li>
-                    <li>list-style</li>
-                    <li>list-style-image</li>
-                    <li>list-style-position</li>
-                    <li>list-style-type</li>
-                    <li>margin</li>
-                    <li>margin-bottom</li>
-                    <li>margin-left</li>
-                    <li>margin-right</li>
-                    <li>margin-top</li>
-                    <li>max-height</li>
-                    <li>max-width </li>
-                    <li>min-height</li>
-                    <li>min-width</li>
-                    <li>mix-blend-mode</li>
-                    <li>object-fit</li>
                     <li>object-position</li>
                     <li>opacity</li>
                     <li>order</li>
-                    <li>outline</li>
-                    <li>outline-color</li>
-                    <li>outline-offset</li>
-                    <li>outline-style</li>
-                    <li>outline-width</li>
+                    -->
+                    <li data-name="outline" data-topic="바깥선">outline</li>
+                    <li data-name="outline-color" data-topic="바깥선">outline-color</li>
+                    <li data-name="outline-offset" data-topic="바깥선">outline-offset</li>
+                    <li data-name="outline-style" data-topic="바깥선">outline-style</li>
+                    <li data-name="outline-width" data-topic="바깥선">outline-width</li>
+                    <!--
                     <li>overflow</li>
                     <li>overflow-x</li>
                     <li>overflow-y</li>
-                    <li>padding</li>
-                    <li>padding-bottom</li>
-                    <li>padding-left</li>
-                    <li>padding-right</li>
-                    <li>padding-top</li>
+                    -->
+                    <li data-name="padding" data-topic="패딩">padding</li>
+                    <li data-name="padding-bottom" data-topic="패딩">padding-bottom</li>
+                    <li data-name="padding-left" data-topic="패딩">padding-left</li>
+                    <li data-name="padding-right" data-topic="패딩">padding-right</li>
+                    <li data-name="padding-top" data-topic="패딩">padding-top</li>
+                    <!--
                     <li>page-break-after</li>
                     <li>page-break-before</li>
                     <li>page-break-inside</li>
@@ -317,26 +330,28 @@
                     <li>right</li>
                     <li>tab-size</li>
                     <li>table-layout</li>
-                    <li>text-align</li>
-                    <li>text-align-last</li>
-                    <li>text-decoration</li>
-                    <li>text-decoration-color </li>
-                    <li>text-decoration-line</li>
-                    <li>text-decoration-style</li>
-                    <li>text-indent</li>
-                    <li>text-justify</li>
-                    <li>text-overflow</li>
-                    <li>text-shadow</li>
-                    <li>text-transform</li>
-                    <li>top</li>
-                    <li>transform</li>
-                    <li>transform-origin</li>
-                    <li>transform-style</li>
-                    <li>transition</li>
-                    <li>transition-delay</li>
-                    <li>transition-duration</li>
-                    <li>transition-property</li>
-                    <li>transition-timing-function</li>
+                    -->
+                    <li data-name="text-align" data-topic="문자">text-align</li>
+                    <li data-name="text-align-last" data-topic="문자">text-align-last</li>
+                    <li data-name="text-decoration" data-topic="문자">text-decoration</li>
+                    <li data-name="text-decoration-color" data-topic="문자">text-decoration-color </li>
+                    <li data-name="text-decoration-line" data-topic="문자">text-decoration-line</li>
+                    <li data-name="text-decoration-style" data-topic="문자">text-decoration-style</li>
+                    <li data-name="text-indent" data-topic="문자">text-indent</li>
+                    <li data-name="text-justify" data-topic="문자">text-justify</li>
+                    <li data-name="text-overflow" data-topic="문자">text-overflow</li>
+                    <li data-name="text-shadow" data-topic="문자">text-shadow</li>
+                    <li data-name="text-transform" data-topic="문자">text-transform</li>
+                    <li data-name="top" data-topic="위">top</li>
+                    <li data-name="transform" data-topic="트랜스폼">transform</li>
+                    <li data-name="transform-origin" data-topic="트랜스폼">transform-origin</li>
+                    <li data-name="transform" data-topic="트랜스폼">transform-style</li>
+                    <li data-name="transition" data-topic="트랜지션">transition</li>
+                    <li data-name="transition-delay" data-topic="트랜지션">transition-delay</li>
+                    <li data-name="transition-duration" data-topic="트랜지션">transition-duration</li>
+                    <li data-name="transition-property" data-topic="트랜지션">transition-property</li>
+                    <li data-name="transition-timing-function" data-topic="트랜지션">transition-timing-function</li>
+                    <!--
                     <li>unicode-bidi</li>
                     <li>user-select</li>
                     <li>vertical-align</li>
@@ -378,13 +393,7 @@
                 //console.log(cssName);
                // console.log(cssTopic);
 
-                if(  searchWord.charAt(0) === cssName.charAt(0) ) {
-                    el. classList.remove("hide");
-                } else {
-                    el. classList.add("hide");
-                }
-
-                if(  searchWord.charAt(0) === cssTopic.charAt(0) ) {
+                if(  searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssTopic.charAt(0) ) {
                     el. classList.remove("hide");
                 } else {
                     el. classList.add("hide");
