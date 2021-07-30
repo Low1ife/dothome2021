@@ -356,7 +356,10 @@
         </div>
         <div class="code">
             <pre class="line-numbers"><code class="language-js"> {
-  
+    const arr =[100, 200, 300, 400, 500];
+    const text1 = arr. length
+
+    document.querySelector(".sample01_R1").innerHTML = text1;
 }
 </code></pre>
         </div>
@@ -472,7 +475,17 @@
     </div>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
+    const arr1 =[100, 200, 300, 400, 500];
+    const text1 = arr1.push(500);
 
+    document.querySelector(".sample03_P1").innerHTML = text1;
+    document.querySelector(".sample03_R1").innerHTML = arr1;
+
+    const arr2 =[100, 200, 300, 400, 500];
+    const text2 = arr2.unshift(500);
+
+    document.querySelector(".sample03_P2").innerHTML = text2;
+    document.querySelector(".sample03_R2").innerHTML = arr2;
 }
 </code></pre>
     </div>
@@ -522,7 +535,17 @@
     </div>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
+    const arr1 =[100, 200, 300, 400, 500];
+    const text1 = arr1.shift();
 
+    document.querySelector(".sample04_P1").innerHTML = text1;
+    document.querySelector(".sample04_R1").innerHTML = arr1;
+
+    const arr2 =[100, 200, 300, 400, 500];
+    const text2 = arr2.pop();
+
+    document.querySelector(".sample04_P2").innerHTML = text2;
+    document.querySelector(".sample04_R2").innerHTML = arr2;
 }
 </code></pre>
     </div>
@@ -574,7 +597,20 @@
     </div>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
+    const arr1 =[100, 200, 300, 400, 500];
+    const text1 = arr1.indexOf(500);
 
+    document.querySelector(".sample05_R1").innerHTML = text1;
+
+    const arr2 =[100, 200, 300, 400, 500];
+    const text2 = arr2.lastIndexOf(500);
+
+    document.querySelector(".sample05_R2").innerHTML = text2;
+
+    const arr3 =[100, 200, 300, 400, 500];
+    const text3 = arr3.includes(500);
+
+    document.querySelector(".sample05_R3").innerHTML = text3;
 }
 </code></pre>
     </div>
@@ -626,7 +662,38 @@
     </div>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
+    const arr1 =[100, 200, 300, 400, 500];
 
+    // const find = arr.find(function(element){
+    //     return element === 300
+    // })
+
+    // const find = arr.find((element)=>{
+    //     return element === 300
+    // })
+
+    // const find = arr.find(element=>{
+    //     return element === 300
+    // })
+    
+    // const text1 = arr1.find((element) => {
+    //     return element === 300
+    // }); 
+
+    const find =arr1.find( element => element === 300)
+
+    document.querySelector(".sample06_R1").innerHTML = find;
+
+
+    const text =["javascript", "react", "vue"];
+    const find2 =text.find( element => element === "javascript")
+
+    document.querySelector(".sample06_R2").innerHTML = find2;
+
+    const text3 =["javascript", "react", "vue"];
+    const find3 =text.findIndex( element => element === "javascript")
+
+    document.querySelector(".sample06_R3").innerHTML = find3;
 }
 </code></pre>
     </div>
