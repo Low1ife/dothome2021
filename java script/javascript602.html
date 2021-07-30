@@ -459,13 +459,11 @@
     const str1 = "자바스크립트";
     const currentStr1 = str1.length;
 
-    document.querySelector(".sample02_Q1").innerHTML = str1;
     document.querySelector(".sample02_R1").innerHTML = currentStr1;
 
     const str2 = "javascript";
     const currentStr2 = str2.length;
 
-    document.querySelector(".sample02_Q2").innerHTML = str2;
     document.querySelector(".sample02_R2").innerHTML = currentStr2;
 }
 </code></pre>
@@ -515,13 +513,11 @@
     const str1 = "javascript";
     const currentStr1 = str1.toUpperCase();
     
-    document.querySelector(".sample03_Q1").innerHTML = str1;
     document.querySelector(".sample03_R1").innerHTML = currentStr1;
     
     const str2 = "JAVASCRIPT";
     const currentStr2 = str2.toLowerCase();
     
-    document.querySelector(".sample03_Q2").innerHTML = str2;
     document.querySelector(".sample03_R2").innerHTML = currentStr2;
 }
 </code></pre>
@@ -575,7 +571,7 @@
     <hr>
 
     <!--sample05-->
-    <div id="sample04" class="sample">
+    <div id="sample05" class="sample">
         <h2>05. 문자열 메서드 : indexOf() / lastindexOf() : 문자열 검색하기 : 반환(숫자) <span class="dot"></span></h2>
         <div class="view">
             <table>
@@ -669,57 +665,46 @@
 
     const text1 = str.indexOf("javascript")
 
-    document.querySelector(".sample05_Q1").innerHTML = str;
     document.querySelector(".sample05_R1").innerHTML = text1;
 
     const text2 = str.indexOf("자바스크립트")
 
-    document.querySelector(".sample05_Q2").innerHTML = str;
     document.querySelector(".sample05_R2").innerHTML = text2;
 
     const text3 = str.indexOf("제이쿼리")
 
-    document.querySelector(".sample05_Q3").innerHTML = str;
     document.querySelector(".sample05_R3").innerHTML = text3;
 
     const text4 = str.indexOf("a")
 
-    document.querySelector(".sample05_Q4").innerHTML = str;
     document.querySelector(".sample05_R4").innerHTML = text4;
 
     const text5 = str.lastIndexOf("a")
 
-    document.querySelector(".sample05_Q5").innerHTML = str;
     document.querySelector(".sample05_R5").innerHTML = text5;
 
     const text6 = str.search(/javascript/);
 
-    document.querySelector(".sample05_Q6").innerHTML = str;
     document.querySelector(".sample05_R6").innerHTML = text6;
 
     const text7 = str.search(/jquery/);
 
-    document.querySelector(".sample05_Q7").innerHTML = str;
     document.querySelector(".sample05_R7").innerHTML = text7;
 
     const text8 = str.includes("javascript");
 
-    document.querySelector(".sample05_Q8").innerHTML = str;
     document.querySelector(".sample05_R8").innerHTML = text8;
 
     const text9 = str.includes("jquery");
 
-    document.querySelector(".sample05_Q9").innerHTML = str;
     document.querySelector(".sample05_R9").innerHTML = text9;
 
     const text10 = str.startsWith("자바스크립트");
 
-    document.querySelector(".sample05_Q10").innerHTML = str;
     document.querySelector(".sample05_R10").innerHTML = text10;
 
     const text11 = str.endsWith("javascript");
-
-    document.querySelector(".sample05_Q11").innerHTML = str; 
+ 
     document.querySelector(".sample05_R11").innerHTML = text11;
 }
 </code></pre>
@@ -769,13 +754,11 @@
     const str = "자바스크립트(javascript)를 공부.";
     const text = str.charAt(4);
     
-    document.querySelector(".sample06_Q1").innerHTML = str;
     document.querySelector(".sample06_R1").innerHTML = text;
     
     const str2 = "자바스크립트(javascript)를 공부.";
     const text2 = str2.charAt();
-    
-    document.querySelector(".sample06_Q2").innerHTML = str2;
+
     document.querySelector(".sample06_R2").innerHTML = text2;
 }
 </code></pre>
@@ -786,7 +769,7 @@
     <hr>
 
     <!--sample07-->
-    <div id="sample06" class="sample">
+    <div id="sample07" class="sample">
         <h2>07. 문자열 메서드 : slice() / subString() : 지정한 범위 내 문자열을 추출 : 반환(문자열)<span class="dot"></span></h2>
         <div class="view">
             <table>
@@ -855,37 +838,30 @@
     const str = "자바스크립트(javascript)를 공부.";
     const text = str.slice(1 , 4);
     
-    document.querySelector(".sample07_Q1").innerHTML = str;
     document.querySelector(".sample07_R1").innerHTML = text;
     
     const text2 = str.slice(1);
     
-    document.querySelector(".sample07_Q2").innerHTML = str;
     document.querySelector(".sample07_R2").innerHTML = text2;
     
     const text3 = str.slice(3, -1);
     
-    document.querySelector(".sample07_Q3").innerHTML = str;
     document.querySelector(".sample07_R3").innerHTML = text3;
     
     const text4 = str.slice(-16, -6);
     
-    document.querySelector(".sample07_Q4").innerHTML = str;
     document.querySelector(".sample07_R4").innerHTML = text4;
     
     const text5 = str.slice(5, 1);
     
-    document.querySelector(".sample07_Q5").innerHTML = str;
     document.querySelector(".sample07_R5").innerHTML = "실행 안됨";
     
     const text6 = str.substring(5, 1);
     
-    document.querySelector(".sample07_Q6").innerHTML = str;
     document.querySelector(".sample07_R6").innerHTML = text6;
     
     const text7 = str.substr(4, 5);
-    
-    document.querySelector(".sample07_Q7").innerHTML = str;   
+      
     document.querySelector(".sample07_R7").innerHTML = text7;
 }
 </code></pre>
