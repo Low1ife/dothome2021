@@ -131,49 +131,38 @@
         }
 
 
-        //
-        {
-        const num =[100, 200, 300, 400, 500]
-        
-        document.write(num.length, "<br>");
+       //선언적 함수
+       {
+           function func(){
+               document.write("함수가 실행되었습니다.");
+           }
+           func();
+       }
 
-        //3번째 값만
-        document.write(num[2]);
+       //익명함수
+       {
+           const func = function(){
+               document.write("함수가 실행되었습니다.");
+           }
+           func();
+       }
 
-        for(let i=0; i<num.length; i++){
-            document.write(i);
-        }
+       // 매개변수
+       {
+           function func (str){
+                document.write(str);
+           }
+           func("함수가 실행되었습니다.");
+       }
 
-        
-
-        forEach((element,index,array)=>{
-            document.write(element);
-            document.write(index);
-            document.write(array);
-        });
-
-        for(let i in num){
-            document.write(i);
-        }
-    }
-
-
-    {
-        const num =[100, 200, 300, 400, 500]
-
-        num.forEach(function(el){
-            document.write(el);
-        })
-
-
-
-        forEach((element,index,array)=>{
-            document.write(element);
-            document.write(index);
-            document.write(array);
-        });
-    }
-    
+       //리턴
+       {
+            function func(){
+                const str = "함수가 실행되었습니다.";
+                return str;
+            }
+            document.write(func());
+       }
     </script>
 </body>
 </html>
