@@ -7,37 +7,29 @@
     <title>javascripttest</title>
 </head>
 <body>
-    <script type="text/javascript">
+    <script>
     {
        // let test =prompt("제일 먼저 잡고싶은 물건은 무엇인가요?","1. 과일 2.떡 3. 수정구슬 4. 현찰 5. 반지");
        // alert(test)
        // let input = confirm()
+       // let num
 
 
-        test = prompt('제일 먼저 잡고싶은 물건은 무엇인가요?','숫자를 입력하세요')
+        let num = prompt("제일 먼저 잡고싶은 물건은 무엇인가요? 1. 과일 2.떡 3. 수정구슬 4. 현찰 5. 반지");
+        console.log(num)
 
-        //switch (test % 2){
-       
-        switch (test % 2){
-            case 1 :
-            alert("01. 과일<br>");
-            alert("당신은 생각이 많고 진지해 보이는 연상 타입 입니다.");
-            break;
-            case 2 :
-            alert("02. 떡");
-            alert("당신은 무드에 약해 화술과 매너가 좋은 타입 입니다.");
-            break;
-            case 3 :
-            alert("3. 수정구슬");
-            alert("당신은 정열적이고 열중하는 타입 입니다.");
-            break;
-            case 4 :
-            alert("4. 현찰");
-            alert("당신은 부드럽고 따듯한 타입입니다.");
-            break;
-            case 5 :
-            alert("5. 반지");
-            alert("당신은 자기를 보호해 줄 수 있는 이성 타입 입니다.");
+        if(num == "1"){
+            document.write("당신은 생각이 많고 진지해 보이는 연상 타입 입니다.")
+        } else if(num == "2"){
+            document.write("당신은 무드에 약해 화술과 매너가 좋은 타입 입니다.")
+        } else if(num == "3"){
+            document.write("당신은 정열적이고 열중하는 타입 입니다.")
+        } else if(num == "4"){
+            document.write("당신은 부드럽고 따듯한 타입 입니다.")
+        } else if(num == "5"){
+            document.write("당신은 자기를 보호해줄 수있는 이성 타입 입니다.")
+        } else {
+            document.write('번호를 입력하세요')
         }
     }
     </script>
