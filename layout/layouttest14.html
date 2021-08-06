@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습 14</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header{
+            height: 150px;
+            background-color: #bbdefb;
+        }
+        nav{
+            height: 150px;
+            background-color: #90caf9;
+        }
+        main{
+            overflow: hidden;
+        }
+        .main1{
+            width: 30%;
+            height: 900px;
+            background-color: #64b5f6;
+            float: left;
+        }
+        .main2{
+            width: 70%;
+            height: 300px;
+            background-color: #4ea5f5;
+            float: left;
+        }
+        .main3{
+            width: 70%;
+            height: 300px;
+            background-color: #2196f3;
+            float: left;
+        }
+        .main4{
+            width: 70%;
+            height: 300px;
+            background-color: #1188e5;
+            float: left;
+        }
+        footer{
+            height: 150px;
+            background-color: #1976d2;
+        }
+        @media(max-width : 1200px){
+            #wrap{
+                width: 100%;
+            }
+            .main4{
+                width: 100%;
+            }
+            .main1{
+                height: 600px;
+            }
+        }
+        @media(max-width : 800px){
+            .main1{
+                width: 100%;
+                height: 150px;
+            }
+            .main2{
+                width: 100%;
+                height: 400px;
+            }
+            .main3{
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <nav></nav>
+        <main>
+            <aside class="main1"></aside>
+            <section class="main2"></section>
+            <article class="main3"></article>
+            <article class="main4"></article>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
