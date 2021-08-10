@@ -1503,7 +1503,7 @@
             const text4 = str1.sort((a, b) =>  a.localeCompare(b));
 
             document.querySelector(".sample06_N4").innerHTML = "4";
-            document.querySelector(".sample06_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample06_Q4").innerHTML = "['c','d','e','a,','b']";
             document.querySelector(".sample06_M4").innerHTML = ".sort()";
             document.querySelector(".sample06_R4").innerHTML = text4;
         }
@@ -1525,7 +1525,7 @@
 
             document.querySelector(".sample07_N2").innerHTML = "2";
             document.querySelector(".sample07_Q2").innerHTML = "[100, 200, 300],[400, 500,600]";
-            document.querySelector(".sample07_M2").innerHTML = ".concat()";
+            document.querySelector(".sample07_M2").innerHTML = "[...arrNum1, ...arrNum2]";
             document.querySelector(".sample07_R2").innerHTML = result2;
         }
 
@@ -1661,7 +1661,7 @@
 
             document.querySelector(".sample10_N1").innerHTML = "1";
             document.querySelector(".sample10_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample10_M1").innerHTML = "find()";
+            document.querySelector(".sample10_M1").innerHTML = "찾는요소 : 300";
             document.querySelector(".sample10_R1").innerHTML = find;
             
 
@@ -1669,16 +1669,16 @@
             const find2 =arr2.find( element => element === "javascript")
 
             document.querySelector(".sample10_N2").innerHTML = "2";
-            document.querySelector(".sample10_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample10_M2").innerHTML = "find()";
+            document.querySelector(".sample10_Q2").innerHTML = "[javascript, react, vue]";
+            document.querySelector(".sample10_M2").innerHTML = "find() : javascript";
             document.querySelector(".sample10_R2").innerHTML = find2;
 
             const arr3 =["javascript", "react", "vue"];
             const find3 =arr3.findIndex( element => element === "javascript")
 
             document.querySelector(".sample10_N3").innerHTML = "3";
-            document.querySelector(".sample10_Q3").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample10_M3").innerHTML = "find()";
+            document.querySelector(".sample10_Q3").innerHTML = "[javascript, react, vue]";
+            document.querySelector(".sample10_M3").innerHTML = "findIndex() : javascript";
             document.querySelector(".sample10_R3").innerHTML = find3;
 
         }
@@ -1743,15 +1743,11 @@
             document.querySelector(".sample12_M3").innerHTML = "map()";
             document.querySelector(".sample12_R3").innerHTML = result3;
 
-            const arrNum4 = [
-                {a :100},
-                {a :200},
-                {a :300}
-            ]
+            const arrNum4 = [ {a :100}, {a :200}, {a :300} ]
             const result4 = arrNum4.map(el => el.a);
 
             document.querySelector(".sample12_N4").innerHTML = "4";
-            document.querySelector(".sample12_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample12_Q4").innerHTML = "[ {a :100}, {a :200}, {a :300} ]";
             document.querySelector(".sample12_M4").innerHTML = "map()";
             document.querySelector(".sample12_R4").innerHTML = result4;
         }
