@@ -223,10 +223,45 @@
             content : "데이터 제어하기 : ";
         }
         .ol5::before{
-            content : "데이터 연습하기 : ";
+            content : "데이터 내장 객체 : ";
         }
         .ol6::before{
-            content : "데이터 메서드 : ";
+            content : "데이터 공부 하기 : ";
+        }
+        .view {
+            padding: 20px;
+        }
+        .view table {
+            width: 100%;
+            border: 1px solid #e6e6e6;
+            /* 속기형 작성법 */
+            text-align: center;
+            vertical-align: middle;
+            border-collapse: collapse;
+        }
+
+        .view table th {
+            /* padding-top : 13px;
+            padding-right: 5px;
+            padding-bottom: 11px;
+            padding-left: 5px; */
+            padding: 13px 5px 11px 5px;
+        }
+
+        .view table td {
+            border: 1px solid #e6e6e6;
+            padding: 13px 5px 11px 5px;
+        }
+
+        .view table td.result {
+            color: #fff;
+            transition: all 0.3s;
+            cursor: zoom-in;
+        }
+
+        .view table td.result:hover {
+            color: #000;
+            background-color: #f5f5f5;
         }
     </style>
 </head>
@@ -254,46 +289,110 @@
         <li><a href="javascript200.html">반복문</a></li>
       
     </ol>
-    <ol class="ol5">
-        <li><a href="javascript400.html">알고리즘 연습</a></li>
+    <ol class="ol5"> 
+        <li><a href="javascript601.html">배열 객체</a></li>
+        <li><a href="javascript602.html">문자열 객체</a></li>
+        <li><a href="javascript604.html">날짜 객체</a></li>
+        <li><a href="javascript609.html">수학 객체</a></li>
+        <li><a href="javascript608.html">숫자 객체</a></li>
+        <li><a href="javascript603.html">브라우저 객체</a></li>
+        <li><a href="javascript607.html">요소 객체</a></li>
+        <li><a href="javascript605.html">이벤트 객체</a></li>
     </ol>
     <ol class="ol6"> 
-        <li><a href="javascript601.html">배열 매서드</a></li>
-        <li><a href="javascript602.html">문자열 매서드</a></li>
-        <li><a href="javascript603.html">브라우저 매서드</a></li>
-        <li><a href="javascript604.html">날짜 매서드</a></li>
-        <li><a href="javascript605.html">이벤트 매서드</a></li>
-    </ol>
-    <ol class="ol7"> 
         <li><a href="javascript606.html">샘플</a></li>
+        <li><a href="javascript400.html">알고리즘 연습</a></li>
     </ol>
 
 
 
-        <h2 class="mt20">날짜 메서드</h2>
+        <h2 class="mt20">날짜 객체</h2>
         <ul>
-            <li><a href="#sample01">01. 변수 : 데이터 불러오기 : 기본</a></li>
-         
+            <li><a href="#sample01">01. 날짜 메서드 : getFullYear() : 연도 불러오기</a></li>
+            <li><a href="#sample02">02. 날짜 메서드 : getMonth() : 월 불러오기</a></li>
+            <li><a href="#sample03">03. 날짜 메서드 : getDate() : 일 불러오기</a></li>
+            <li><a href="#sample04">04. 날짜 메서드 : getHours() : 시간 불러오기</a></li>
+            <li><a href="#sample05">05. 날짜 메서드 : getMinuite() : 분 불러오기</a></li>
+            <li><a href="#sample06">06. 날짜 메서드 : getSeconds() : 초 불러오기</a></li>
+            <li><a href="#sample07">07. 날짜 메서드 : getMilliseconds() : 밀리초 불러오기</a></li>
+            <li><a href="#sample08">08. 날짜 메서드 : getDay() : 요일 불러오기</a></li>
         </ul>
 
     <hr>
 
-    <!--sample1-->
-    <div id="sample1" class="sample">
-        <h2>01. 변수 : 데이터 불러오기  <span class="dot"></span></h2>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js"> {
-    let x = 100, y = 200, z="Javascript
-    
-    document.write("*** 01. 변수 : 데이터 불러오기 ***<br>");
-    document.write(x);
-    document.write(y);
-    document.write(z);    
+   <!--sample01-->
+   <div id="sample01" class="sample">
+    <h2>01. 날짜 메서드 : getFullYear() : 연도 불러오기 <span class="dot"></span></h2>
+    <div class="view">
+        <table>
+            <colgroup>
+                <col style="width: 4%">
+                <col style="width: 22%">
+                <col style="width: 22%">
+                <col style="width: 50%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>기본 값</th>
+                    <th>메서드</th>
+                    <th>결과값</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sample01_N1"></td>
+                    <td class="sample01_Q1"></td>
+                    <td class="sample01_M1"></td>
+                    <td class="sample01_R1 result"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N2"></td>
+                    <td class="sample01_Q2"></td>
+                    <td class="sample01_M2"></td>
+                    <td class="sample01_R2 result"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N3"></td>
+                    <td class="sample01_Q3"></td>
+                    <td class="sample01_M3"></td>
+                    <td class="sample01_R3 result"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N4"></td>
+                    <td class="sample01_Q4"></td>
+                    <td class="sample01_M4"></td>
+                    <td class="sample01_R4 result"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N5"></td>
+                    <td class="sample01_Q5"></td>
+                    <td class="sample01_M5"></td>
+                    <td class="sample01_R5 result"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N6"></td>
+                    <td class="sample01_Q6"></td>
+                    <td class="sample01_M6"></td>
+                    <td class="sample01_R6 result"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N7"></td>
+                    <td class="sample01_Q7"></td>
+                    <td class="sample01_M7"></td>
+                    <td class="sample01_R7 result"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="code">
+        <pre class="line-numbers"><code class="language-js"> {
+
 }
 </code></pre>
-        </div>
     </div>
-    <!--sample1-->
+</div>
+<!--sample01-->
 <hr>
  
 
@@ -310,8 +409,58 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        //sample1
-        //01. 변수 : 데이터 불러오기
+        //sample01
+        {
+            const date = new Date();
+            const year = date.getFullYear();
+
+            document.querySelector(".sample01_N1").innerHTML = "1";
+            document.querySelector(".sample01_Q1").innerHTML = "new Date()";
+            document.querySelector(".sample01_M1").innerHTML = "getFullYear()";
+            document.querySelector(".sample01_R1").innerHTML = "지금은" + year + "년 입니다";
+
+            const month = date.getMonth() + 1;
+
+            document.querySelector(".sample01_N2").innerHTML = "2";
+            document.querySelector(".sample01_Q2").innerHTML = "new Date()";
+            document.querySelector(".sample01_M2").innerHTML = "getMonth()";
+            document.querySelector(".sample01_R2").innerHTML = "지금은" + month + "월 입니다";
+
+            const day = date.getDate();
+
+            document.querySelector(".sample01_N3").innerHTML = "3";
+            document.querySelector(".sample01_Q3").innerHTML = "new Date()";
+            document.querySelector(".sample01_M3").innerHTML = "getDate()";
+            document.querySelector(".sample01_R3").innerHTML = "지금은" + day + "일 입니다";
+
+            const hour = date.getHours();
+
+            document.querySelector(".sample01_N4").innerHTML = "4";
+            document.querySelector(".sample01_Q4").innerHTML = "new Date()";
+            document.querySelector(".sample01_M4").innerHTML = "getHours()";
+            document.querySelector(".sample01_R4").innerHTML = "지금은" + hour + "시 입니다";
+
+            const minute = date.getMinutes();
+
+            document.querySelector(".sample01_N5").innerHTML = "5";
+            document.querySelector(".sample01_Q5").innerHTML = "new Date()";
+            document.querySelector(".sample01_M5").innerHTML = "getMinutes()";
+            document.querySelector(".sample01_R5").innerHTML = "지금은" + minute + "분 입니다";
+
+            const seconds = date.getSeconds();
+
+            document.querySelector(".sample01_N6").innerHTML = "6";
+            document.querySelector(".sample01_Q6").innerHTML = "new Date()";
+            document.querySelector(".sample01_M6").innerHTML = "getSeconds()";
+            document.querySelector(".sample01_R6").innerHTML = "지금은" + seconds + "초 입니다";
+
+            const milliseconds = date.getMilliseconds();
+
+            document.querySelector(".sample01_N7").innerHTML = "7";
+            document.querySelector(".sample01_Q7").innerHTML = "new Date()";
+            document.querySelector(".sample01_M7").innerHTML = "getMilliseconds()";
+            document.querySelector(".sample01_R7").innerHTML = "지금은" + milliseconds + "초 입니다";
+        }
  
     </script>
 </body>
