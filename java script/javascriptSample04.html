@@ -218,7 +218,7 @@
 
     <div class="time"></div>
     <div class="dday">앞으로 수료일은 <span class="dday-time">00</span>일 남았습니다.</div>
-    <div class="day"> 오늘은 <span class="date"> 입니다.</span></div>
+    <div class="day"><span class="date"></span></div>
 
     <script>
         //function func1(){
@@ -265,7 +265,10 @@
             document.querySelector(".dday-time").innerHTML = interval;
 
             //요일 표시 숙제
-             
+            const day = today.getDay();
+            const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
+
+            document.querySelector(".day").innerHTML = "오늘은 " + dayList[day] + " 입니다";
 
 
         }, 1000);
