@@ -59,7 +59,9 @@
         ul {
             list-style: none;
         }
-
+        ol {
+            padding-left: 26px;
+        }
         a {
             text-decoration: none;
             color: #333;
@@ -264,7 +266,12 @@
                 font-weight: normal;
             }
             .view table td.result {
-                color : #000;
+                
+                background: #f1f1f1;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
             }
             .menu li a {
                 font-size: 12px;
@@ -310,20 +317,22 @@
         </ul>
     </nav>
         <h2 class="mt20">날짜 객체</h2>
-        <ul class="list">
-            <li><a href="#sample01">01. 날짜 메서드 : getFullYear() : 연도 불러오기</a></li>
-            <li><a href="#sample01">01. 날짜 메서드 : getMonth() : 월 불러오기</a></li>
-            <li><a href="#sample01">01. 날짜 메서드 : getDate() : 일 불러오기</a></li>
-            <li><a href="#sample01">01. 날짜 메서드 : getHours() : 시간 불러오기</a></li>
-            <li><a href="#sample01">01. 날짜 메서드 : getMinuite() : 분 불러오기</a></li>
-            <li><a href="#sample01">01. 날짜 메서드 : getSeconds() : 초 불러오기</a></li>
-            <li><a href="#sample01">01. 날짜 메서드 : getMilliseconds() : 밀리초 불러오기</a></li>
-            <li><a href="#sample01">01. 날짜 메서드 : getDay() : 요일 불러오기</a></li>
-            <li><a href="#sample02">02. 날짜 메서드 : toLocaleString() : 현재 날짜/시간 문자열 불러오기</a></li>
-            <li><a href="#sample02">02. 날짜 메서드 : toLocaleDateString() : 현재 날짜 문자열 불러오기</a></li>
-            <li><a href="#sample02">02. 날짜 메서드 : toLocaleTimeString() : 현재 시간 문자열 불러오기</a></li>
-            <li><a href="#sample03">03. 날짜 메서드 : Date.parse() : 날짜 문자열 타임스탬프 불러오기</a></li>
-        </ul>
+        <div class="list">
+            <ol>
+            <li><a href="#sample01">날짜 메서드 : getFullYear() : 연도 불러오기</a></li>
+            <li><a href="#sample01">날짜 메서드 : getMonth() : 월 불러오기</a></li>
+            <li><a href="#sample01">날짜 메서드 : getDate() : 일 불러오기</a></li>
+            <li><a href="#sample01">날짜 메서드 : getHours() : 시간 불러오기</a></li>
+            <li><a href="#sample01">날짜 메서드 : getMinuite() : 분 불러오기</a></li>
+            <li><a href="#sample01">날짜 메서드 : getSeconds() : 초 불러오기</a></li>
+            <li><a href="#sample01">날짜 메서드 : getMilliseconds() : 밀리초 불러오기</a></li>
+            <li><a href="#sample01">날짜 메서드 : getDay() : 요일 불러오기</a></li>
+            <li><a href="#sample02">날짜 메서드 : toLocaleString() : 현재 날짜/시간 문자열 불러오기</a></li>
+            <li><a href="#sample02">날짜 메서드 : toLocaleDateString() : 현재 날짜 문자열 불러오기</a></li>
+            <li><a href="#sample02">날짜 메서드 : toLocaleTimeString() : 현재 시간 문자열 불러오기</a></li>
+            <li><a href="#sample03">날짜 메서드 : Date.parse() : 날짜 문자열 타임스탬프 불러오기</a></li>
+        </ol>
+        </div>
 
     <hr>
 
@@ -483,7 +492,16 @@
     </div>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
-    
+    const date = new Date();
+    const locale = date.toLocaleString();
+    const localeDate = date.toLocaleDateString();
+    const localeTime = date.toLocaleTimeString();
+
+    document.querySelector(".sample02_R1").innerHTML = locale;
+
+    document.querySelector(".sample02_R2").innerHTML = localeDate;
+
+    document.querySelector(".sample02_R3").innerHTML = localeTime;
 }
 </code></pre>
     </div>
@@ -535,7 +553,17 @@
     </div>
     <div class="code">
         <pre class="line-numbers"><code class="language-js"> {
-    
+    const date = Date.parse("2021/8/11")
+
+    document.querySelector(".sample03_R1").innerHTML = date;
+
+    const date2 = Date.parse("8 11 2021")
+
+    document.querySelector(".sample03_R2").innerHTML = date2;
+
+    const date3 = Date.now()
+
+    document.querySelector(".sample03_R3").innerHTML = date3;
 }
 </code></pre>
     </div>
@@ -543,12 +571,6 @@
 <!--sample03-->
 
 <hr>
-<hr>
-<hr>
-<hr>
-<hr>
-
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
