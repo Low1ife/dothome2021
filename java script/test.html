@@ -8,161 +8,138 @@
 </head>
 <body>
     <script>
-        //변수 : 데이터 저장소
-        //100, 200, 300 변수에 저장 출력
-        {
-        let x = 100;
-        let y = 200;
-        let z = 300;
-
-        document.write("1. 변수<br>");
-        document.write(x);
-        document.write(y);
-        document.write(z);
+        function func1(){
+            document.write("함수1<br>");
         }
+        func1();
 
-        document.write("<br>");
-
-        //배열
-        //100 200 300
-
-        const arr=[100, 200, 300]
-
-        document.write("2.배열<br>");
-        document.write(arr[0]);
-        document.write(arr[1]);
-        document.write(arr[2]);
-
-        document.write("<br>");
-
-        // 객체
-        //100 200 300
+        //익명
         {
-            const obj={
-                a:100,
-                b:200,
-                c:300
-            };
-
-            document.write("3.객체<br>");
-            document.write(obj.a);
-            document.write(obj.b);
-            document.write(obj.c);
-            document.write("<br>");
-        }
-
-
-        //반복문
-        //for 1-50
-        {
-            document.write("4.for<br>");
-
-            for(let i=1; i<=50; i++){
-            document.write(i, " &nbsp;");    
-        }
-            document.write("<br>");
-        }
-
-
-        //반복문 50-1
-        {
-            document.write("5.for<br>");
-
-            for(let i=50; i>=1; i--){
-            document.write(i, " &nbsp;");
-        } 
-            document.write("<br>");
-        }
-
-
-
-
-        //반복문 1-50 짝수
-        {
-            document.write("6. 짝수 50<br>")
-
-            for(let i=1; i<=50; i++)
-                if(i % 2 ==0){
-                    document.write(i, " &nbsp;")
-                }
-                document.write("<br>");
-        }
-
-
-
-        //반복문 50-1 홀수
-        {
-            document.write("7. 홀수 50<br>")
-
-            for(let i=1; i<=50; i++)
-                if(i % 2 ==1){
-                    document.write(i, " &nbsp;")
+            const func2 = function(){
+                document.write("익명함수<br>");
             }
-            document.write("<br>");
+            func2();
         }
-
-        
-        //반복문 구구단 8단
+        //매개변수
         {
-            document.write("8. 8단<br>")
-
-            for(let i=8; i==8; i++){
-                for(let j=1; j<=9; j++){
-                    let sum = i * j;
-                    document.write(i + " * " + j + "=" + sum, "<br>");
-                }
+            function func3(text){
+                document.write(text);
             }
-            document.write("<br><br>");
+            func3("매개변수 함수<br>");
         }
 
-
-
-        // 5단 부터 8단
+        //리턴
         {
-            document.write("8. 5단~8단<br>")
-
-            for(let i=5; i<=8; i++){
-                for(let j=1; j<=9; j++){
-                    let sum = i * j;
-                    document.write(i + " * " + j + "=" + sum, "<br>");
-                }
+            function func4(){
+                const text = "리턴";
+                return text;
             }
-            document.write("<br><br>");
+            document.write(func4());
         }
 
+        func5 = () => {
+            document.write("화살표 선언적함수");
+        }
+        func5();
 
-       //선언적 함수
-       {
-           function func(){
-               document.write("함수가 실행되었습니다.");
-           }
-           func();
-       }
+        //화살표 익명
+        {
+            const func6 = () => {
+                document.write("화살표 익명");
+            }
+            func6();
+        }
 
-       //익명함수
-       {
-           const func = function(){
-               document.write("함수가 실행되었습니다.");
-           }
-           func();
-       }
-
-       // 매개변수
-       {
-           function func (str){
-                document.write(str);
-           }
-           func("함수가 실행되었습니다.");
-       }
-
-       //리턴
-       {
-            function func(){
-                const str = "함수가 실행되었습니다.";
+        //화살표 리턴
+        {
+            func7 = () => {
+                let str = "화살표 리턴";
                 return str;
             }
-            document.write(func());
-       }
+            document.write(func7());
+        }
+
+        {
+            const func8 = (str) => {
+                return str;
+            }
+            document.write(func8("익명 매개 리턴 화살표"));
+        }
+
+        {
+            const func9 = str => {
+                return str;
+            }
+            document.write(func9("익명 매개 리턴 화살표 괄호 생략<br>"));
+        }
+
+        {
+            const func10 = str => str;
+
+            document.write(func10("익명 매개 리턴 화살표 괄호 생략<br>"));
+        }
+
+        {
+            func11 = str => str;
+
+            document.write(func11("tfddfd"))
+        }
+
+        {
+            function func12(str1, str2){
+                document.write(`${str1}가 ${str2}되었습니다.<br>`)
+            }
+            func12("함수","실행");
+        }
+
+        {
+            func13 = (str1, str2) => {
+                document.write(`${str1}가 ${str2}되었습니다.<br>`)
+            }
+            func13("함수","실행");
+        }
+
+        {
+            func14 = (str1, str2) => {
+                document.write(`${str1}가 ${str2}되었습니다.<br>`)
+            }
+            const a = "함수";
+            const b = "실행";
+            func14(a,b);
+        }
+
+        {
+            func15 = (str1, str2) => {
+                document.write(`${str1}가 ${str2}되었습니다.<br>`)
+            }
+            const c = ["함수","실행"];
+            func15(c[0], c[1]);
+        }
+
+        {
+            func16 = (str1, str2) => {
+                document.write(`${str1}가 ${str2}되었습니다.<br>`)
+            }
+            const c = [{a:"함수"},{b : "실행"}];
+            func16(c[0].a, c[1].b);
+        }
+
+        {
+            func17 = (str1, str2) => {
+                document.write(`${str1}가 ${str2}되었습니다.<br>`)
+            }
+            const c = {a: "함수", b : "실행"};
+            func17(c.a, c.b);
+
+            const f = {
+                a : "함수",
+                b : "실행",
+                result : () => {
+                    document.write(`${f.a}가 ${f.b}되었습니다.<br>`)
+                }
+            }
+            f.result();
+        }
     </script>
 </body>
 </html>
