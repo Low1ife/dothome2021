@@ -5,7 +5,13 @@
     margin: 0 auto;
     position: relative;
 }
-
+.container1 {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
 .container-fluid {
     width: 96%;
     margin: 0 auto;
