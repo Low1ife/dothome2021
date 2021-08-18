@@ -19,7 +19,21 @@
     line-height: 1.28;
     margin-bottom: 40px;
 }
-
+.cardType02 {
+    font-family: 'S-CoreDream';
+    padding: 60px 0;
+}
+.cardType02 h2 {
+    font-weight: 500;
+    font-size: 60px;
+    margin-bottom: 7px;
+}
+.cardType02 p {
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
 /* float을 이용한 레이아웃 
 .card-wrap {
     overflow: hidden;
@@ -41,20 +55,69 @@
 .card-wrap > div {
     width: 387px;
 }
-
+.card-wrap02 {
+    display: flex;
+    justify-content: space-between;
+}
+.card-wrap02 > div {
+    width: 255px;
+}
 .card {}
 .card .card-img{}
 .card .card-title{
     display: block;
     font-size: 32px;
+    white-space: nowrap;       /* 한줄 효과 */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .card .card-desc{
     display: block;
     font-size: 20px;
     font-weight: 300;
+    overflow: hidden;
+    /* 벤더 프리픽스 */
+    /* 두줄 효과 */
+    display : -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
 }
 .card .card-keyword{
     font-size: 16px;
     font-weight: 300;
     opacity: 0.5;
+}
+.card02 {
+    border : 1px solid #e6e6e6;
+    padding: 20px;
+    border-radius: 5px;
+}
+.card02 .card-title{
+    display: block;
+    font-size: 25px;
+    white-space: nowrap;       /* 한줄 효과 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+.card02 .card-desc{
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    overflow: hidden;
+    /* 벤더 프리픽스 */
+    /* 두줄 효과 */
+    display : -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 20px;
+}       
+.card02 .card-keyword{
+    font-size: 16px;
+    font-weight: 300;
+    color : #fff;
+    border: 1px solid #000;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 3px 25px;
 }
