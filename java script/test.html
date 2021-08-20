@@ -148,6 +148,22 @@
             document.write(i)
         }
     }
+
+    {
+         let x = 100;    //변수 설정 : 전역변수
+         let a = 300;
+         function func(){
+                 let x = 100;
+                 a = 400;        // 전역 변수 : 변수 값이 변경
+         document.write(x);
+  // 함수 안
+         document.write(a);
+}
+        func();
+        document.write(x);
+ // 함수 밖
+        document.write(a);
+}
     </script>
 </body>
 </html>
