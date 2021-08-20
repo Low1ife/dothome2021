@@ -4,7 +4,7 @@ body {
     background-color: #f3f3f3;
 }
 .cardType{
-    margin: 150px 0;
+    margin: 100px 0;
     background-color: #fff;
     box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
@@ -125,144 +125,80 @@ body {
     background-color: #000;
 }
 
-/* cardType03 
-.cardType03 .card-wrap {
-    display: flex;
-}
+
+/* cardType03 */
 .cardType03 {
-    font-family: 'S-CoreDream';
-    padding: 96px 0;
+    padding: 100px 0;
+    font-family: 'NanumSquare';
 }
 .cardType03 h2 {
-    font-weight: 500;
     font-size: 50px;
-    margin-bottom: 22px;
+    font-weight: 800;
+    margin-bottom: 4px;
 }
 .cardType03 p {
-    font-weight: 200;
     font-size: 18px;
-    margin-bottom: 40px;
+    font-weight: 400;
+    line-height: 1.28;
+    margin-bottom: 50px;
 }
-
-.cardType03 .card-wrap > div {
-    width: 285px;
-}
-.cardType03 .card03 .card-title {
-    position: absolute;
-    left: 290px;
-    top: 340px;
-    font-size: 26px;
-}
-.cardType03 .card03 .card-desc {
-    position: absolute;
-    left: 290px;
-    top: 380px;
-    font-size: 16px;
-    font-weight: 200;
-}
-.cardType03 .card03 .card-word {
-    position: absolute;
-    left: 280px;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 5px 10px;
-    color: #fff;
-    background-color: #ff5151;
-}
-.cardType03 .card03 .card-img {
-    border-radius: 10px;
-    display: inline;
-} */
-
-.cardType03 .card-wrap {
-    display: flex;
-}
-.cardType03 {
-    font-family: 'S-CoreDream';
-    padding: 96px 0;
-}
-.cardType03 h2 {
-    font-weight: 500;
-    font-size: 50px;
-    margin-bottom: 22px;
-}
-.cardType03 p {
-    font-weight: 200;
+.cardType03 .popular {
     font-size: 18px;
-    margin-bottom: 40px;
+    font-weight: 400;
+    line-height: 1.28;
+    position: absolute;
+    right: 0; top: 180px;
 }
-
-.cardType03 .card-wrap > div {
+.cardType03 .card-wrap .card {
+    margin-bottom: 28px;
+}
+.cardType03 .card-wrap .card .card-img {
     width: 285px;
-}
-.cardType03 .card03 .card-title {
+    height: 185px;
     position: absolute;
-    padding: 40px 40px 40px 20px;
-    font-size: 26px;
 }
-.cardType03 .card03 .card-desc {
-    position: absolute;
-    padding: 90px 90px 90px 20px;
-    font-size: 16px;
-    font-weight: 200;
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
 }
-.cardType03 .card03 .card-word {
-    margin-left: 20px;
-    position: absolute;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 5px 10px;
+.cardType03 .card-wrap .card .card-category {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 4px 14px 2px 15px;
     color: #fff;
-    background-color: #ff5151;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
 }
-.cardType03 .card03 .card-word2 {
-    margin-left: 20px;
-    position: absolute;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 5px 10px;
-    color: #fff;
+.cardType03 .card-wrap .card .card-category.red {
+    background: #ff4646;
+}
+.cardType03 .card-wrap .card .card-category.blue {
     background-color: #5465ff;
 }
-.cardType03 .card03 .card-word3 {
-    margin-left: 20px;
-    position: absolute;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 5px 10px;
-    color: #fff;
-    background-color: #ff5151;
-}
-.cardType03 .card03 .card-word4 {
-    margin-left: 20px;
-    position: absolute;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 5px 10px;
-    color: #fff;
+.cardType03 .card-wrap .card .card-category.green {
     background-color: #11c865;
 }
-.cardType03 .card03 .card-img {
-    border-radius: 10px;
-    display: inline;
-    margin-bottom: 20px;
-    width: 285px;
+.cardType03 .card-wrap .card .card-title {
+    display: block;
+    font-weight: bold;
+    font-size: 26px;
 }
-
-.cardType03 .cd1 {
-   float: right;
-   margin-right: 15px;
+.cardType03 .card-wrap .card .card-desc {
+    font-size: 16px;
+    line-height: 1.53;
+    color: #555;
+    font-weight: 300;
+    margin-top: 10px;
 }
-.cardType03 .cd2 {
-    float: right;
-    margin-right: 15px;
- }
- .cardType03 .card03 .card-date {
-    position: absolute;
-    padding: 210px 210px 210px 20px;
+.cardType03 .card-wrap .card .right .card-date {
+    display: block;
+    color: #555;
     font-size: 14px;
     font-weight: bold;
     line-height: 1.4;
-    color: #555;
     text-decoration: underline;
- }
+    margin-top: 20px;
+}
+em {
+    font-style: normal;
+}
