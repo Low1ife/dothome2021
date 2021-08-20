@@ -1,43 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Css Reference</title>
+    <title>HTML Reference</title>
     <style>
-        @font-face {
-            font-family: 'GmarketSansMedium';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
+    @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
             font-family: 'GmarketSansLight';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
-        @font-face {
-            font-family: 'GmarketSansBold';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
         * {
             margin: 0;
             padding: 0;
         }
-
         body {
             background-color: #f5f5f5;
             font-family: 'GmarketSansLight';
         }
-
         #header {
             padding: 3% 2% 0% 2%;
             border-bottom: 1px solid #000;
@@ -46,42 +41,36 @@
             top: 0;
             width: 96%;
             background-color: #f5f5f5;
+            /* width = margin + padding + border */
         }
-
         #header h1 {
             font-family: 'GmarketSansMedium';
         }
-
         #header strong {
             position: absolute;
             right: 2%;
             bottom: 2%;
         }
-
         main h2 {
             font-family: 'GmarketSansBold';
             font-size: 80px;
             text-align: center;
             padding: 15% 5% 5%;
         }
-
         main h2 em {
             color: #00DB72;
             font-style: normal;
         }
-
-        #content {
+        #contents {
             width: 1200px;
             margin: 0 auto;
         }
-
         .refer {
             background-color: #fff;
             padding: 60px;
             border: 1px solid #000;
             margin-bottom: 300px;
         }
-
         .refer h3 {
             display: inline-block;
             padding: 6px 30px;
@@ -90,25 +79,23 @@
             color: #fff;
         }
         .refer h3 a {
-                text-decoration: none;
-                color: #fff;
-            }
+            text-decoration: none;
+            color: #fff;
+        }
         .refer h3.active {
-                box-shadow: inset 0 5px 0 0 #0bc56b;
-            }
+            box-shadow: inset 0 -5px 0 0 #068d4c;
+        }
         .refer table {
             width: 100%;
             border: 1px solid #aaa;
             border-collapse: collapse;
         }
-
         .refer table th {
             border: 1px solid #aaa;
-            padding: 15px;
+            padding: 15px 10px;
             font-weight: bold;
             background-color: #f5f5f5;
         }
-
         .refer table td {
             border: 1px solid #aaa;
             padding: 15px;
@@ -118,21 +105,22 @@
         }
         .refer table tr:hover {
             background-color: #00DB72;
-            color: #fff;
-            cursor : crosshair;
+            color:#fff;
+            cursor: crosshair;
         }
         .link {
             margin-bottom: 20px;
         }
         .link li {
             list-style: none;
-            display: inline-block;
+            display: inline;
         }
         .link li a {
             color: #fff;
             text-decoration: none;
-            padding: 13px 10px 10px 10px;
+            color: #fff;
             background: #000;
+            padding: 13px 10px 10px 10px;
             display: inline-block;
             margin-bottom: 10px;
             border-radius: 2px;
@@ -152,17 +140,20 @@
             text-decoration: none;
             color: #222;
         }
-        .page li a:hover{
-            color: #00DB72;
+        .page li a:hover {
+            color: #098a4c;
         }
-        @media (max-width:1220px){
-            #content{
-                width: 96%;
+        @media (max-width: 1220px){
+            #contents {
+                width: 98%;
             }
         }
-        @media (max-width:800px){
-            #content{
+        @media (max-width: 800px){
+            #contents {
                 width: 96%;
+            }
+            #header {
+                padding: 6% 2% 2% 2%;
             }
             #header h1 {
                 font-size: 16px;
@@ -173,52 +164,54 @@
             }
             main h2 {
                 font-size: 30px;
+                padding: 22% 5% 5%;
             }
             .refer {
                 padding: 10px;
                 margin-bottom: 100px;
             }
-            .refer h3{
+            .refer h3 {
                 margin-bottom: 10px;
                 font-size: 16px;
                 padding: 6px 10px;
             }
-            .refer table th{
+            
+            .refer table th {
                 padding: 8px;
             }
-            .refer table td{
+            .refer table td {
                 padding: 8px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
-
 <body>
     <header id="header">
         <h1>라인 중학교 1학년 코딩반</h1>
         <strong>김우석</strong>
     </header>
-    <!--//header-->
+    <!-- //header -->
 
-
-    <main id="content">
-        <h2>HTML <em>래퍼런스 북</em></h2>
+    <main id="contents">
+        <h2>HTML <em>레퍼런스 북</em></h2>
         <ul class="page">
-            <li><a href="#">HTML</a></li>
+            <li><a href="../refer-html/index.html">HTML</a></li>
             <li><a href="../refer-css/index.html">CSS</a></li>
-            <li><a href="../java script/javascript100.html">JAVASCRIPT</a></li>  
+            <li><a href="../java script/index.html">JAVASCRIPT</a></li>
         </ul>
+        
         <section class="refer">
-            <h3><a href =index.html>Alphabet</a></h3>
-            <h3 class="active"><a href="index2.html">토픽</a></h3>
+            <h3><a href="index.html">Alphabet</a></h3>
+            <h3  class="active"><a href="index2.html">Topics</a></h3>
             <ul class="link">
-                <li><a href="#sample01">섹션</a></li>
-                <li><a href="#sample01">텍스트</a></li>
-                <li><a href="#sample01">목록</a></li>
-                <li><a href="#sample01">테이블</a></li>
-                <li><a href="#sample01">이미지</a></li>
-                <li><a href="#sample01">미디어</a></li>
-                <li><a href="#sample01">폼</a></li>
+                <li><a href="#sample01">섹션</a></td>
+                <li><a href="#sample01">텍스트</a></td>
+                <li><a href="#sample01">목록</a></td>
+                <li><a href="#sample01">테이블</a></td>
+                <li><a href="#sample01">이미지</a></td>
+                <li><a href="#sample01">미디어</a></td>
+                <li><a href="#sample01">폼</a></td>
             </ul>
             <table>
                 <colgroup>
@@ -232,15 +225,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                 <tr>
-                     <td>a</a></td>
-                     <td>a </td>
-                 </tr>
+                    <tr>
+                        <td>&lt;a></td>
+                        <td>&lt;a> 태그는 다른 페이지 이동을 설정합니다.</td>
+                    </tr>
+                   
                 </tbody>
             </table>
         </section>
     </main>
-    <!--//main-->
+    <!-- //contents -->
 </body>
-
 </html>
