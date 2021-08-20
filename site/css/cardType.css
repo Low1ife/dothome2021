@@ -77,13 +77,146 @@ body {
 .cardType02 {
     padding: 150px 0;
     font-family: 'GmarketSans';
-    text-align: center;
 }
 .cardType02 h2 {
     font-size: 50px;
     font-weight: 500;
+    text-align: center;
 }
 .cardType02 p {
     font-size: 26px;
     font-weight: 300;
+    text-align: center;
+}
+.cardType02 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.cardType02 .card-wrap > div {
+    width: 255px;
+}
+.cardType02 .card02 .card-title{
+    display: block;
+    font-size: 25px;
+    white-space: nowrap;       /* 한줄 효과 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+.cardType02 .card02 .card-desc{
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.cardType02 .card02 {
+    border: 1px solid #c5c2c2;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.cardType02 .card-word {
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #000;
+}
+
+/* cardType03 
+.cardType03 .card-wrap {
+    display: flex;
+}
+.cardType03 {
+    font-family: 'S-CoreDream';
+    padding: 96px 0;
+}
+.cardType03 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 22px;
+}
+.cardType03 p {
+    font-weight: 200;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cardType03 .card-wrap > div {
+    width: 285px;
+}
+.cardType03 .card03 .card-title {
+    position: absolute;
+    left: 290px;
+    top: 340px;
+    font-size: 26px;
+}
+.cardType03 .card03 .card-desc {
+    position: absolute;
+    left: 290px;
+    top: 380px;
+    font-size: 16px;
+    font-weight: 200;
+}
+.cardType03 .card03 .card-word {
+    position: absolute;
+    left: 280px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #ff5151;
+}
+.cardType03 .card03 .card-img {
+    border-radius: 10px;
+    display: inline;
+} */
+
+.cardType03 .card-wrap {
+    display: flex;
+}
+.cardType03 {
+    font-family: 'S-CoreDream';
+    padding: 96px 0;
+}
+.cardType03 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 22px;
+}
+.cardType03 p {
+    font-weight: 200;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cardType03 .card-wrap > div {
+    width: 285px;
+}
+.cardType03 .card03 .card-title {
+    position: absolute;
+    padding: 40px 40px 40px 20px;
+    font-size: 26px;
+}
+.cardType03 .card03 .card-desc {
+    position: absolute;
+    padding: 90px 90px 90px 20px;
+    font-size: 16px;
+    font-weight: 200;
+}
+.cardType03 .card03 .card-word {
+    margin-left: 20px;
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #ff5151;
+}
+.cardType03 .card03 .card-img {
+    border-radius: 10px;
+    display: inline;
+    margin-bottom: 20px;
 }
