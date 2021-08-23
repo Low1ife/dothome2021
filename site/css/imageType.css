@@ -1,0 +1,20 @@
+.imageType {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    display: flex;
+}
+.imageType .image-wrap .image {
+    position: absolute;
+}
+.imageType h2 {
+    font-weight: 700;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.imageType .image-wrap .image{
+    background-size: 590px 489px;
+    width: 590px;
+    height: 489px;
+    position: relative;
+    justify-content: space-between;
+}
