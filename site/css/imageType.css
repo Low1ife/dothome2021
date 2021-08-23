@@ -1,20 +1,53 @@
-.imageType {
-    font-family: 'NEXON Lv1 Gothic OTF';
-    display: flex;
+body {
+    background-color: #f3f3f3;
 }
-.imageType .image-wrap .image {
-    position: absolute;
+.imageType{
+    margin: 100px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
-.imageType h2 {
+.imageType01 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType01 h2 {
     font-weight: 700;
     font-size: 50px;
-    margin-top: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
-.imageType .image-wrap .image{
-    background-size: 590px 489px;
-    width: 590px;
-    height: 489px;
+.imageType01 .image-wrap {
+    display: flex;
+    float: left;
+    margin-right: 30px;
+}
+.image-wrap .image {
+    width: 489px;
     position: relative;
-    justify-content: space-between;
+}
+
+.image-wrap .image .title {
+    position: absolute;
+    left: 40px;
+    top : 250px;
+    font-size: 25px;
+    color: #fff;
+}
+.image-wrap .image .word {
+    position: absolute;
+    color: #fff;
+    top : 290px;
+    left : 40px;
+    font-size: 14px;
+}
+.image-wrap .image .btn {
+    position: absolute;
+    top : 340px;
+    left : 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.image-wrap .image .in {
+    background-color: rgba(0,0,0,0.3);
+    width: 430px;
+    height: 130px;
 }
