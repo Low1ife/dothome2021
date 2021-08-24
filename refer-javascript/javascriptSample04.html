@@ -1,309 +1,325 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>시계 만들기</title>
+    <title>HTML 속성 검색하기</title>
     <style>
-         @font-face {
-            font-family: 'NEXON Lv1 Gothic OTF';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+        @font-face {
+            font-family: 'GyeonggiBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
 
-        html,
-        body {
-            height: 100%;
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-image: linear-gradient(#E7E7E7, #D7D7D7);
-            font-family: 'NEXON Lv1 Gothic OTF';
         }
-        .clock-wrapper {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            bottom: 50%;
-            left: 0;
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            background-image: url(img/search_bg.jpg);
+            background-size: cover;
+            background-position: center bottom;
+            background-attachment: fixed;
+        }
+
+        .girl {
             width: 250px;
-            height: 250px;
-            margin: auto;
-            padding: 5px;
-            background-image: linear-gradient(#F7F7F7, #E0E0E0);
-            border-radius: 50%;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, .15), 0 2px 2px rgba(0, 0, 0, .2);
+            position: fixed;
+            bottom: -60px;
+            right: 5%;
         }
-        .clock-base {
-            width: 250px;
-            height: 250px;
-            background-color: #eee;
-            border-radius: 50%;
-            box-shadow: 0 0 5px #eee;
-        }
-        .clock-dial {
-            position: absolute;
-            z-index: 1;
-            top: 15px;
-            left: 15px;
-            width: 230px;
-            height: 230px;
-        }
-        .clock-dial .clock-indicator {
-            position: absolute;
-            width: 2px;
-            height: 4px;
-            margin: 113px 114px;
-            background-color: #ddd;
-        }
-        .clock-indicator:nth-child(1) {
-            transform: rotate(30deg) translateY(-113px);
-        }
-        .clock-indicator:nth-child(2) {
-            transform: rotate(60deg) translateY(-113px);
-        }
-        .clock-indicator:nth-child(3) {
-            transform: rotate(90deg) translateY(-113px);
-            background-color: #aaa;
-        }
-        .clock-indicator:nth-child(4) {
-            transform: rotate(120deg) translateY(-113px);
-        }
-        .clock-indicator:nth-child(5) {
-            transform: rotate(150deg) translateY(-113px);
-        }
-        .clock-indicator:nth-child(6) {
-            transform: rotate(180deg) translateY(-113px);
-            background-color: #aaa;
-        }
-        .clock-indicator:nth-child(7) {
-            transform: rotate(210deg) translateY(-113px);
-        }
-        .clock-indicator:nth-child(8) {
-            transform: rotate(240deg) translateY(-113px);
-        }
-        .clock-indicator:nth-child(9) {
-            transform: rotate(270deg) translateY(-113px);
-            background-color: #aaa;
-        }
-        .clock-indicator:nth-child(10) {
-            transform: rotate(300deg) translateY(-113px);
-        }
-        .clock-indicator:nth-child(11) {
-            transform: rotate(330deg) translateY(-113px);
-        }
-        .clock-indicator:nth-child(12) {
-            transform: rotate(360deg) translateY(-113px);
-            background-color: #c00;
-        }
-        .clock-hour {
-            position: absolute;
-            z-index: 2;
-            top: 80px;
-            left: 128px;
-            width: 4px;
-            height: 65px;
-            background-color: #555;
-            border-radius: 2px;
-            box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-            transform-origin: 2px 50px;
-        }
-        .clock-minute {
-            position: absolute;
-            z-index: 3;
-            top: 60px;
-            left: 128px;
-            width: 4px;
-            height: 85px;
-            background-color: #555;
-            border-radius: 2px;
-            box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-            transform-origin: 2px 70px;
-        }
-        .clock-second {
-            position: absolute;
-            z-index: 4;
-            top: 20px;
-            left: 129px;
-            width: 2px;
-            height: 130px;
-            background-color: #a00;
-            box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-            transform-origin: 1px 110px;
-        }
-        .clock-second:after {
-            content: "";
-            display: block;
-            position: absolute;
-            left: -5px;
-            bottom: 14px;
-            width: 8px;
-            height: 8px;
-            background-color: #a00;
-            border: solid 2px #a00;
-            border-radius: 50%;
-            box-shadow: 0 0 3px rgba(0, 0, 0, .2);
-        }
-        .clock-center {
-            position: absolute;
-            z-index: 1;
+
+        .dog {
             width: 150px;
-            height: 150px;
-            top: 55px;
-            left: 55px;
-            background-image: linear-gradient(#E3E3E3, #F7F7F7);
-            border-radius: 50%;
-            box-shadow: inset 0 -1px 0 #FAFAFA, inset 0 1px 0 #E3E3E3;
+            position: fixed;
+            bottom: -40px;
+            left: 5%;
         }
-        .clock-center:after {
-            content: "";
-            display: block;
-            width: 20px;
-            height: 20px;
-            margin: 65px;
-            background-color: #ddd;
-            border-radius: 50%;
+
+        .board {
+            margin: 5vw 10vw 10vw 10vw;
+            width: 80vw;
+            background-color: #F1F3F6;
+            border: 2px solid #000;
+            padding: 3%;
+            text-align: center;
+            box-sizing: border-box;
         }
-        .time {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform : translateX(-50%);
+
+        .board h1 {
+            font-family: 'TmonMonsori';
+            color: #223547;
+            font-size: 60px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .board span {
+            font-family: 'GyeonggiBatang';
+            color: #223547;
             font-size: 20px;
         }
-        .dday {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform : translateX(-50%);
-            font-size: 20px;
-            line-height: 1.4;
-            white-space: nowrap;
+
+        .board .search label {
+            font-family: 'GyeonggiBatang';
+            background-color: #BFE6FE;
+            font-size: 26px;
+            padding: 10px 30px;
+            border: 1px solid #000;
+            border-radius: 40px;
+            display: none;
         }
-        .day {
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            transform : translateX(-50%);
-            font-size: 20px;
-            line-height: 1.4;
-            white-space: nowrap;
+
+        .board .search input {
+            font-family: 'GyeonggiBatang';
+            font-size: 24px;
+            border: 1px solid #000;
+            padding: 10px 10px 10px 30px;
+            border-radius: 40px;
+            outline: none;
+        }
+
+        .board .list {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .board .list ul li {
+            font-family: 'GyeonggiBatang';
+            line-height: 1.6;
+            list-style: none;
+            background-color: #BDD6E6;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .board .list ul li.hide {
+            display: none;
+        }
+
+        @media (max-width: 800px) {
+            .board {
+                width: 80vw;
+                padding:6% 3% 3% 3%;
+                margin: 4vw;
+            }
+
+            .board h1 {
+                font-size: 30px;
+                margin-top: 5px;
+            }
+
+            .board span {
+                font-size: 12px;
+            }
+            .board .search input {
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 16px;
+                padding: 10px 10px 10px 20px;
+            }
+            .board .list {
+                margin-top: 20px;
+            }
+            .girl {
+                width: 200px;
+            }
+            .dog {
+                width: 100px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="clock-wrapper">
-        <div class="clock-base">
-            <div class="clock-dial">
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
-                <div class="clock-indicator"></div>
+    <div id="wrap">
+        <div class="board">
+            <span>속성중에 첫글자만 입력하세요!</span>
+            <h1>HTML 속성 검색하기</h1>
+            <div class="search">
+                <label for="search-box">검색하기</label>
+                <input id="search-box" type="text">
             </div>
-            <div class="clock-hour"></div>
-            <div class="clock-minute"></div>
-            <div class="clock-second"></div>
-            <div class="clock-center"></div>
+            <div class="list">
+                <ul>
+                    <li data-name="a" data-topic="이동">a 태그는 다른 페이지 이동을 설정합니다.</li>
+                    <li data-name="abbr" data-topic="줄임말">abbr 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.</li>
+                    <li data-name="acronym" data-topic="줄임말">acronym 태그는 줄임말이나 머리글자를 표현하는데 사용합니다. 현재는 사용하지 않습니다.</li>
+                    <li data-name="address" data-topic="주소">address 태그는 웹 페이지의 연락처 정보를 설정합니다.</li>
+                    <li data-name="applet" data-topic="애플렛">applet 태그는 애플랫 요소를 설정합니다. 현재는 사용하지 않습니다.</li>
+                    <li data-name="area" data-topic="영역">area 태그는 이미지 맵의 영역을 정의합니다.</li>
+                    <li data-name="article" data-topic="아티클">article 태그는 사이트의 독립적인 컨텐츠 섹션을 설정합니다.</li>
+                    <li data-name="aside" data-topic="어사이드">aside 태그는 주요 콘텐츠의 보조적 컨텐츠 섹션을 설정합니다.</li>
+                    <li data-name="audio" data-topic="오디오">audio 태그는 오디오 파일을 설정합니다.</li>
+                    <li data-name="b" data-topic="구별">b 태그는 다른 텍스트와 구별 할 때 설정합니다.</li>
+                    <li data-name="base" data-topic="베이스">base 태그는 모든 문서의 기본이 되는 URL을 설정합니다</li>
+                    <li data-name="basefont" data-topic="베이스폰트">basefont  태그는 문서의 기본 폰트, 사이즈, 종류를 설정합니다. 지금은 CSS에서 이 기능을 구현하기 때문에 현재는 사용하지 않습니다.</li>
+                    <li data-name="bdi" data-topic="비디아이">bdi 태그는 텍스트의 출력 방향 영역을 설정합니다.</li>
+                    <li data-name="bdo" data-topic="비디오">bdo 태그는 텍스트의 방향을 설정합니다. 텍스트의 읽는 방향이 다른 나른 언어를 위해 사용합니다.</li>
+                    <li data-name="big" data-topic="빅">big 태그는 텍스트의 크기를 크게 설정합니다. CSS가 그 기능을 대신하기 때문에 현재는 사용하지 않는 태그입니다.</li>
+                    <li data-name="blockquot" data-topic="인용문">blockquote 태그는 긴 문장의 인용문을 설정합니다.</li>
+                    <li data-name="blink" data-topic="블링크">blink 태그는 텍스트를 깜박이게 설정합니다. </li>
+                    <li data-name="body" data-topic="바디">body 태그는 해당 HTML 문서의 텍스트, 하이퍼링크, 이미지, 리스트 등과 같은 모든 콘텐츠를 포함하는 영역을 정의할 때 사용합니다.</li>
+                    <li data-name="br" data-topic="줄바꿈">br 태그는 텍스트 줄바꿈이 필요할 때 설정합니다.</li>
+                    <li data-name="button" data-topic="버튼">button 태그는 클릭 할 수 있는 버튼을 설정합니다.</li>
+                    <li data-name="canvas" data-topic="캔버스">canvas 태그는 비트맵 방식의 그림을 설정합니다</li>
+                    <li data-name="caption" data-topic="캡션">caption 태그는 표의 제목을 설정합니다.</li>
+                    <li data-name="center" data-topic="센터">center 태그는 텍스트를 가운데 정렬합니다. CSS 속성이 기능을 대신하고 있기 때문에 현재는 사용하지 않습니다.</li>
+                    <li data-name="cite" data-topic="사이트">cite 태그는 저작물의 출처 표기를 설정합니다.</li>
+                    <li data-name="code" data-topic="코드">code 태그는 코드를 나타내는 텍스트를 설정합니다.</li>
+                    <li data-name="col" data-topic="콜">col 태그는 colgroup 요소에 속하는 각 열의 속성을 설정합니다.</li>
+                    <li data-name="colgroup" data-topic="콜그룹">colgroup 태그는 표의 열을 묶는 그룹을 설정합니다.</li>
+                    <li data-name="data" data-topic="데이터">data 태그는 주어진 요소의 데이터 값을 설정합니다.</li>
+                    <li data-name="datalist" data-topic="데이터리스트">datalist 태그는 선택 목록과 자동 완성 기능을 설정합니다.</li>
+                    <li data-name="dd" data-topic="항목">dd 태그는 설명 목록의 항목을 설정합니다.</li>
+                    <li data-name="del" data-topic="삭제">del 태그는 문서의 삭제된 텍스트를 설정합니다.</li>
+                    <li data-name="details" data-topic="디테일">details 태그는 접기/펼치기 목록을 설정합니다. 컨텐츠 요소를 숨기거나 보여줄 수 있습니다.</li>
+                    <li data-name="dfn" data-topic="정의">dfn 태그는 용어를 정의할 때 설정합니다.</li>
+                    <li data-name="dialog" data-topic="다이얼로그">dialog 태그는 팝업 정보을 설정합니다.</li>
+                    <li data-name="dir" data-topic="디렉토리">dir 태그는 파일 및 폴더의 디렉토리를 설정합니다. 현재는 사용하지 않습니다.</li>
+                    <li data-name="div" data-topic="구역">div 태그는 문서의 영역을 나누거나 그룹화 할 때 설정합니다.</li>
+                    <li data-name="dl" data-topic="목록">dl 태그는 설명 목록을 설정합니다.</li>
+                    <li data-name="dt" data-topic="목록">dt 태그는 설명 목록 항목의 제목을 설정합니다.</li>
+                    <li data-name="em" data-topic="강조">em 태그는 텍스트를 강조할 때 설정합니다.</li>
+                    <li data-name="embed" data-topic="외부">embed 태그는 외부 콘텐츠를 사용할 수 있도록 설정합니다.</li>
+                    <li data-name="fieldset" data-topic="필드셋">fieldset 태그는 폼 컨트롤 요소의 내부 영역을 설정합니다.</li>
+                    <li data-name="figcaption" data-topic="피그캡션">figcaption 태그는 figure 요소의 설명 또는 제목을 설정합니다.</li>
+                    <li data-name="figure" data-topic="피규어">figure 태그는 인용, 도표, 사진, 코드 등의 독립적인 콘텐츠를 설정합니다.</li>
+                    <li data-name="font" data-topic="폰트">font 태그는 폰트의 크기, 색, 종류를 설정합니다.</li>
+                    <li data-name="footer" data-topic="푸터">footer 태그는 사이트 관련 정보 및 관련 링크 콘텐츠 섹션을 설정합니다.</li>
+                    <li data-name="form" data-topic="폼">form 태그는 웹 서버에 정보를 제공하는 폼 컨트롤 유형을 설정합니다.</li>
+                    <li data-name="frame" data-topic="프레임">frame 태그는 다른 HTML문서가 표시 될 수 있는 특정 영역을 설정합니다.</li>
+                    <li data-name="frameset" data-topic="프레임셋">frameset 태그는 레이아웃 구성을 위한 프레임을 설정합니다.</li>
+                    <li data-name="h1" data-topic="제목">h1~h6 태그는 섹션의 제목 설정합니다.</li>
+                    <li data-name="head" data-topic="헤드">head 태그는 제목과 스크립트, 스타일 시트, 메타 정보 등을 제공합니다.</li>
+                    <li data-name="header" data-topic="헤더">header 태그는 사이트의 소개 및 메뉴 그룹을 나타내는 섹션을 설정합니다.</li>
+                    <li data-name="hgroup" data-topic="그룹">hgroup 태그는 제목 요소 그룹화를 설정합니다.</li>
+                    <li data-name="hr" data-topic="구분">hr 태그는 단란 요소간의 주제별 구분을 설정합니다.</li>
+                    <li data-name="html" data-topic="문서">html 태그는 웹 문서의 최상위 요소 문서의 루트를 나타냅니다.</li>
+                    <li data-name="i" data-topic="아이">i 태그는 특별한 이유로 평범한 글자와 구분하기 위해 설정합니다.</li>
+                    <li data-name="iframe" data-topic="프레임">iframe 태그는 웹 문서에 다른 문서를 포함하는데 사용합니다.</li>
+                    <li data-name="img" data-topic="이미지">img 태그는 웹 문서에 이미지를 정의합니다.</li>
+                    <li data-name="input" data-topic="인풋">input 태그는 데이터를 입력할 수 있는 폼 컨트롤을 정의합니다.</li>
+                    <li data-name="ins" data-topic="인서트">ins 태그는 문서에 삽입된 텍스트를 설정합니다</li>
+                    <li data-name="kbd" data-topic="키보드">kbd 태그는 키보드 입력요소를 나타내는 텍스트를 정의합니다.</li>
+                    <li data-name="keygen" data-topic="키보드">keygen 태그는 보안키를 생성하고 컨트롤합니다.</li>
+                    <li data-name="label" data-topic="라벨">label 태그는 해당 input 요소의 제목을 설정합니다.</li>
+                    <li data-name="legend" data-topic="레전드">legend 태그는 fieldset 요소 영역의 설명을 설정합니다.</li>
+                    <li data-name="li" data-topic="리스트">li 태그는 목록의 항목을 나타내는 태그입니다.</li>
+                    <li data-name="link" data-topic="링크">link 태그는 외부 파일 연결 할 때 설정합니다.</li>
+                    <li data-name="main" data-topic="메인">main 태그는 문서의 주요 콘텐츠를 정의합니다.</li>
+                    <li data-name="map" data-topic="맵">map 태그는 이미지 맵을 정의합니다.</li>
+                    <li data-name="mark" data-topic="마크">mark 태그는 참조용 표시를 정의합니다.</li>
+                    <li data-name="marquee" data-topic="마크">marquee 태그는 텍스트의 스크롤과 움직임을 정의합니다.</li>
+                    <li data-name="menu" data-topic="메뉴">menu 태그는 메뉴 리스트를 정의합니다.</li>
+                    <li data-name="menuitem" data-topic="메뉴">menuitem 태그는 메뉴 리스트 항목을 정의합니다.</li>
+                    <li data-name="meta" data-topic="메타">meta 태그는 웹 문서에 대한 정보를 제공합니다.</li>
+                    <li data-name="meter" data-topic="미터">meter 태그는 범위를 측정하는 게이지 정보를 정의합니다.</li>
+                    <li data-name="nav" data-topic="내비">nav 태그는 내부 페이지 및 외부 페이지에 대한 탐색 링크를 제공하는 페이지 섹션을 설정합니다.</li>
+                    <li data-name="noframes" data-topic="프레임">noframes 태그는 프레임이 지원되지 않을 경우 대체 메세지를 표시합니다.</li>
+                    <li data-name="noscript" data-topic="스크립트">noscript 태그는 스크립트를 지원하지 않는 브라우저를 위한 대체 태그입니다.</li>
+                    <li data-name="object" data-topic="오브젝트">object 태그는 웹 문서에 포함된 멀티미디어 요소를 정의합니다.</li>
+                    <li data-name="ol" data-topic="목록">ol 태그는 순서가 있는 목록형 태그입니다.</li>
+                    <li data-name="optgroup" data-topic="그룹">optgroup 태그는 select 메뉴 option 리스트의 그룹화를 설정합니다</li>
+                    <li data-name="option" data-topic="옵션">option 태그는 select 요소의 항목을 정의합니다.</li>
+                    <li data-name="output" data-topic="아웃풋">output 태그는 사용자에 컨트롤에 따라 결과값을 계산으로 보여주는 요소입니다.</li>
+                    <li data-name="p" data-topic="단락">p  태그는 단락을 나타냅니다. 문단은 하나로 묶을 수 있는 짧막한 단위를 말하며, 단락은 하나 하나의 짧은 토막이라고 말 할 수 있습니다.</li>
+                    <li data-name="param" data-topic="파람">param 태그는 object 태그의 매개변수를 정의합니다.</li>
+                    <li data-name="picture" data-topic="픽쳐">picture 태그는 화면 크기에 따라 이미지를 정의합니다.</li>
+                    <li data-name="pre" data-topic="프리">pre 태그는 마크업 소스를 화면 그대로 표현합니다.</li>
+                    <li data-name="progress" data-topic="프로그레스">progress 태그는 작업의 진행 상태를 표시하는 바를 나타냅니다.</li>
+                    <li data-name="q" data-topic="큐">q 태그는 짧은 글을 인용할 때 사용합니다. </li>
+                    <li data-name="rp" data-topic="알피">rp 태그는 루비 태그가 지원되지 않을 경우 괄호('(')를 표현해주는 역할을 합니다.</li>
+                    <li data-name="rt" data-topic="알티">rt  태그는 상단에 작은 주석 글씨를 나타냅니다.</li>
+                    <li data-name="rtc" data-topic="알티">rtc 태그는 텍스트 컨테이너 역할을 합니다.</li>
+                    <li data-name="ruby" data-topic="루비">ruby 태그는 루비 문자를 정의합니다.</li>
+                    <li data-name="s" data-topic="취소">s 요소는 텍스트에 취소선을 나타냅니다</li>
+                    <li data-name="samp" data-topic="샘프">samp 태그는 컴퓨터 프로그램으로 출력된 결과물을 나타내는 텍스트를 표현합니다.</li>
+                    <li data-name="script" data-topic="스크립트">script 태그는 실행 가능한 스크립트 코드를 포함하거나 외부 스크립트를 연결할 수 있습니다.</li>
+                    <li data-name="section" data-topic="섹션">section 태그는 주제별 그룹의 콘텐츠 섹션을 나타낼 때 사용합니다.</li>
+                    <li data-name="select" data-topic="셀렉트">select 태그는 선택 목록을 설정합니다.</li>
+                    <li data-name="small" data-topic="스몰">small 태그는 저작권 및 법적인 텍스트에 설정합니다.</li>
+                    <li data-name="source" data-topic="소스">source 태그는 picture, audio 요소 및 video 요소에 소스를 지정하는데 사용합니다. 닫는 태그가 없는 빈요소입니다.</li>
+                    <li data-name="span" data-topic="스팬">span 태그는 콘텐츠 요소를 표현하기 위한 인라인 요소이며, 의미가 없는 그룹화 요소입니다. </li>
+                    <li data-name="strike" data-topic="스트라이크">strike 태그는 현재 사용하지 않는 태그입니다. 텍스트 위에 취소선(수평선)을 표현하기 위해 사용한 태그이지만 현재는 del 태그 또는 s 태그가 그 역할을 대신하고 있습니다.</li>
+                    <li data-name="strong" data-topic="스트롱">strong 태그는 텍스트의 중요성을 강조할 때 설정합니다.</li>
+                    <li data-name="style" data-topic="스타일">style 태그는 웹 문서에 스타일 정보를 설정할 수 있습니다.</li>
+                    <li data-name="sub" data-topic="서브">sub 태그는 텍스트의 아래첨자를 사용할 때 쓰입니다.</li>
+                    <li data-name="summary" data-topic="서머리">summary 태그는 접기/펼치기 목록의 제목을 summary 태그를 통해 설정합니다.</li>
+                    <li data-name="sup" data-topic="서포트">sup 태그는 텍스트의 위첨자를 사용할 때 쓰입니다.</li>
+                    <li data-name="SVG" data-topic="에스비쥐">SVG 는 텍스트 기반의 표준 방식이며, HTML이나 CSS를 이용하여 사용 할 수 있습니다.</li>
+                    <li data-name="table" data-topic="테이블">table 태그는 표를 설정합니다.</li>
+                    <li data-name="tbody" data-topic="테이블">tbody 태그는 표의 본문 영역을 그룹화합니다.</li>
+                    <li data-name="td" data-topic="테이블">td 태그는 표의 열(셀)을 설정합니다.</li>
+                    <li data-name="template" data-topic="템플레이트">template 태그는 페이지가 로드 될 때 렌더링되지 않고 자바스크립트를 이용하여 HTML을 표현해주는 태그입니다.</li>
+                    <li data-name="textarea" data-topic="텍스트">textarea 태그는 여러줄의 텍스트를 편집할 수 있습니다.</li>
+                    <li data-name="tfoot" data-topic="테이블">tfoot 태그는 표의 푸터 영역을 그룹화합니다.</li>
+                    <li data-name="th" data-topic="테이블">th 태그는 행이나 열에 타이틀을 설정합니다.</li>
+                    <li data-name="thead" data-topic="테이블">thead 태그는 표의 헤더 영역을 그룹화합니다.</li>
+                    <li data-name="time" data-topic="타임">time 태그는 시간의 특정 기간을 나타낼 때 사용합니다.</li>
+                    <li data-name="title" data-topic="타이틀">title 태그는 브라우저의 제목 또는 탭에 표시되는 문서의 제목을 표시합니다.</li>
+                    <li data-name="tr" data-topic="테이블">tr 태그는 표의 행을 설정합니다.</li>
+                    <li data-name="track" data-topic="트랙">track 태그는 video 태그와 audio 태그의 자막을 설정합니다. </li>
+                    <li data-name="tt" data-topic="텍스트">tt 태그는 타자모양의 텍스트를 보여주기 위한 태그입니다.</li>
+                    <li data-name="u" data-topic="사용안함">u 태그는 HTML4에서는 밑줄을 표시하기 위해서 사용하였습니다.</li>
+                    <li data-name="ul" data-topic="목록">ul 태그는 일반적인 글 보다는 목록 형식의 글을 사용할 때 씁니다.</li>
+                    <li data-name="var" data-topic="변수">var  태그는 수학적인 변수나 프로그램의 변수를 쓸 때 사용합니다.</li>
+                    <li data-name="video" data-topic="비디오">video 웹 문서에 동영상을 재생하는 미디어 플레이어입니다.</li>
+                    <li data-name="wbr" data-topic="위치정의">wbr 태그는 줄바꿈 할 위치를 정의할 때 사용합니다.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="girl">
+            <img src="img/search_girl.png" alt="">
+        </div>
+        <div class="dog">
+            <img src="img/search_dog.png" alt="">
         </div>
     </div>
 
-    <div class="time"></div>
-    <div class="dday">앞으로 수료일은 <span class="dday-time">00</span>일 남았습니다.</div>
-    <div class="day"><span class="date"></span></div>
-
     <script>
-        //function func1(){
-        //    document.write("실행문입니다");
-        //}
-        //func1();
+        const searchBox = document.querySelector("#search-box");
+        const cssList = document.querySelectorAll(".list ul li");
 
-        //setInterval(function(){
-        //    document.write("실행문입니다.<br>");
-        //},1000);
-   
-        setInterval(() => {
-            const today = new Date();
+        // searchBox.addEventListener("keyup", function(){});
+        searchBox.addEventListener("keyup", () => {     //키보드 이벤트
+            const searchWord =searchBox.value;          //input 태그에 글씨를 쓰면 : 변수에 저장
 
-            const nowH = today.getHours();
-            const nowM = today.getMinutes();
-            const nowS = today.getSeconds();
+            //console.log(searchWord);
 
-            const degH = nowH * (360/12) + nowM * (360/12/60);
-            const degM = nowM * (360/60);
-            const degS = nowS * (360/60);
+            cssList.forEach((el) => {              //리스트 갯수
+                //console.log(el)
 
-            const eleH = document.querySelector(".clock-hour");
-            const eleM = document.querySelector(".clock-minute");
-            const eleS = document.querySelector(".clock-second");
+                const cssName = el. dataset. name;      //리스트에 name 속성 값을 가져옴
+                const cssTopic = el. dataset. topic;    //리스트에 topic 속성 값을 가져옴
 
-            eleH.style.transform = `rotate(${degH}deg)`;
-            eleM.style.transform = `rotate(${degM}deg)`;
-            eleS.style.transform = `rotate(${degS}deg)`;
+                //console.log(cssName);
+               // console.log(cssTopic);
 
-            //시간 표시
-            const nowTime = today.toLocaleString();
-
-            const time = document.querySelector(".time");
-            time.innerHTML = nowTime;
-
-            //디데이
-
-            const dDay = new Date ("December 20, 2021");
-
-            let interval = today.getTime() - dDay.getTime();
-            interval = Math.floor(interval / (1000 * 60 * 60 * 24))
-
-            document.querySelector(".dday-time").innerHTML = interval;
-
-            //요일 표시 숙제
-            const day = today.getDay();
-            const dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일']
-
-            document.querySelector(".day").innerHTML = "오늘은 " + dayList[day] + " 입니다";
-
-
-        }, 1000);
-
-        //const now = new Date();
-        //document.write("실행문입니다.");
-
-        //1번 즉시실행
-        //document.write("실행문입니다.");
-        
-        // (function(){
-        //     document.write("실행문입니디.")
-        // });
-
-        //익명
-        // const func =()=>{
-        //     document.write("실행문입니다.");
-        // }
-        // func();
-
-
-        //매개
-        //func = (str) =>{
-        //    document.write(str);
-        //}
-        //func("실행문입니다");
-
-
-        //리턴
-        // function =()=>{
-        //     const str = "실행문입니다.";
-        //     return str;
-        // }
-        // document.write(func());
+                if(  searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssTopic.charAt(0) ) {
+                    el. classList.remove("hide");
+                } else {
+                    el. classList.add("hide");
+                }
+            })
+        });
 
     </script>
 </body>
+
 </html>
