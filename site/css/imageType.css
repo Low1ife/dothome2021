@@ -138,7 +138,7 @@ body {
     margin-bottom: 40px;
 }
 .imgType03 .img-wrap {
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
     text-align: center;
 }
