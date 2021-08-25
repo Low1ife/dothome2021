@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>imageType</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -15,116 +15,42 @@
 </head>
 
 <body>
-    <!-- imgType01 -->
-    <section class="imgType">
-        <div class="container">
-            <div class="imgType01">
-                <h2>FUR SEAL</h2>
-                <div class="img-wrap">
-                    <div class="img">
-                        <img src="img/card12.jpg" alt="물개 1">
-                        <div class="img-box">
-                            <strong class="img-title">바다의 강아지 물개</strong>
-                            <span class="img-desc">남극이나 북태평양과 같은 한대의 바다에서 
-                                주로 서식한다.특히 해변가나 바위가 많은 지역에서 살고 있다.</span>
-                            <span class="img-keyword"><a href="#">자세히 보기</a></span>
-                        </div>
-                    </div>
-                    <div class="img">
-                        <img src="img/card13.jpg" alt="물개 2">
-                        <div class="img-box">
-                            <strong class="img-title">바다표범 , 바다사자</strong>
-                            <span class="img-desc">비슷한 형태인 바다표범과 혼동하는 경우가 있는데, 
-                                쉬운 구별법은 뒷다리의 형태를 확인하면 된다.</span>
-                            <span class="img-keyword"><a href="#">자세히 보기</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- image01 -->
+    <!-- 이미지를 표현하는 방법 
+         1 - 이미지를 img태그 (alt)   ==> 의미가 있을 때
+         2 - 이미지를 background 속성 ==> 의미가 없을 때(장식, 배경)
+         3 - 의미가 있는 이미지도 background 로 사용함 ==> 수정하기 편함  이미지 스프라이트사용
+         - 이미지 스프라이트를 사용하면 접근성이 깨짐, ==> IR 효과 (alt)
 
-    <!-- image02 -->
-    <section class="imgType">
-        <div class="container">
-            <div class="imgType02">
-                <h2>CAMEL</h2>
-                <div class="img-wrap">
-                    <div class="img">
-                        <img src="img/card14.jpg" alt="낙타1">
-                        <div class="img-box">
-                            <strong class="img-title1">CAMEL</strong>
-                        </div>
-                    </div>
-                    <div class="img">
-                        <img src="img/card15.jpg" alt="낙타2">
-                        <div class="img-box">
-                            <strong class="img-title2">CAMEL</strong>
-                            <span class="img-keyword"><a href="#">자세히 보기</a></span>
-                        </div>
-                    </div>
-                    <div class="img">
-                        <img src="img/card16.jpg" alt="낙타3">
-                        <div class="img-box">
-                            <strong class="img-title3">CAMEL</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //image02 -->
+         4. 이미지 해상도 ==> 이미지 분류 작업 ==> picture 태그, figure 태그
+    -->
 
-    <section class="imgtype">
+    <!-- imageType01 -->
+    <section class="imageType">
         <div class="container">
-            <div class="imgType03">
-                <h2>LANDMARK NEW YORK</h2>
-                <div class="img-wrap">
-                    <div class="img">
-                        <img src="img/card17.jpg" alt="센트럴 파크">
-                        <div class="img-box">
-                            <strong class="img-title">CENTRAL PARK</strong>
-                            <span class="img-desc">미국 뉴욕시 맨해튼에 있는 거대한 공원 1856년에 설립되었다.<br>“도심에서 자연으로 최단시간 탈출”이라는 옴스테드의 설계.......</span>
-                            <span class="img-keyword"><a href="#">자세히 보기</a></span>
+            <div class="imageType01">
+               <h2>FUL SEAL</h2>
+               <div class="image-wrap">
+                   <div class="image">
+                       <img src="img/card12.jpg" alt="물개1">
+                       <div class="image-cont">
+                            <h3 class="image-title">바다의 강아지 물개</h3>
+                            <p class="image-desc">남극이나 북태평양과 같은 한대의 바다에서 주로 서식한다.특히 해변가나 바위가 많은 지역에서 살고 있다.</p>
+                            <a class="image-btn red" href="#">자세히 보기</a>
+                       </div>
+                   </div>
+                   <div class="image">
+                        <img src="img/card13.jpg" alt="물개2">
+                        <div class="image-cont s2">
+                            <h3 class="image-title">바다사자 , 바다표범</h3>
+                            <p class="image-desc">비슷한 형태인 바다표범과 혼동하는 경우가 있는데,쉬운 구별법은 뒷다리의 형태를 확인하면 된다.</p>
+                            <a class="image-btn yellow" href="#">자세히 보기</a>
                         </div>
-                    </div>
-                </div>
-                <div class="img-wrap">
-                    <div class="img2">
-                        <img src="img/card18.jpg" alt="센트럴 파크">
-                        <div class="img-box2">
-                            <strong class="img-title">Empire State Buliding</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="img-wrap">
-                    <div class="img3">
-                        <img src="img/card19.jpg" alt="타임 스퀘어">
-                        <div class="img-box3">
-                            <strong class="img-title">Times Square</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="img-wrap">
-                    <div class="img4">
-                        <img src="img/card20.jpg" alt="록펠러">
-                        <div class="img-box4">
-                            <strong class="img-title">Rockfeller Center</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="img-wrap">
-                    <div class="img5">
-                        <img src="img/card21.jpg" alt="moma">
-                        <div class="img-box5">
-                            <strong class="img-title">MoMA</strong>
-                        </div>
-                    </div>
-                </div>
+                   </div>
+               </div>
             </div>
-        </div>
-    </section>
+         </div>  
+</section>
+<!-- imageType01 -->
 </body>
 
 </html>
