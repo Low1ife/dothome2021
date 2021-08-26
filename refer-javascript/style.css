@@ -45,10 +45,12 @@ img {
     margin: 5px;
 }
 */
-ul {
-    list-style: none;
+ol {
+    padding-left: 26px;
 }
-
+ul {
+    list-style : none;
+}
 a {
     text-decoration: none;
     color: #333;
@@ -204,7 +206,7 @@ a {
     transition: all 0.4s;
 }
 .menu li a:hover {
-    box-shadow: inset 0 -100px 0 #000;
+     box-shadow: inset 0 -100px 0 #000;
     color: #fff;
     border-style: solid;
 }
@@ -232,4 +234,48 @@ a {
     .sample pre {
         font-size: 14px;
     }
+}
+
+.view {
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+}
+.view ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.view li {
+    border: 1px solid #f2f2f2;
+    padding: 20px;
+    margin: 10px;
+    color : #222;
+    white-space: nowrap;
+}
+.view .red {
+    border : 1px dashed #a51a3d;
+    background-color: #f9f2f4;
+    color : #a51a3d;
+}
+.view .blue {
+    border : 1px dashed #3d90b7;
+    background-color: #e7f6fd;
+    color : #3d90b7;
+}
+.btn {
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+    border-top: 0;
+}
+.btn a {
+    border : 1px solid #e6e6e6;
+    padding: 7px 25px;
+    display: inline-block;
+    border-radius: 40px;
+    margin: 4px 0;
+    color : #222;
+    transition : all 0.2s;
+}
+.btn a:hover {
+    background: #000;
+    color : #fff;
 }
