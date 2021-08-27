@@ -22,6 +22,7 @@ fieldset,
 legend,
 textarea,
 p,
+em,
 blockquote,
 th,
 td,
@@ -65,6 +66,7 @@ strong {
 }
 em {
     font-weight: normal;
+    font-style: normal;
 }
 img {
     width: 100%;
