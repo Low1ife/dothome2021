@@ -13,6 +13,31 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <link rel="stylesheet" href="style.css">
+        <style>
+            .result h3{
+                margin-top: 10px;
+                padding: 5px;
+                border-radius: 10px;
+                background-color: #a2a2a2;
+                width: 100px;
+                text-align: center;
+                
+            }
+            .result div {
+                background-color: #272822;
+                color : #fff;
+                padding: 20px;
+                border-radius: 10px;
+                display: none;
+                box-sizing: border-box;
+            }
+            .result div {
+                display: none;
+            }
+            .result div.show {
+                display: block;
+            }
+        </style>
 </head>
 
 <body>
@@ -86,11 +111,19 @@
     document.write(z);  
 }
 </code></pre>
-        <div class="sample">
-            <a href="#" class="btn">결과보기</a>
-            
         </div>
+        <div class="result">
+            <h3><a href="#c">결과보기</a></h3>
+            <div>
+                <span class="result1-1"></span>
+                <span class="result1-2"></span>
+                <span class="result1-3"></span>
+            </div>
         </div>
+    </div>
+
+    <div>
+       
     </div>
 
 
@@ -508,18 +541,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
+
+
         //sample1
         //01. 변수 : 데이터 저장소
         {
             var x = 100; //변수 x에 숫자 100을 저장
             var y = 200; //변수 y에 숫자 200을 저장
-            var z = "javascirpt"; //변수 z에 문자 javascirpt 저장
+            var z = "javascirpt"; //변수 z에 문자 javascirpt 
+            // document.write("*** 01.변수 ***<br>")
+            // document.write(x, "<br>");
+            // document.write(y, "<br>");
+            // document.write(z, "<br><br>");
+// 
+            document.querySelector(".result1-1").innerHTML = x;
+            document.querySelector(".result1-2").innerHTML = y;
+            document.querySelector(".result1-3").innerHTML = z;
 
-
-            document.write("*** 01.변수 ***<br>")
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br><br>");
+            document.querySelector(".result h3").addEventListener("click" ,function(){
+            document.querySelector(".result div").classList.toggle("show")
+        });
         }
 
 
@@ -537,6 +578,10 @@
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
+
+            // document.querySelector(".result2-1").innerHTML = x;
+            // document.querySelector(".result2-2").innerHTML = y;
+            // document.querySelector(".result2-3").innerHTML = z;
         }
 
 
