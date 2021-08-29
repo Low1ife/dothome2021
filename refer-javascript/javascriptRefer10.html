@@ -146,11 +146,22 @@
         }
         @media( max-width : 800px){
             .ex1 {
-                position: relative;
+               flex-wrap: wrap;
             }
-            .ex1>div img {
-                position: absolute;
-                width: 30%;
+            .ex1>div  {
+                width: 40%;
+            }
+            .ex2 {
+               flex-wrap: wrap;
+            }
+            .ex2>div  {
+                width: 40%;
+            }
+            .ex3 {
+               flex-wrap: wrap;
+            }
+            .ex3>div  {
+                width: 40%;
             }
         }
     </style>
@@ -214,7 +225,7 @@
     <div id="sample01" class="sample">
         <h2>01. 요소 객체 : 클래스 메서드 : .classList.add() / remove()</address><span class="dot"></span></h2>
         <div class="view ex1">
-            <div><img src="../refer-jquery/img/image01.jpg" alt="이미지1"></div>
+            <div><img src="../refer-jquery/img/image01.jpg" srcset="" alt="이미지1"></div>
             <div><img src="../refer-jquery/img/image02.jpg" alt="이미지2"></div>
             <div><img src="../refer-jquery/img/image03.jpg" alt="이미지3"></div>
             <div><img src="../refer-jquery/img/image04.jpg" alt="이미지4"></div>
