@@ -244,3 +244,83 @@ body {
     width: 315px;
     margin-top: 220px;
 }
+
+
+/* cardType05 */
+
+.cardType05 {
+    padding: 100px 0;
+    font-family: 'S-CoreDream';
+}
+.cardType05 h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.cardType05 p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 85px;
+}
+.cardType05 .card-wrap {
+}
+.cardType05 .card-wrap .card-box {
+    display: inline-block;
+    justify-content: space-between;
+    border: 1px solid #eeeeee;
+    width: 370px;
+    height: 593px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.cardType05 .card-wrap .card-box img{
+    height: 370px;
+    margin-bottom: 30px;
+}
+.cardType05 .card-wrap .card-box .card-title{
+    padding-left: 40px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.cardType05 .card-wrap .card-box .new{
+    display: inline-block;
+    border: 1px solid #fa615b;
+    background: #fa615b;
+    color: #fff;
+    text-align: center;
+    padding: 0 7px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.cardType05 .card-wrap .card-box .card-desc{
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;  
+    display: block;
+}
+.cardType05 .card-wrap .card-box .buy{
+    border : 1px solid #05D686;
+    background: #05D686;
+    border-radius: 2px;
+    color: #fff;
+    padding: 5px 15px;
+    margin-left: 40px;
+}
+.cardType05 .card-wrap .card-box .button {
+    border : 1px solid #E3E3E3;
+    margin-left: 10px;
+    color: #000;
+    padding: 5px 15px;
+}
+.cardType05 .card-wrap .card-box .button1{
+    border : 1px solid #E3E3E3;
+    margin-left: 40px;
+    color: #000;
+    padding: 5px 15px;
+}
