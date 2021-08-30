@@ -9,9 +9,10 @@ body {
 
 /* sliderType01 */
 
-.sliderType01{
+.sliderType{
     font-family: 'GmarketSans';
 }
+
 
 .sliderType01 .slider:nth-child(1) {
     background-image: url(../img/slider1.jpg);
@@ -110,4 +111,8 @@ body {
     width: 9px;
     display: inline-block;
     margin-left: 7px;
+}
+
+.sliderType02{
+    font-family: 'GmarketSans';
 }
