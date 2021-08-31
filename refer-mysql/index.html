@@ -273,20 +273,26 @@ Query OK, 0 rows affected (0.00 sec)
 <pre class="language-js"><code>ALTER TABLE myMember2 ADD youAge int(3) not null comment "회원의 나이" AFTER youBirth;
     Query OK, 0 rows affected (0.03 sec)
 </code></pre>
+<pre class="language-js"><codemysql>mysql> ALTER TABLE myMember2 ADD youPhone int(10) not null comment "회원의 핸드폰번호" after youAge;
+    Query OK, 0 rows affected (0.04 sec)
+</code></pre>
+<pre class="language-js"><codemysql>mysql> ALTER TABLE myMember2 ADD youGender enum('m','w','x') default 'x' comment "남성은 m", "여성은 w" AFTER youPhone;
+    Query OK, 0 rows affected (0.04 sec)
+</code></pre>
 
                     <h3 id="intro5-2" class="pt30">필드 수정하기</h3>
                     <div class="bs-callout bs-callout-info">
                         ALTER TABLE 테이블명 MODIFY 수정할 필드명
                       </div>
-<pre class="language-js"><code>
-   
+<pre class="language-js"><code>mysql> ALTER TABLE myMember2 ADD MODIFY youGender enum('m','w');
+Query OK, 0 rows affected (0.04 sec)   
 </code></pre>
                     <h3 id="intro5-3" class="pt30">필드 삭제하기</h3>
                     <div class="bs-callout bs-callout-info">
                         ALTER TABLE 테이블명 DROP 삭제할 필드명
                     </div>
-<pre class="language-js"><code>
-
+<pre class="language-js"><code>ALTER TABLE myMember2 DROP youAge;
+Query OK, 0 rows affected (0.04 sec)
 </code></pre>
              
                 </div>
