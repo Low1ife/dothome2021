@@ -6,30 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Effect</title>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="bg bg11">
+<body class="bg bg16">
     <!-- info -->
     <div class="info">
         <h1>Javascript Menu Effect01</h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
+        <div class="info right">
+            <ul>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+            </ul>
+        </div>
+        <div class="info bottom">
+            <button>소스보기</button>
+        </div>
     </div>
 
-    <div class="info right">
-        <ul>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-        </ul>
-    </div>
-
-    <div class="info bottom">
-        <button>소스보기</button>
+   
+    <div id="cont-wrap">
+        <div class="cont-bg">
+            <div class="cont-box">
+<pre><code>
+dddddddddddd
+ </code></pre>
+                <button>닫기</button>
+            </div>
+        </div>
     </div>
     <!-- info -->
 
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+    $(".info button").click(function(){
+        $("#cont-wrap").removeClass().addClass("show");                           
+    });
+
+    $(".cont-box button").click(function(){
+        $("#cont-wrap").addClass("hide");
+    });
+    </script>
 </body>
 </html>
