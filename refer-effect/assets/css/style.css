@@ -415,7 +415,7 @@ figcaption {
 
 @media (max-width : 800px){
     #nav li{
-     float: left;
+      float: left;
     }
     #nav li a{
       position: static;
