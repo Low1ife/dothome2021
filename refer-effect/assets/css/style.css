@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* 넥슨 */
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXON Lv2 Gothic Light";
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXON Lv2 Gothic";
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
+  font-style: normal;
+}
+@font-face {
+  font-family: "NEXON Lv2 Gothic Bold";
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
+  font-style: normal;
+}
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+.bg1 {
+  height: 100vh;
+  background-image: url(../img/bg06@2.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #11e8bb;
+  background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
+}
+#main.game {
+  background: #a8edea;
+  background: linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%);
+}
+#main.menu {
+  background: linear-gradient(to bottom, #fad0c4 0%, #ffd1ff 100%);
+}
+#main.mouse {
+  background: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
+}
+#main.parallax {
+  background: linear-gradient(to bottom, #9795f0 0%, #fbc8d4 100%);
+}
+#main.slider {
+  background: linear-gradient(to bottom, #92fe9d 0%, #00c9ff 100%);
+}
+
+#contents h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+  white-space: nowrap;
+  font-family: "Six Caps", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(to bottom, #8200c9, #8200c9);
+}
+
+#nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 10px;
+  top: auto;
+}
+#nav li {
+  list-style: none;
+  display: inline;
+}
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  margin: 4px;
+  font-family: "NEXON Lv1 Gothic OTF";
+  box-shadow: inset 0 0 0 #fff;
+  transition: all 0.4s;
+}
+#nav li a:hover {
+  box-shadow: inset 0 -100px 0 #fff;
+  color: #6c4a70;
+}
