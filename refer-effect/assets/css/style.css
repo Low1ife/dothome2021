@@ -70,11 +70,66 @@ figcaption {
   padding: 0;
 }
 
-.bg1 {
+.bg {
   height: 100vh;
-  background-image: url(../img/bg06@2.jpg);
+  position: relative;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+}
+.bg::before {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.bg10 {
+  background-image: url(../img/bg10@2.jpg);
+}
+
+.bg11 {
+  background-image: url(../img/bg11@2.jpg);
+}
+
+.bg12 {
+  background-image: url(../img/bg12@2.jpg);
+}
+
+.bg13 {
+  background-image: url(../img/bg13@2.jpg);
+}
+
+.bg14 {
+  background-image: url(../img/bg14@2.jpg);
+}
+
+.bg15 {
+  background-image: url(../img/bg15@2.jpg);
+}
+
+.bg16 {
+  background-image: url(../img/bg16@2.jpg);
+}
+
+.bg17 {
+  background-image: url(../img/bg17@2.jpg);
+}
+
+.bg18 {
+  background-image: url(../img/bg18@2.jpg);
+}
+
+.bg19 {
+  background-image: url(../img/bg19@2.jpg);
+}
+
+.bg20 {
+  background-image: url(../img/bg20@2.jpg);
 }
 
 #main {
@@ -149,4 +204,67 @@ figcaption {
 #nav li a:hover {
   box-shadow: inset 0 -100px 0 #fff;
   color: #6c4a70;
+}
+
+.info {
+  color: #fff;
+  font-family: "NEXON Lv1 Gothic OTF";
+  padding: 20px;
+}
+.info.right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.info.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.info h1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  border-bottom: 1px dashed #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.info p {
+  font-weight: 400;
+  font-size: 16px;
+}
+.info li {
+  list-style: none;
+  display: inline;
+}
+.info li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px dashed #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.info li.active a {
+  background: #fff;
+  color: #000;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 0 0 #fff inset;
+  transition: all 0.4s;
+}
+button:hover {
+  box-shadow: 0 -50px 0 #fff inset;
+  color: #000;
 }
