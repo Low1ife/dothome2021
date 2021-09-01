@@ -412,18 +412,20 @@ figcaption {
   }
 }
 
-
-@media (max-width : 800px){
-    #nav li{
-      float: left;
-    }
-    #nav li a{
-      position: static;
-      line-height: 25px;
-      width:40px;
-      height: 25px;
-      font-size: 5px;
-      text-align: center;
-      margin-bottom: 60px;
-    }
+@media (max-width: 800px) {
+  #contents h1 {
+    font-size: 20vw;
+  }
+  #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #nav li a {
+    margin: 5px;
+    font-size: 12px;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+  }
 }
