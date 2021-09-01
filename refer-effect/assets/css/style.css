@@ -411,3 +411,19 @@ figcaption {
     transform: scale(0);
   }
 }
+
+
+@media (max-width : 800px){
+    #nav li{
+     float: left;
+    }
+    #nav li a{
+      position: static;
+      line-height: 25px;
+      width:40px;
+      height: 25px;
+      font-size: 5px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+}
