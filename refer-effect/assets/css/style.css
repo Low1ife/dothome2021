@@ -277,16 +277,19 @@ figcaption {
     padding: 14px;
   }
   .info h1 {
-    font-size: 30px;
-   
+    font-size: 16px;
   }
   .info p {
-    font-size: 20px;
+    font-size: 14px;
   }
   .info.right {
     display: none;
-    
   }
+  .info.bottom {
+    position: fixed;
+    bottom: 0;
+  }
+}
   .info li a {
     width: 40px;
     height: 40px;
@@ -297,7 +300,7 @@ figcaption {
   .info.bottom {
     margin-bottom: 100px;
   }
-}
+
 
 
 
