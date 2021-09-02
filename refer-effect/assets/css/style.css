@@ -284,8 +284,7 @@ figcaption {
     font-size: 20px;
   }
   .info.right {
-   margin-top: 120px;
-   left: 0;
+    display: none;
     
   }
   .info li a {
