@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <style>
         #tab-menu {
-            min-width: 600px;
+            max-width: 600px;
             background: rgb(118, 133, 175);
             position: absolute;
             left: 50%;
@@ -66,6 +66,23 @@
 
         .tab-cont>div p {
             line-height: 1.6;
+        }
+
+
+        @media (max-width: 800px) {
+            #tab-menu {
+                width: 80%;
+            }
+            .tab-btn li a {
+                padding: 13px 10px 10px 10px;
+                font-size: 14px;
+            }
+            .tab-cont > div h2 {
+                font-size: 16px;
+            }
+            .tab-cont > div p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
