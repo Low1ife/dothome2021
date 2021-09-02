@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tab-menu {
+            min-width: 600px;
+            background: rgb(118, 133, 175);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+            overflow: hidden;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #fff;
+
+        }
+
+        .tab-btn ul {
+            display: flex;
+        }
+
+        .tab-btn li {
+            width: 20%;
+            list-style: none;
+            text-align: center;
+        }
+
+        .tab-btn li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 15px 15px 15px;
+            display: block;
+        }
+
+        .tab-btn li.active a {
+            border-bottom: 3px solid rgb(61, 69, 128);
+            color: #000;
+        }
+
+        .tab-cont {
+            background: #fff;
+            padding: 20px;
+            color: #222;
+        }
+
+        .tab-cont>div {
+            display: none;
+        }
+
+        .tab-cont>div:first-child {
+            display: block;
+        }
+
+        .tab-cont>div h2 {
+            margin-bottom: 10px;
+        }
+
+        .tab-cont>div p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div id="tab-menu">
+        <div class="tab-btn">
+            &lt;ul>
+                <li class="active"><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">Jquery</a></li>
+                <li><a href="#">SCSS</a></li>
+            </ul>
+        </div>
+        <div class="tab-cont">
+            <div>
+                <h2>HTML</h2>
+                <p>HTML (Hypertext Markup Language,하이퍼텍스트 마크업 언어)는 프로그래밍 언어는 아니고, 우리가 보는 웹페이지가 어떻게 구조화되어 있는지 브라우저로
+                    하여금 알 수 있도록 하는 마크업 언어입니다</p>
+            </div>
+            <div>
+                <h2>CSS</h2>
+                <p>김우석</p>
+            </div>
+            <div>
+                <h2>Javascript</h2>
+                <p>김우석</p>
+            </div>
+            <div>
+                <h2>Jquery</h2>
+                <p>jQuery는 HTML의 클라이언트 사이드 조작을 단순화 하도록 설계된 크로스 플랫폼의 자바스크립트 라이브러리 입니다.</p>
+            </div>
+            <div>
+                <h2>SCSS</h2>
+                <p>김우석</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
