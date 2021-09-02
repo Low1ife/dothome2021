@@ -272,24 +272,6 @@ figcaption {
   color: #000;
 }
 
-@media (max-width: 800px) {
-  .info {
-    padding: 14px;
-  }
-  .info h1 {
-    font-size: 16px;
-  }
-  .info p {
-    font-size: 14px;
-  }
-  .info.right {
-    display: none;
-  }
-  .info.bottom {
-    position: fixed;
-    bottom: 0;
-  }
-}
   .info li a {
     width: 40px;
     height: 40px;
@@ -301,6 +283,27 @@ figcaption {
     margin-bottom: 100px;
   }
 
+  @media (max-width: 800px) {
+    .info {
+      padding: 14px;
+    }
+    .info h1 {
+      font-size: 16px;
+    }
+    .info p {
+      font-size: 14px;
+    }
+    .info.right {
+      display: none;
+    }
+    .info.bottom {
+      position: fixed;
+      bottom: 0;
+    }
+    .info.bottom button {
+      line-height: 1.7;
+    }
+  }
 
 
 
