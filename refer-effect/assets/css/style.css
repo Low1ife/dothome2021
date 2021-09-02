@@ -500,3 +500,15 @@ figcaption {
   display: block;
 }
 
+@media (max-width: 800px) {
+  .code-view {
+    width: 90vw;
+    font-size: 14px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    background: #f8f8f8;
+  }
+  .code-view .view-cont {
+    height: 55vh;
+  }
+}
