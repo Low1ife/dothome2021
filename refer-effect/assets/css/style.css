@@ -272,6 +272,36 @@ figcaption {
   color: #000;
 }
 
+@media (max-width: 800px) {
+  .info {
+    padding: 14px;
+  }
+  .info h1 {
+    font-size: 30px;
+   
+  }
+  .info p {
+    font-size: 20px;
+  }
+  .info.right {
+   margin-top: 120px;
+   left: 0;
+    
+  }
+  .info li a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    margin: 5px;
+  }
+  .info.bottom {
+    margin-bottom: 100px;
+  }
+}
+
+
+
 #cont-wrap {
   position: fixed;
   left: 0;
@@ -470,20 +500,3 @@ figcaption {
   display: block;
 }
 
-@media (max-width: 800px) {
-  #contents h1 {
-    font-size: 20vw;
-  }
-  #nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #nav li a {
-    margin: 5px;
-    font-size: 12px;
-    width: 60px;
-    height: 35px;
-    line-height: 35px;
-  }
-}
