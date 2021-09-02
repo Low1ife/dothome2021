@@ -23,7 +23,7 @@
 
 
         #tab-menu {
-            min-width: 600px;
+            max-width: 600px;
             background: rgb(118, 133, 175);
             position: absolute;
             left: 50%;
@@ -35,8 +35,6 @@
             color: #fff;
 
         }
-
-        .tab-btn {}
 
         .tab-btn ul {
             display: flex;
@@ -81,6 +79,23 @@
         .tab-cont>div p {
             line-height: 1.6;
         }
+
+        
+        @media (max-width: 800px) {
+            #tab-menu {
+                width: 80%;
+            }
+            .tab-btn li a {
+                padding: 13px 10px 10px 10px;
+                font-size: 14px;
+            }
+            .tab-cont > div h2 {
+                font-size: 16px;
+            }
+            .tab-cont > div p {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 
@@ -105,20 +120,20 @@
                         하여금 알 수 있도록 하는 마크업 언어입니다</p>
                 </div>
                 <div>
-                    <h2>김우석</h2>
-                    <p>김우석2</p>
+                    <h2>CSS</h2>
+                    <p>캐스케이딩 스타일 시트는 마크업 언어가 실제 표시되는 방법을 기술하는 스타일 언어로, HTML과 XHTML에 주로 쓰이며, XML에서도 사용할 수 있다. </p>
                 </div>
                 <div>
-                    <h2>김우석</h2>
-                    <p>김우석3</p>
+                    <h2>Javascript</h2>
+                    <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어이다. 이 언어는 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있다.</p>
                 </div>
                 <div>
                     <h2>Jquery</h2>
                     <p>jQuery는 HTML의 클라이언트 사이드 조작을 단순화 하도록 설계된 크로스 플랫폼의 자바스크립트 라이브러리 입니다.</p>
                 </div>
                 <div>
-                    <h2>김우석</h2>
-                    <p>김우석5</p>
+                    <h2>SCSS</h2>
+                    <p>Sass(Syntactically Awesome Style Sheets)의 3버전에서 새롭게 등장한 SCSS는 CSS 구문과 완전히 호환되도록 새로운 구문을 도입해 만든 Sass의 모든 기능을 지원하는 CSS의 상위집합(Superset) 입니다.</p>
                 </div>
             </div>
         </div>
