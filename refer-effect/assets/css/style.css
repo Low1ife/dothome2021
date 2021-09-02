@@ -84,7 +84,7 @@ figcaption {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: rgba(180, 176, 176, 0.7);
+  background: rgba(46, 45, 45, 0.7);
   z-index: -1;
 }
 
@@ -210,14 +210,17 @@ figcaption {
   color: #fff;
   font-family: "NEXON Lv1 Gothic OTF";
   padding: 20px;
-}
-.info.right {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
+.info.right {
+  left: auto;
+  right: 0;
+}
 .info.bottom {
-  position: absolute;
+  top: auto;
+  left: auto;
   bottom: 0;
   right: 0;
 }
@@ -229,14 +232,15 @@ figcaption {
   border-radius: 50px;
   box-shadow: 0 0 0 #fff inset;
   transition: all 0.4s;
+  cursor: pointer;
 }
 .info.bottom button:hover {
   box-shadow: 0 -50px 0 #fff inset;
   color: #000;
 }
 .info h1 {
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 40px;
   line-height: 1.6;
   border-bottom: 1px dashed #fff;
   display: inline-block;
@@ -244,7 +248,7 @@ figcaption {
 }
 .info p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 25px;
 }
 .info li {
   list-style: none;
@@ -278,17 +282,11 @@ figcaption {
   transform: scale(0);
 }
 #cont-wrap .cont-bg {
-  background: rgba(119, 92, 79, 0.657);
+  background: rgba(59, 59, 59, 0.657);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#cont-wrap .cont-box {
-  background: #fff;
-  border-radius: 5px;
-  padding: 3vw;
-  max-width: 60vw;
 }
 #cont-wrap .cont-box h2 {
   background: #fff;
@@ -308,6 +306,7 @@ figcaption {
   color: #fff;
   padding: 5px 10px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 #cont-wrap.show {
@@ -410,6 +409,65 @@ figcaption {
   100% {
     transform: scale(0);
   }
+}
+.code-view {
+  background: #fff;
+  width: 60vw;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.code-view .view-header {
+  border-bottom: 1px solid #f2f2f2;
+}
+.code-view .view-header .dot {
+  padding: 12px 10px 10px 15px;
+}
+.code-view .view-header .dot span {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin: 0 2px;
+  border-radius: 50%;
+}
+.code-view .view-header .dot span:nth-child(1) {
+  background-color: #f56565;
+}
+.code-view .view-header .dot span:nth-child(2) {
+  background-color: #f6e052;
+}
+.code-view .view-header .dot span:nth-child(3) {
+  background-color: #48bb78;
+}
+.code-view .view-title {
+  font-family: "NEXON Lv1 Gothic OTF";
+  border-bottom: 1px solid #f2f2f2;
+  padding: 0 10px;
+}
+.code-view .view-title li {
+  display: inline;
+  list-style: none;
+}
+.code-view .view-title li a {
+  text-decoration: none;
+  color: #cccccc;
+  padding: 10px 10px 12px;
+  margin: 0 5px;
+  display: inline-block;
+}
+.code-view .view-title li.active a {
+  border-top: 2px solid #667EEA;
+  color: #4a5568;
+}
+.code-view .view-cont {
+  height: 500px;
+  overflow-y: scroll;
+}
+.code-view .view-cont > div {
+  display: none;
+}
+.code-view .view-cont > div:nth-child(1) {
+  display: block;
 }
 
 @media (max-width: 800px) {
