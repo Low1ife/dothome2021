@@ -70,6 +70,14 @@ figcaption {
   padding: 0;
 }
 
+.iphone main {
+  padding: 10px;
+}
+
+.android main {
+  padding: 10px;
+}
+
 .bg {
   height: 100vh;
   position: relative;
@@ -272,31 +280,6 @@ figcaption {
   color: #000;
 }
 
-
-  @media (max-width: 800px) {
-    .info {
-      padding: 14px;
-    }
-    .info h1 {
-      font-size: 16px;
-    }
-    .info p {
-      font-size: 14px;
-    }
-    .info.right {
-      display: none;
-    }
-    .info.bottom {
-      position: fixed;
-      bottom: 0;
-    }
-    .info.bottom button {
-      line-height: 1.7;
-    }
-  }
-
-
-
 #cont-wrap {
   position: fixed;
   left: 0;
@@ -493,17 +476,4 @@ figcaption {
 }
 .code-view .view-cont > div:nth-child(1) {
   display: block;
-}
-
-@media (max-width: 800px) {
-  .code-view {
-    width: 90vw;
-    font-size: 14px;
-    overflow: hidden;
-    padding-bottom: 10px;
-    background: #f8f8f8;
-  }
-  .code-view .view-cont {
-    height: 55vh;
-  }
 }
