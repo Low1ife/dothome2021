@@ -1,0 +1,23 @@
+/* container */
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+body {
+    background-image: url(../img/naver01.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+section {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
