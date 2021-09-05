@@ -21,3 +21,14 @@
 .dark .btn-style {
     border-color: #fff;
 }
+
+
+
+
+.naver-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
