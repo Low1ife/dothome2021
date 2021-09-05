@@ -73,12 +73,12 @@
         }
 
         .cardType01 {
-            position: relative;
+            display: inline;
         }
 
         .cardType01 h2 {
             font-family: 'NanumSquare';
-            color : #fff;
+            color : #6d8bff;
             font-size: 50px;
             margin-top: 80px;
             font-weight: 800;
@@ -97,6 +97,8 @@
         .cardType01 .card01 .title{
             color: #fff;
             font-size: 20px;
+            padding-left: 40px;
+            margin-top: 20px;
         }
 
         .cardType01 .card01 .main {
@@ -104,17 +106,33 @@
             font-weight: 700;
             color: #fff;
             display: block;
+            padding-left: 40px;
+            margin-top: 10px;
         }
         .cardType01 .card01 .more {
             color: #fff;
             font-size: 20px;
+            padding-left: 40px;
+            margin-top: 30px;
         }
 
 
         .cardType01 .card01 .img img {
             width: 496px;
             height: 593px;
+            margin-top: 110px;
+            transform : scale(1);
+            transition: transform 0.4s;
         }
+
+        .cardType01 .card01 .img:hover img{
+            transform : scale(1.1);
+        }
+
+        .right {
+            display: inline-block;
+        }
+
 
         .card02 {
             font-family: 'NanumSquare';
@@ -123,31 +141,36 @@
             width: 496px;
             height: 570px;
             background-color: #2F3033;
-            float: left;
-            position: absolute;
         }
      
 
-        .cardType01 .card02 .title{
+        .card02 .title{
             color: #fff;
             font-size: 20px;
         }
 
-        .cardType01 .card02 .main {
+        .card02 .main {
             font-size: 30px;
             font-weight: 700;
             color: #fff;
             display: block;
         }
-        .cardType01 .card02 .more {
+        .card02 .more {
             color: #fff;
             font-size: 20px;
         }
 
 
-        .cardType01 .card02 .img img {
+        .card02 .img img {
             width: 496px;
             height: 294px;
+            margin-top: 125px;
+            transform : scale(1);
+            transition: transform 0.4s;
+        }
+
+        .card02 .img:hover img{
+            transform : scale(1.1);
         }
 
         .card03 {
@@ -160,26 +183,32 @@
             position: absolute;
         }
 
-        .cardType01 .card03 .title{
+        .card03 .title{
             color: #fff;
             font-size: 20px;
         }
 
-        .cardType01 .card03 .main {
+        .card03 .main {
             font-size: 30px;
             font-weight: 700;
             color: #fff;
             display: block;
         }
-        .cardType01 .card03 .more {
+        .card03 .more {
             color: #fff;
             font-size: 20px;
         }
 
-
-        .cardType01 .card03 .img img {
+        .card03 .img img {
             width: 496px;
             height: 294px;
+            margin-top: 125px;
+            transform : scale(1);
+            transition: transform 0.4s;
+        }
+
+        .card03 .img:hover img{
+            transform : scale(1.1);
         }
 
     </style>
@@ -232,33 +261,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-wrap">
-                    <div class="card02">
-                        <a href="#">
-                            <span class="title">인플루언서 홈</span>
-                            <strong class="main">취향을 자유롭게 표현하는 <br> 나만의 홈페이지</strong>
-                            <span class="more">자세히 알아보기</span>
-                        </a>
-                        <div class="img">
-                            <img src="img/t2.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-wrap">
-                    <div class="card03">
-                        <a href="#">
-                            <span class="title">인플루언서 홈</span>
-                            <strong class="main">취향을 자유롭게 표현하는 <br> 나만의 홈페이지</strong>
-                            <span class="more">자세히 알아보기</span>
-                        </a>
-                        <div class="img">
-                            <img src="img/t3.png" alt="">
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
+
+    <article class="right">
+        <div class="card-wrap">
+            <div class="card02">
+                <a href="#">
+                    <span class="title">인플루언서 홈</span>
+                    <strong class="main">취향을 자유롭게 표현하는 <br> 나만의 홈페이지</strong>
+                    <span class="more">자세히 알아보기</span>
+                </a>
+                <div class="img">
+                    <img src="img/t2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="card-wrap">
+            <div class="card03">
+                <a href="#">
+                    <span class="title">인플루언서 홈</span>
+                    <strong class="main">취향을 자유롭게 표현하는 <br> 나만의 홈페이지</strong>
+                    <span class="more">자세히 알아보기</span>
+                </a>
+                <div class="img">
+                    <img src="img/t3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </article>
 
 
 
