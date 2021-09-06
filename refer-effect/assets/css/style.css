@@ -535,7 +535,7 @@ figcaption {
     font-size: 14px;
   }
 
-  #modal .modal-bg .modal-cont button {
+  #cont-wrap .cont-bg .cont-box button {
     padding: 5px 20px;
   }
 }
@@ -742,7 +742,8 @@ figcaption {
   box-shadow: 0 0 0 #fff inset;
   transition: all 0.4s;
   cursor: pointer;
-  line-height: 15px;
+  text-align: center;
+  line-height: 20px;
   font-size: 15px;
 }
 .source button:hover {
