@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <style>
+        @media(max-width : 800px){
+            .paraInfo h1 a{
+                display: none;
+            }
+            .paraInfo p{
+                display: none;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="parallax">
+
+   <!-- header -->
+   <header class="paraInfo">
+    <h1><a href="index.html">Parallax Effect01 - javascript</a></h1>
+    <p>패랠랙스 스크로링 효과 - 메뉴 이동</p>
+</header>
+<!-- //header -->
+
+    <!-- main -->
+    <main>
+        <div class="paraScroll">window.scrollY : <span>0</span></div>
+        
+        <!-- //scroll -->
+        <div class="paraInfo2">
+            <ul>
+                <li>section1 offset() : <span class="offset1">0</span></li>
+                <li>section2 offset() : <span class="offset2">0</span></li>
+                <li>section3 offset() : <span class="offset3">0</span></li>
+                <li>section4 offset() : <span class="offset4">0</span></li>
+                <li>section5 offset() : <span class="offset5">0</span></li>
+                <li>section6 offset() : <span class="offset6">0</span></li>
+                <li>section7 offset() : <span class="offset7">0</span></li>
+                <li>section8 offset() : <span class="offset8">0</span></li>
+                <li>section9 offset() : <span class="offset9">0</span></li>
+            </ul>
+        </div>
+
+        <nav class="paraNav">
+            <ul>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
+            </ul>
+        </nav>
+        <!-- //nav -->
+
+        <div class="paraCont">
+            <section id="section1" class="content-item">
+                <span class="num">01</span>
+                <h2 class="title">Section1</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+            </section>
+            <!-- //section1 -->
+
+            <section id="section2" class="content-item">
+                <span class="num">02</span>
+                <h2 class="title">Section2</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p>
+            </section>
+            <!-- //section2 -->
+
+            <section id="section3" class="content-item">
+                <span class="num">03</span>
+                <h2 class="title">Section3</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">매 순간에 최선을 다하고, 끊임없이 변화한다.</p>
+            </section>
+            <!-- //section3 -->
+
+            <section id="section4" class="content-item">
+                <span class="num">04</span>
+                <h2 class="title">Section4</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">모든지 기본을 중요하게 생각한다.</p>
+            </section>
+            <!-- //section4 -->
+
+            <section id="section5" class="content-item">
+                <span class="num">05</span>
+                <h2 class="title">Section5</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">천 마디 말보단 하나의 행동이 더 값지다.</p>
+            </section>
+            <!-- //section5 -->
+
+            <section id="section6" class="content-item">
+                <span class="num">06</span>
+                <h2 class="title">Section6</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">조그만 성공에 만족하지 않으며, 방심을 경계한다.</p>
+            </section>
+            <!-- //section6 -->
+
+            <section id="section7" class="content-item">
+                <span class="num">07</span>
+                <h2 class="title">Section7</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다.</p>
+            </section>
+            <!-- //section7 -->
+
+            <section id="section8" class="content-item">
+                <span class="num">08</span>
+                <h2 class="title">Section8</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p>
+            </section>
+            <!-- //section8 -->
+
+            <section id="section9" class="content-item">
+                <span class="num">09</span>
+                <h2 class="title">Section9</h2>
+                <figure class="img-Wrap">
+                    <div class="img"></div>
+                </figure>
+                <p class="desc">열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.</p>
+            </section>
+            <!-- //section9 -->
+        </div>
+        <!-- //contents -->
+    </main>
+    <!-- //main -->
+
+    <!-- footer -->
+    <footer class="paraFooter">
+
+    </footer>
+    <!-- //footer -->
+
+    <!-- source -->
+    <div class="source">
+        <button>소스 보기</button>
+    </div>
+    <!-- //source -->
+
+    <!-- modal -->
+    <div id="cont-wrap">
+        <div class="cont-bg">
+            <div class="cont-box">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">Html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html"> &lt;div class="paraCont"&gt;
+&lt;section id="section1" class="content-item"&gt;
+    &lt;span class="num"&gt;01&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt;추구할 수 있는 용기가 있다면 우리의 모든 꿈은 이뤄질 수 있다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section1 --&gt;
+​
+&lt;section id="section2" class="content-item"&gt;
+    &lt;span class="num"&gt;02&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt; 열정을 잃지 않고 실패에서 실패로 걸어가는 것이 성공이다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section2 --&gt;
+​
+&lt;section id="section3" class="content-item"&gt;
+    &lt;span class="num"&gt;03&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt;애벌레가 세상이 끝났다고 생각하는 순간 나비로 변했다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section3 --&gt;
+​
+&lt;section id="section4" class="content-item"&gt;
+    &lt;span class="num"&gt;04&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt;나는 실패한 게 아니다. 나는 잘 되지 않는 방법 1만 가지를 발견한 것이다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section4 --&gt;
+​
+&lt;section id="section5" class="content-item"&gt;
+    &lt;span class="num"&gt;05&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt; 게으른 예술가가 만든 명작은 없다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section5 --&gt;
+​
+&lt;section id="section6" class="content-item"&gt;
+    &lt;span class="num"&gt;06&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt;사람들이 인생에서 실패하는 가장 큰 이유는 친구, 가족, 이웃들의 말을 듣기 때문이다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section6 --&gt;
+​
+&lt;section id="section7" class="content-item"&gt;
+    &lt;span class="num"&gt;07&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt;위대한 일들을 이루기 전에 스스로에게 위대한 일들을 기대해야 한다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section7 --&gt;
+​
+&lt;section id="section8" class="content-item"&gt;
+    &lt;span class="num"&gt;08&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt;높은 목표를 세우고, 스스로 채찍질 한다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section8 --&gt;
+​
+&lt;section id="section9" class="content-item"&gt;
+    &lt;span class="num"&gt;09&lt;/span&gt;
+    &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+    &lt;figure class="img-Wrap"&gt;
+        &lt;div class="img"&gt;&lt;/div&gt;
+    &lt;/figure&gt;
+    &lt;p class="desc"&gt;높은 목표를 세우고, 스스로 채찍질 한다.&lt;/p&gt;
+&lt;/section&gt;
+&lt;!-- //section9 --&gt; 
+</code></pre> 
+                        </div>
+                        <div class="css">
+<pre><code class="language-css">
+.parallax {
+    background: #222;
+    color: #fff;
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.paraScroll {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.4);
+    color : #fff;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.paraInfo2 {
+    position: fixed;
+    left: 20px;
+    bottom: 70px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.4);
+    color : #fff;
+    font-size: 12px;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.8;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+.paraNav {
+    position: fixed;
+    right: 20px; top: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.4);
+    padding: 15px 20px;
+    border-radius: 50px;
+
+    li {
+        display: inline-block;
+        list-style: none;
+
+        a{
+            color : #fff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px;
+            width: 30px; height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        &.active a {
+            background: #fff;
+            color : #000;
+            border-radius: 50%;
+        }
+    }
+}
+
+.paraInfo {
+    padding: 20px;
+    h1 {
+        display: inline-block;
+        font-size: 30px;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 8px;
+        font-weight: 700;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+.paraCont {
+    width: 100%;
+    overflow: hidden;
+
+    .content-item {
+        width: 1000px;
+        max-width: 70vw;
+        // background: rgba(255,255,255,0.3);
+        margin: 30vw 0;
+        padding-top: 10vw;
+        text-align: right;
+        position: relative;
+        .num {
+            font-family: 'Lato';
+            font-weight: 100;
+            font-size: 25vw;
+            opacity: 0.07;
+            position: absolute;
+            right: -5vw; top: -9vw;
+        }
+        .title {
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        .img-Wrap {
+            width: 100%;
+            padding-bottom: 56%;
+            background: #000;
+            position: relative;
+            .img {
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                filter : saturate(0%);
+                transition : all 1s;
+
+                &:hover {
+                    filter :saturate(100%);
+                }
+            }
+        }
+        .desc {
+            font-size: 3vw;
+            line-height: 1.4;
+            margin-top: -6vw;
+            margin-right: -3vw;
+            position: relative;
+            z-index: 100;
+            word-break: keep-all;
+        }
+        &:nth-child(even){
+            margin-left: auto;
+            text-align: left;
+            .num {
+                right: auto;
+                left: -5vw;
+            }
+            .desc {
+                margin-right: auto;
+                margin-left: -3vw;
+            }
+        }
+    }
+}
+@for $i from 1 through 9 {
+    .content-item {
+        &:nth-child(#{$i}){
+            .img {
+                background-image: url(../img/bg#{$i}.jpg);
+            }
+        }
+    }
+}
+</code></pre> 
+                        </div>
+                        <div class="javascript">
+<pre><code class="language-javascript"> $(".paraNav ul li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".paraCont > section").eq(index);
+    let offset = section.offset().top;
+    $("html,body").animate({
+        scrollTop: offset
+    }, 600)
+});
+
+
+$(window).scroll(function () {
+    let scrollTop = $(window).scrollTop();
+
+    $(".paraScroll span").text(parseInt(scrollTop));
+
+    //each()
+    $(".content-item").each(function (index) {
+        if (scrollTop >= $(this).offset().top - 2) {
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        }
+    });
+
+
+
+    //info
+    $(".paraScroll span").text(parseInt(scrollTop));
+
+    
+    for (let i = 1; i &lt; 10; i++) {
+        $(".offset" + i).text(parseInt($("#section" + i).offset().top) + "px");
+    }
+});
+</code></pre> 
+                        </div>
+                    </div>
+                </div>
+                
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+
+    <!-- script -->
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        // $(".paraNav ul li").click(function(e){
+        //     e.preventDefault();
+        //     let target = $(this);
+        //     let index = target.index();
+        //     let section = $(".paraCont > section").eq(index);
+        //     let offset = section.offset().top;
+        //     $("html, body").animate({ scrollTop : offset }, 600);
+        // });
+
+        document.querySelectorAll(".paraNav ul li a").forEach(el => {
+            el.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        
+        window.addEventListener("scroll", function(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+            if( scrollTop >= document.getElementById("section1").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(1)").classList.add("active");
+            }
+            if( scrollTop >= document.getElementById("section2").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(2)").classList.add("active");
+            }
+            if( scrollTop >= document.getElementById("section3").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(3)").classList.add("active");
+            }
+            if( scrollTop >= document.getElementById("section4").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(4)").classList.add("active");
+            }
+            if( scrollTop >= document.getElementById("section5").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(5)").classList.add("active");
+            }
+            if( scrollTop >= document.getElementById("section6").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(6)").classList.add("active");
+            }
+            if( scrollTop >= document.getElementById("section7").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(7)").classList.add("active");
+            }
+            if( scrollTop >= document.getElementById("section8").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(8)").classList.add("active");
+            }
+            if( scrollTop >= document.getElementById("section9").offsetTop -2 ){
+                document.querySelectorAll(".paraNav ul li").forEach( el => {
+                    el.classList.remove("active")
+                });
+                document.querySelector(".paraNav ul li:nth-child(9)").classList.add("active");
+            }
+
+            //info
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
+
+            // document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
+            // document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
+            // document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
+            // document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
+            // document.querySelector(".offset5").innerText = parseInt(document.getElementById("section5").offsetTop) + "px";
+            // document.querySelector(".offset6").innerText = parseInt(document.getElementById("section6").offsetTop) + "px";
+            // document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
+            // document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
+            // document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
+
+            for( let i=1; i<10; i++ ){
+                document.querySelector(".offset"+i).innerText = parseInt(document.getElementById("section"+i).offsetTop) + "px";
+            }
+        });
+
+    </script>
+</body>
+</html>
