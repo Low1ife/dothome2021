@@ -83,6 +83,9 @@
             .tab-cont > div p {
                 font-size: 14px;
             }
+            .info.right {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -310,6 +313,16 @@ tabBtn.forEach((element, index) => {
             // animate();
             agentCheck();
         }
+
+        document.querySelector(".info button").addEventListener("click" , function(){
+            document.querySelector("#cont-wrap").classList.add("show");
+            document.querySelector("#cont-wrap").classList.remove("hide");
+        });
+     
+        document.querySelector(".cont-box button").addEventListener("click" , function(){
+            document.querySelector("#cont-wrap").classList.add("hide");
+        });
+
 
 
 
