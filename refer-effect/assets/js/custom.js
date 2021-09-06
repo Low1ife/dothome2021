@@ -63,16 +63,16 @@
 
 
     // Modal button animation
-    //function modal(){
-        // document.querySelector(".info button").addEventListener("click" , function(){
-        //     document.querySelector("#cont-wrap").classList.add("show");
-        //     document.querySelector("#cont-wrap").classList.remove("hide");
-        // });
+    function modal(){
+        document.querySelector(".info button").addEventListener("click" , function(){
+            document.querySelector("#cont-wrap").classList.add("show");
+            document.querySelector("#cont-wrap").classList.remove("hide");
+        });
      
-        // document.querySelector(".cont-box button").addEventListener("click" , function(){
-        //     document.querySelector("#cont-wrap").classList.add("hide");
-        // });
-    //}
+        document.querySelector(".cont-box button").addEventListener("click" , function(){
+            document.querySelector("#cont-wrap").classList.add("hide");
+        });
+    }
 
 
 
