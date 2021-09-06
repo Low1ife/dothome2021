@@ -478,6 +478,67 @@ figcaption {
   display: block;
 }
 
+@media (max-width: 900px) {
+  #contents h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+  }
+
+  #nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: unset;
+    bottom: 10px;
+    width: 100%;
+  }
+
+  #nav li a {
+    font-size: 12px;
+    width: 60px;
+    height: 32px;
+    line-height: 35px;
+  }
+
+  .info h1 {
+    font-size: 14px;
+  }
+
+  .info p {
+    font-size: 12px;
+  }
+
+  .info li a {
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .info.bottom {
+    bottom: 10px;
+  }
+
+  .code-view {
+    width: 90vw;
+    overflow: hidden;
+  }
+
+  .code-view .view-cont {
+    font-size: 12px;
+  }
+
+  .code-view .view-title {
+    font-size: 14px;
+  }
+
+  #modal .modal-bg .modal-cont button {
+    padding: 5px 20px;
+  }
+}
 .parallax {
   background: #222;
   color: #fff;
