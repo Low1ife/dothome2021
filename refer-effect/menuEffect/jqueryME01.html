@@ -321,6 +321,15 @@ tabView.click(function () {
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+
+        document.querySelector(".info button").addEventListener("click" , function(){
+            document.querySelector("#cont-wrap").classList.add("show");
+            document.querySelector("#cont-wrap").classList.remove("hide");
+        });
+     
+        document.querySelector(".cont-box button").addEventListener("click" , function(){
+            document.querySelector("#cont-wrap").classList.add("hide");
+        }); 
         const tabBtn = $(".tab-btn ul li") //5개의 버튼을 변수에 저장
         const tabCont = $(".tab-cont > div") // 5개의 컨텐츠 변수에 저장
 
