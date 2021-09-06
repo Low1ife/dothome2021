@@ -448,6 +448,68 @@ $gradient6 :  linear-gradient(to bottom, #92fe9d 0%, #00c9ff 100%);
         }
     }
 }
+@media (max-width: 900px) {
+    #contents h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      font-size: 15vw;
+    }
+    #nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      text-align: center;
+      -webkit-box-align: unset;
+          -ms-flex-align: unset;
+              align-items: unset;
+      bottom: 10px;
+      width: 100%;
+    }
+    #nav li a {
+      font-size: 12px;
+      width: 60px;
+      height: 32px;
+      line-height: 35px;
+    }
+    .info h1 {
+      font-size: 14px;
+    }
+    .info p {
+      font-size: 12px;
+    }
+    .info li a {
+      font-size: 10px;
+      width: 18px;
+      height: 18px;
+    }
+    .info.bottom {
+      bottom: 10px;
+    }
+    .code-view {
+      width: 90vw;
+      overflow: hidden;
+    }
+    .code-view .view-cont {
+      font-size: 12px;
+    }
+    .code-view .view-title {
+      font-size: 14px;
+    }
+    #modal .modal-bg .modal-cont button {
+      padding: 5px 20px;
+    }
+  }
+
+
 
 
 // parallax
