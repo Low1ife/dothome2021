@@ -484,17 +484,11 @@ figcaption {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 15vw;
+    font-size: 20vw;
   }
 
-  #nav {
+  #nav ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    align-items: unset;
-    bottom: 10px;
-    width: 100%;
   }
 
   #nav li a {
@@ -537,6 +531,10 @@ figcaption {
 
   #cont-wrap .cont-bg .cont-box button {
     padding: 5px 20px;
+  }
+
+  .paraNav ul li a {
+    font-size: 12px;
   }
 }
 .parallax {
