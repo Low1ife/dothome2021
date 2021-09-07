@@ -664,7 +664,13 @@
          //info
          document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
 
-         // document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
+         for (let i = 1; i < 10; i++) {
+             document.querySelector(".offset" + i).innerText = parseInt(document.getElementById("section" +
+                 i).offsetTop) + "px";
+         }
+     });
+
+        // document.querySelector(".offset1").innerText = parseInt(document.getElementById("section1").offsetTop) + "px";
          // document.querySelector(".offset2").innerText = parseInt(document.getElementById("section2").offsetTop) + "px";
          // document.querySelector(".offset3").innerText = parseInt(document.getElementById("section3").offsetTop) + "px";
          // document.querySelector(".offset4").innerText = parseInt(document.getElementById("section4").offsetTop) + "px";
@@ -673,12 +679,6 @@
          // document.querySelector(".offset7").innerText = parseInt(document.getElementById("section7").offsetTop) + "px";
          // document.querySelector(".offset8").innerText = parseInt(document.getElementById("section8").offsetTop) + "px";
          // document.querySelector(".offset9").innerText = parseInt(document.getElementById("section9").offsetTop) + "px";
-
-         for (let i = 1; i < 10; i++) {
-             document.querySelector(".offset" + i).innerText = parseInt(document.getElementById("section" +
-                 i).offsetTop) + "px";
-         }
-     });
  </script>
 </body>
 
