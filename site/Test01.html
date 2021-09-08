@@ -1,12 +1,559 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>sliderTest</title>
+    <style>
+        #header {
+            width: 100%;
+            height: 70px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-container {
+            position: relative;
+            width: 96%;
+            margin: 0 auto;
+        }
+
+        .header-three {
+            text-align: center;
+        }
+
+        .header-three h1 {
+            font-family: 'S-CoreDream';
+            font-weight: 800;
+            position: absolute;
+            text-align: left;
+            line-height: 17px;
+            left: 20.5%;
+            top: 27%;
+        }
+
+        .header-three h1 a {
+            font-size: 16px;
+            color: #eee;
+        }
+
+        .header-three .tap li {
+            display: inline;
+        }
+
+        .header-three .tap li a {
+            font-family: 'NanumSquare';
+            padding: 0 27px;
+            color: #eee;
+            font-size: 17px;
+            line-height: 100px;
+        }
+
+        .header-three .login {
+            position: absolute;
+            right: 20.5%;
+            top: 0;
+        }
+
+        .header-three .login a {
+            font-family: 'NanumSquare';
+            line-height: 100px;
+            border: 1px solid #eee;
+            padding: 8px 13px;
+            border-radius: 30px;
+            margin-left: 10px;
+            color: #eee;
+        }
+
+
+        /* content */
+        .content .content-inner em {
+            color: #eee;
+            font-family: 'S-CoreDream';
+            font-weight: 800;
+            font-size: 70px;
+            padding-top: 100px;
+            line-height: 80px;
+            display: block;
+        }
+
+        .content .content-inner h2 {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: #eee;
+            font-size: 40px;
+            font-family: 'NanumSquare';
+        }
+
+        .content .content-inner span {
+            font-family: 'NanumSquare';
+            color: #eee;
+            line-height: 40px;
+            font-size: 25px;
+
+        }
+
+
+        /* slider */
+        .swiper3 {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .swiper-slide .slider-inner em {
+            color: #eee;
+            font-family: 'NanumSquare';
+            font-size: 17px;
+            font-weight: 700;
+            padding-top: 40px;
+            padding-left: 60px;
+            display: block;
+        }
+
+        .swiper-slide .slider-inner h3 {
+            color: #eee;
+            font-family: 'NanumSquare';
+            font-size: 30px;
+            font-weight: 700;
+            padding-top: 10px;
+            padding-left: 60px;
+            display: block;
+        }
+
+        .swiper-slide .slider-inner p {
+            color: #eee;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            font-size: 15px;
+            font-weight: 700;
+            padding-top: 20px;
+            padding-left: 60px;
+            display: block;
+        }
+
+
+        .swiper-wrapper .swiper-slide:nth-child(1) {
+            margin-top: 200px;
+            background-image: url(img/n1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 20px;
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-wrapper .swiper-slide:nth-child(2) {
+            margin-top: 200px;
+            background-image: url(img/n2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 20px;
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-wrapper .swiper-slide:nth-child(3) {
+            margin-top: 200px;
+            background-image: url(img/n3.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 20px;
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-wrapper .swiper-slide:nth-child(4) {
+            margin-top: 200px;
+            background-image: url(img/n4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 20px;
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-wrapper .swiper-slide:nth-child(5) {
+            margin-top: 200px;
+            background-image: url(img/n5.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 20px;
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-wrapper .swiper-slide:nth-child(6) {
+            margin-top: 200px;
+            background-image: url(img/n6.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 20px;
+            width: 100%;
+            height: 400px;
+        }
+
+
+        .swiper-pagination {
+            position: absolute;
+            color: #fff !important;
+            left: -40% !important;
+            margin-bottom: 50px;
+        }
+
+        .swiper-button-prev {
+            width: 15px;
+            height: 30px;
+            position: absolute;
+            display: block;
+            top: 40%;
+            left: 0 !important;
+            transform: translateY(200%);
+            color: #fff !important;
+        }
+
+        .swiper-button-next {
+            /* border: #000;
+            background: #000; */
+            border-radius: 50%;
+            width: 21px;
+            height: 41px;
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0 !important;
+            transform: translateY(200%);
+            color: #fff !important;
+        }
+
+        .cardType {
+            margin: 100px 0;
+            background-color: #fff;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .cardType01 h3 {
+            font-family: 'NanumSquare';
+            color: #fff;
+            margin-top: 80px;
+        }
+
+        .cardType {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 150px 0;
+        }
+
+        .cardType01 {
+            display: inline;
+        }
+
+        .cardType01 h2 {
+            font-family: 'NanumSquare';
+            color : #6d8bff;
+            font-size: 50px;
+            margin-top: 80px;
+            font-weight: 800;
+        }
+
+        .card01 {
+            font-family: 'NanumSquare';
+            margin-top: 50px;
+            border-radius: 20px;
+            width: 496px;
+            height: 870px;
+            background-color: #2F3033;
+            overflow: hidden;
+        }
+
+        .cardType01 .card01 .title{
+            color: #fff;
+            font-size: 20px;
+            padding-left: 40px;
+            margin-top: 20px;
+        }
+
+        .cardType01 .card01 .main {
+            font-size: 30px;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+            padding-left: 40px;
+            margin-top: 10px;
+        }
+        .cardType01 .card01 .more {
+            color: #fff;
+            font-size: 20px;
+            padding-left: 40px;
+            margin-top: 30px;
+        }
+
+
+        .cardType01 .card01 .img img {
+            width: 496px;
+            height: 593px;
+            margin-top: 110px;
+            transform : scale(1);
+            transition: transform 0.4s;
+        }
+
+        .cardType01 .card01 .img:hover img{
+            transform : scale(1.1);
+        }
+
+        .right {
+            display: inline-block;
+        }
+
+
+        .card02 {
+            font-family: 'NanumSquare';
+            margin-top: 50px;
+            border-radius: 20px;
+            width: 496px;
+            height: 570px;
+            background-color: #2F3033;
+        }
+     
+
+        .card02 .title{
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .card02 .main {
+            font-size: 30px;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+        }
+        .card02 .more {
+            color: #fff;
+            font-size: 20px;
+        }
+
+
+        .card02 .img img {
+            width: 496px;
+            height: 294px;
+            margin-top: 125px;
+            transform : scale(1);
+            transition: transform 0.4s;
+        }
+
+        .card02 .img:hover img{
+            transform : scale(1.1);
+        }
+
+        .card03 {
+            font-family: 'NanumSquare';
+            margin-top: 50px;
+            border-radius: 20px;
+            width: 496px;
+            height: 570px;
+            background-color: #2F3033;
+            position: absolute;
+        }
+
+        .card03 .title{
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .card03 .main {
+            font-size: 30px;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+        }
+        .card03 .more {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .card03 .img img {
+            width: 496px;
+            height: 294px;
+            margin-top: 125px;
+            transform : scale(1);
+            transition: transform 0.4s;
+        }
+
+        .card03 .img:hover img{
+            transform : scale(1.1);
+        }
+    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 </head>
+
 <body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-three">
+                <h1>
+                    <a href="#c">NAVER<br> INFLUCENCER CENTER</a>
+                </h1>
+                <nav class="tap">
+                    <ul>
+                        <li><a href="#c">인플루언서 안내</a></li>
+                        <li><a href="#c">광고 수익 혜택</a></li>
+                        <li><a href="#c">성장 지원 프로그램</a></li>
+                        <li><a href="#c">브랜드커넥트</a></li>
+                        <li><a href="#c">공지</a></li>
+                    </ul>
+                </nav>
+                <div class="login">
+                    <a href="#c">인플루언서로 로그인</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="content-inner">
+            <em>NAVER<br>INFLUCENCER CENTER</em>
+            <h2>인플루언서에게 필요한 모든 것</h2>
+            <span>네이버 인플루언서 센터는 여러분들에게 다양한 지원 프로그램을 운영하고 있습니다.<br> 더 큰 수익과 성장을 위한 다양한 혜택과 지원 프로그램을 지금
+                경험해보세요.</span>
+        </div>
+    </section>
+
+    <!-- sliderType03 -->
+    <section class="sliderType">
+        <div class="swiper3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>로고 전문가 최은빈과 함께하는</em>
+                        <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
+                        <p>지금 만나보세요</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>로고 전문가 최은빈과 함께하는</em>
+                        <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
+                        <p>지금 만나보세요</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>로고 전문가 최은빈과 함께하는</em>
+                        <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
+                        <p>지금 만나보세요</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>로고 전문가 최은빈과 함께하는</em>
+                        <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
+                        <p>지금 만나보세요</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>로고 전문가 최은빈과 함께하는</em>
+                        <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
+                        <p>지금 만나보세요</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-inner">
+                        <em>로고 전문가 최은빈과 함께하는</em>
+                        <h3>세상에서 제일 쉬운<br>나만의 로고 만들기</h3>
+                        <p>지금 만나보세요</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <!-- sliderType03 -->
+
+    <section class="cardType">
+        <div class="container">
+            <div class="cardType01">
+                <h2>인플루언서에게 <br> 제공되는<br> 광고수익과 혜택</h2>
+                <div class="card-wrap">
+                    <div class="card01">
+                        <a href="#">
+                            <span class="title">인플루언서 홈</span>
+                            <strong class="main">취향을 자유롭게 표현하는 <br> 나만의 홈페이지</strong>
+                            <span class="more">자세히 알아보기</span>
+                        </a>
+                        <div class="img">
+                            <img src="img/t1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <article class="right">
+        <div class="card-wrap">
+            <div class="card02">
+                <a href="#">
+                    <span class="title">인플루언서 홈</span>
+                    <strong class="main">취향을 자유롭게 표현하는 <br> 나만의 홈페이지</strong>
+                    <span class="more">자세히 알아보기</span>
+                </a>
+                <div class="img">
+                    <img src="img/t2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="card-wrap">
+            <div class="card03">
+                <a href="#">
+                    <span class="title">인플루언서 홈</span>
+                    <strong class="main">취향을 자유롭게 표현하는 <br> 나만의 홈페이지</strong>
+                    <span class="more">자세히 알아보기</span>
+                </a>
+                <div class="img">
+                    <img src="img/t3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </article>
+
     
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper3 = new Swiper('.swiper3', { //객체 생성자 함수
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
+
 </html>
