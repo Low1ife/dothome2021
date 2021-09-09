@@ -21,6 +21,73 @@
             z-index: -1;
         }
 
+
+        .mouseCont {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color : #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            cursor: none;
+        }
+        .mouseCont p {
+            font-size: 2.5vw;
+            line-height: 2.3;
+            font-weight: 300;
+        }
+        .mouseCont h2 {
+            font-size: 3vw;
+            font-weight: normal;
+        }
+        .mouseCont span {
+            font-style: normal;
+            border-bottom : 0.2vw dashed #fffed7;
+        }
+        .mouseCont em {
+            font-style: normal;
+            border-bottom : 0.2vw dashed #fffed7;
+            color : #fffed7; 
+        }
+        .cursor {
+            position: absolute;
+            left: 0; top: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            z-index: 9999;
+            background-color: rgba(255,255,255,0.1);
+            user-select: none;
+            pointer-events: none;
+            transition : 
+                background-color .2s,
+                border-color .2s,
+                border-radius .2s,
+                transform .6s;
+        }
+        .cursor.style1 {
+            background-color: rgba(255,165,0,0.4);
+            border-color : #fffed7;
+        }
+        .cursor.style2 {
+            background-color: rgba(211, 166, 84, 0.4);
+            border-color : #d8a452;
+            transform : rotateY(7200deg) scale(2);
+        }
+        .cursor.style3 {
+            background-color: rgba(228, 63, 126, 0.4);
+            border-color : #fff;
+            transform :  scale(3) rotateX(1080deg);
+        }
+        .cursor.style4 {
+            background-color: rgb(154, 224, 219);
+            border-color : rgb(47, 169, 206);
+            transform :  scale(3) ;
+        }
     </style>
 </head>
 
@@ -31,8 +98,8 @@
         <div class="cursor"></div>
 
         <article class="mouseCont">
-            <p>열정 없이 사느니 차라리 <em>죽는 게</em> 낫다.</p>
-            <h2>Rather be <em>dead</em> than coll</h2>
+            <p><span class="style1">열정</span> <span class="style2">없이</span> 사느니 차라리 <em>죽는 게</em> 낫다.</p>
+            <h2><span class="style3">Rather</span> be <em>dead</em> than <span class="style4">cool</span></h2>
         </article>
     </main>
     <!-- contents -->
@@ -64,14 +131,14 @@
     ​
     <div class="info left list">
         <ul>
-            <li>clientX : <span class="offset1">0</span></li>
-            <li>clientY : <span class="offset2">0</span></li>
-            <li>offsetX : <span class="offset3">0</span></li>
-            <li>offsetY : <span class="offset4">0</span></li>
-            <li>pageX : <span class="offset5">0</span></li>
-            <li>pageY : <span class="offset6">0</span></li>
-            <li>screenX : <span class="offset7">0</span></li>
-            <li>screenY : <span class="offset8">0</span></li>
+            <li>clientX : <span class="clientX">0</span></li>
+            <li>clientY : <span class="clientY">0</span></li>
+            <li>offsetX : <span class="offsetX">0</span></li>
+            <li>offsetY : <span class="offsetY">0</span></li>
+            <li>pageX : <span class="pageX">0</span></li>
+            <li>pageY : <span class="pageY">0</span></li>
+            <li>screenX : <span class="screenX">0</span></li>
+            <li>screenY : <span class="screenY">0</span></li>
         </ul>
     </div>
 
@@ -226,21 +293,102 @@ tabView.click(function () {
     <!-- info -->
 
 
-
-    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
 
-        document.querySelector(".info button").addEventListener("click" , function(){
-            document.querySelector("#cont-wrap").classList.add("show");
-            document.querySelector("#cont-wrap").classList.remove("hide");
+        // document.querySelector(".info button").addEventListener("click" , function(){
+        //     document.querySelector("#cont-wrap").classList.add("show");
+        //     document.querySelector("#cont-wrap").classList.remove("hide");
+        // });
+     
+        // document.querySelector(".cont-box button").addEventListener("click" , function(){
+        //     document.querySelector("#cont-wrap").classList.add("hide");
+        // }); 
+     
+        // 출력문
+        $(window).mousemove(function(e){
+            $(".clientX").text(e.clientX);  // 브라우저 X 좌 표 기준
+            $(".clientY").text(e.clientY);  // 브라우저 Y 좌 표 기준
+            $(".offsetX").text(e.offsetX);  // 요소 좌표
+            $(".offsetY").text(e.offsetY);  // 요소 Y 좌표
+            $(".pageX").text(e.pageX);      // 페이지 X 좌표
+            $(".pageY").text(e.pageY);
+            $(".screenX").text(e.screenX);
+            $(".screenY").text(e.screenY);
         });
-     
-        document.querySelector(".cont-box button").addEventListener("click" , function(){
-            document.querySelector("#cont-wrap").classList.add("hide");
-        }); 
-     
+
+        //마우스 움직이기
+        $(window).mousemove(function(e){
+            $(".cursor").css({left:e.clientX -25 , top: e.clientY - 25});
+
+            // $(".mouseCont em").mouseover(function(){
+            //     $(".cursor").addClass("active")
+            // })
+            // $(".mouseCont em").mouseout(function(){
+            //     $(".cursor").removeClass("active")
+            // })
+
+            // $(".mouseCont em").mouseenter(function(){
+            //     $(".cursor").addClass("active")
+            // })
+            // $(".mouseCont em").mouseleave(function(){
+            //     $(".cursor").removeClass("active")
+            // })
+            // hover 요소 위에 있을때 / 없을 때ㅔ
+
+            $(".mouseCont em").hover(function(){
+                $(".cursor").addClass("active")
+            } , function(){
+                $(".cursor").removeClass("active")
+            })
+
+            // $(".mouseCont .style1").hover(function(){
+            //     $(".cursor").addClass("style1")
+            // } , function(){
+            //     $(".cursor").removeClass("style1")
+            // })
+
+            // $(".mouseCont .style2").hover(function(){
+            //     $(".cursor").addClass("style2")
+            // } , function(){
+            //     $(".cursor").removeClass("style2")
+            // })
+
+            // $(".mouseCont .style3").hover(function(){
+            //     $(".cursor").addClass("style3")
+            // } , function(){
+            //     $(".cursor").removeClass("style3")
+            // })
+            
+            // $(".mouseCont .style4").hover(function(){
+            //     $(".cursor").addClass("style4")
+            // } , function(){
+            //     $(".cursor").removeClass("style4")
+            // })
+
+            // $(".mouseCont .style5").hover(function(){
+            //     $(".cursor").addClass("style5")
+            // } , function(){
+            //     $(".cursor").removeClass("style5")
+            // })
+
+            // for(let i =1; i<5; i++){
+            //     $(".mouseCont .style" + i).hover(function(){
+            //     $(".cursor").addClass("style" + i)
+            //     } , function(){
+            //     $(".cursor").removeClass("style" + i)
+            // })
+            // }
+
+            $(".mouseCont").each(function(index){
+                $(".mouseCont span").hover(function(){
+                    $(".cursor").addClass("stlye" + index)
+                })
+            })
+        });
     </script>
 </body>
 
