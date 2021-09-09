@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
+        integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NEXON Lv1 Gothic OTF';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+            margin-bottom: 400px;
+        }
+
+        h1 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        h1 a {
+            font-family: 'TmonMonsori';
+        }
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #E6E6E6;
+            border-width: 1px;
+        }
+
+        img {
+            vertical-align: top;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style: none;
+        }
+        ol {
+            padding-left: 26px;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sample {
+            border: 1px solid #E6E6E6;
+            border-radius: 5px;
+        }
+
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #F2F2F2;
+            padding: 15px;
+            border-bottom: 1px solid #E6E6E6;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px;
+            top: 0;
+        }
+
+        .sample .ex {
+            padding: 20px;
+        }
+
+        .sample .ex .text {
+            margin: 10px 0;
+        }
+
+        .sample .re {
+            padding: 20px;
+            border-top: 1px solid #E6E6E6;
+        }
+
+        .sample .re a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .sample .re a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .sample .problem {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+            line-height: 1.6;
+        }
+
+        .sample pre {
+            margin: 0 !important;
+            border-radius: 0;
+            ;
+        }
+
+        .sample .desc {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .sample .desc dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .desc dd {
+            padding: 3px 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .sample .sam {
+            padding: 25px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .sample .sam dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+
+        .sample .sam dd {
+            padding: 3px 0 16px 0;
+        }
+        .mt20 {
+            margin-top: 20px;
+        }
+        .view {
+            padding: 20px;
+        }
+
+        .view table {
+            width: 100%;
+            border: 1px solid #e6e6e6;
+            /* 속기형 작성법 */
+            text-align: center;
+            vertical-align: middle;
+            border-collapse: collapse;
+        }
+
+        .view table th {
+            /* padding-top : 13px;
+            padding-right: 5px;
+            padding-bottom: 11px;
+            padding-left: 5px; */
+            padding: 13px 5px 11px 5px;
+        }
+
+        .view table td {
+            border: 1px solid #e6e6e6;
+            padding: 13px 5px 11px 5px;
+        }
+
+        .view table td.result {
+            color: #fff;
+            transition: all 0.3s;
+            cursor: zoom-in;
+        }
+
+        .view table td.result:hover {
+            color: #000;
+            background-color: #f5f5f5;
+        }
+        .sam {
+            background-color: #000;
+            color: #fff;
+            border-radius: 30px;
+            padding: 0 20px;
+        }
+        .page {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover{
+            color: #00DB72;
+        }
+        .menu li {
+            display: inline;
+        }
+
+        .menu li a {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            color: #000;
+            border: 1px dashed #000;
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 16px;
+            margin: 4px 1px;
+            transition: all 0.4s;
+        }
+        .menu li a:hover {
+            box-shadow: inset 0 -100px 0 #000;
+            color: #fff;
+            border-style: solid;
+        }
+        @media (max-width : 800px) {
+            body {
+                font-size: 13px;
+            }
+            h1 {
+                text-align: center;
+            }
+            .sample h2 {
+                font-size: 14px;
+                font-weight: normal;
+                padding: 7px 5px 5px;
+            }
+            .sample h2 .dot {
+                display: none;
+            }
+            .view {
+                padding: 5px;
+                max-width: 800px;
+                overflow :auto;
+            }
+            .view th {
+                font-weight: normal;
+            }
+            .view table td.result {
+                color : #bdbdbd;
+                background: #f1f1f1;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
+            }
+            .menu li a {
+                font-size: 12px;
+                padding: 5px 20px;
+            }
+            .list li {
+                line-height: 1.3;
+            }
+            .list a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="index.html">Javascript Reference</a></h1>
+
+    <!-- <ul class="page">
+        <li><a href="/refer-html/index.html">HTML</a></li>
+        <li><a href="../refer-css/index.html">CSS</a></li>
+        <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>   
+    </ul> -->
+    <nav class="menu">
+        <ul>
+            <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
+            <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
+            <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
+            <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascriptRefer05.html">문자열 객체</a></li>
+            <li><a href="javascriptRefer06.html">배열 객체</a></li>
+            <li><a href="javascriptRefer07.html">날짜 객체</a></li>
+            <li><a href="javascriptRefer08.html">수학 객체</a></li>
+            <li><a href="javascriptRefer14.html">숫자 객체</a></li>
+            <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
+            <li><a href="javascriptRefer10.html">요소 객체</a></li>
+            <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascriptRefer12.html">샘플</a></li>
+            <li><a href="javascriptRefer13.html">알고리즘</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h2 class="mt20">이벤트 객체</h2>
+    <div class="list">
+        <ol>
+            <li><a href="#section01">이벤트 : onclick : 클릭 했을 때</a></li>
+            <li><a href="#section01">이벤트 : ondblclick : 더블 클릭 했을 때</a></li>
+            <br>
+            <li><a href="#section01">이벤트 : 마우스 메서드 : mousedown() : 마우스 버튼을 누를 때</a></li>
+            <li><a href="#section01">이벤트 : 마우스 메서드 : mouseup() : 마우스 버튼을 떼는 시점</a></li>
+            <li><a href="#section01">이벤트 : 마우스 메서드 : mousemove() : 마우스를 움직일 때</a></li>
+            <li><a href="#section01">이벤트 : 마우스 메서드 : mouseenter() : 요소 위에 있을 때</a></li>
+            <li><a href="#section01">이벤트 : 마우스 메서드 : mouseleave() : 요소에 벗어 났을 때</a></li>
+            <li><a href="#section01">이벤트 : 마우스 메서드 : mouseover() : 요소 위에 있을 때</a></li>
+            <li><a href="#section01">이벤트 : 마우스 메서드 : mouseout(): 요소에 벗어 났을 때</a></li>
+            <li><a href="#section01">이벤트 : 마우스 메서드 : hover(): 요소위에 있을때 / 없을 때</a></li>
+            <li><a href="#section01">이벤트 : 마우스 속성 : event.clientX : 브라우저 기준 X 좌표</a></li>
+            <li><a href="#section01">이벤트 : 마우스 속성 : event.clientY : 브라우저 기준 Y 좌표</a></li>
+            <li><a href="#section01">이벤트 : 마우스 속성 : event.offsetX : 요소 기준 X 좌표</a></li>
+            <li><a href="#section01">이벤트 : 마우스 속성 : event.offsetY : 요소 기준 Y 좌표</a></li>
+            <li><a href="#section01">이벤트 : 마우스 속성 : event.pageX : 페이지 기준 X 좌표</a></li>
+            <li><a href="#section01">이벤트 : 마우스 속성 : event.pageY : 페이지 기준 Y 좌표</a></li>
+            <li><a href="#section01">이벤트 : 마우스 속성 : event.screenX : 디바이스 기준 X 좌표</a></li>
+            <li><a href="#section01">이벤트 : 마우스 속성 : event.screenY : 디바이스 기준 Y 좌표</a></li>
+            <br>
+            <li><a href="#section01">이벤트 : 키보드 메서드 : keydown : 키를 누를 때 이벤트 발생</a></li>
+            <li><a href="#section01">이벤트 : 키보드 메서드 : keyup : 키를 누를고 뗄 때 이벤트 발생</a></li>
+            <li><a href="#section01">이벤트 : 키보드 메서드 : keypress : 문자 키를 누를 때 이벤트 발생</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.key : 눌러진 키의 값</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.code : 눌러진 버튼의 코드</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.altKey : 눌러진 버튼의 코드</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.ctrlKey : 눌러진 버튼의 코드</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.shiftKey : 눌러진 버튼의 코드</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.metaKey : 눌러진 버튼의 코드</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.repeat : 눌러진 버튼의 코드</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.isComposing : 눌러진 버튼의 코드</a></li>
+            <li><a href="#section01">이벤트 : 키보드 속성 : event.keyCode : 눌러진 버튼의 코드</a></li>
+            <br>
+            <li><a hrer="#section01">이벤트 : touchstart : 터치 시작할 때 이벤트 발생</a></li>
+            <li><a hrer="#section01">이벤트 : touchmove : 터치 포인트 움직일 때 이벤트 발생</a></li>
+            <li><a hrer="#section01">이벤트 : touchend : 터치 끝날 때 이벤트 발생</a></li>
+            <br>
+            <li><a href="#section01">이벤트 : scroll : 스크롤 발생 할 때 이벤트 발생</a></li>
+            <li><a href="#section01">이벤트 : resize : 브라우저 사이즈 변경 될 때 이벤트 발생</a></li>
+            <li><a href="#section01">이벤트 : selectstart : 텍스트를 선택 할 때 이벤트 발생</a></li>
+            
+            <br>
+            <li><a href="#section01">이벤트 : dragstart : 드래그 시작할 때</a></li>
+            <li><a href="#section01">이벤트 : drag : 드래그 할 때</a></li>
+            <li><a href="#section01">이벤트 : dragend : 드래그 완료 할 때</a></li>
+            <li><a href="#section01">이벤트 : dragenter: 드래그 완료 할 때 </a></li>
+            <li><a href="#section01">이벤트 : dragover: 드래그 완료 할 때 </a></li>
+            <li><a href="#section01">이벤트 : dragleave: 드래그 완료 할 때 </a></li>
+            <li><a href="#section01">이벤트 : drop : 드롭할 때 </a></li>
+            <li><a href="#section01">이벤트 : event.dataTransfer.files : 드롭한 파일 정보 </a></li>
+            
+            <br>
+            <li><a href="#section01">이벤트 : visibilitychange : 브라우저의 탭 상태가 변경될 때 이벤트 발생</a></li>
+            <li><a href="#section01">이벤트 : metachMedia : 미디어쿼리 설정</a></li>
+            <li><a href="#section01">이벤트 : preventDefault() : 이벤트 작동 해지</a></li>
+            <li><a href="#section01">이벤트 : dispatchEvent() : 이벤트 작동 해지</a></li>
+            <li><a href="#section01">이벤트 : new Event() : 이벤트 생성 처리</a></li>
+    </ol>
+    </div>
+
+
+
+ 
+<hr>
+
+ <!-- sample01 -->
+ <div id="sample01" class="sample">
+    <h2>01. 브라우저 객체 : window 객체 메서드 : window.alert() : 경고창 표시</address><span class="dot"></span></h2>
+    <div class="btn">
+        <a href="#c" class="btn1-1">클릭하면 경고창을 표시 합니다.</a>
+    </div>
+    <div class="code">
+        <pre class="line-numbers"><code class="language-js"> {
+    document.querySelector(".btn1-1").addEventListener("click" , function(){
+        alert("알림창")
+    });
+}
+</code></pre>
+    </div>
+</div>
+<hr>
+
+<script>
+    document.querySelector(".btn1-1").addEventListener("click" , function(){
+        alert("알림창")
+    });
+</script>
+
+<!-- sample01 -->
+
+<hr>
+
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        //sample1
+        //문자열 결합
+    
+    </script>
+</body>
+
+</html>
