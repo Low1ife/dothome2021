@@ -383,10 +383,22 @@ tabView.click(function () {
             // })
             // }
 
-            $(".mouseCont").each(function(index){
-                $(".mouseCont span").hover(function(){
-                    $(".cursor").addClass("stlye" + index)
-                })
+
+            //each()
+            // $(".mouseCont span").each((index, element) => {
+            //     $(element).hover(function(){
+            //         $(".cursor").addClass("style"+ (index+1));
+            //     }, function(){
+            //         $(".cursor").removeClass("style"+(index+1));
+            //     });
+            // });        
+
+            
+            //attr()
+            $(".mouseCont span").hover(function(){
+                $(".cursor").addClass( $(this).attr("class")); 
+            } , function(){
+                $(".cursor").removeClass( $(this).attr("class")); 
             })
         });
     </script>
