@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test03</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        em {
+            font-weight: normal;
+            font-style: normal;
+        }
+        #wrap {
+            font-family: 'S-CoreDream';
+        }
+
+        /* header */
+        #header {
+            height: 100px;
+            background-color: #fff;
+        }
+        .container {
+            width: 1400px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .header {
+            overflow: hidden;
+        }
+        .header h2{
+            width: 20%;
+            float: left;
+            font-size: 13px;
+            margin-top: 45px;
+            font-family: 'S-CoreDream';
+            font-weight: 800;
+            line-height: 17px;
+        }
+        .header h2 strong {
+            font-size: 24px;
+        }
+        .header nav{
+            width: 60%;
+            height: 100px;
+            float: left;
+            text-align: center;
+        }
+        .header nav li{
+            list-style: none;
+            display: inline-block;
+            margin-top: 33px;
+            padding: 5px 23px;
+            font-size: 18px;
+        }
+        .header nav li a{
+            text-decoration: none;
+            color: black;
+        }
+        .header .login{
+            width: 20%;
+            float: left;
+            margin-top: 45px;
+            text-align: center;
+            border: 1px soild #000;
+        }
+        .header .login a{
+            text-decoration: none;
+            color : #000;
+            font-size: 14px;
+            padding: 8px;
+            border-radius: 3px;
+            margin: 5px;
+        }
+        .header .login a.biz {
+            border: 1px solid #9c9b9b;
+        }
+        .header .login a.qa {
+            border: 1px solid #9c9b9b;
+        }
+
+
+        /* banner */
+        .banner {
+            height: 400px;
+            background-image: url('https://static-clova.pstatic.net/static/d15c0af/img/bridge/bridge_banner_01.png');
+            background-size:cover;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+
+        /* contents */
+        #contents {
+            margin: 0 auto;
+        }
+        .cont1 {
+           overflow: hidden;
+        }
+        .cont1 .title{
+            font-family: 'S-CoreDream';
+            width: 100%;
+            height: 300px;
+            float: left;
+            text-align: center;
+        }
+        .cont1 .title h2 {
+            margin-top: 130px;
+            font-size: 40px;
+            text-align: center;
+        }
+        .cont1 .box-wrap {
+          border-radius: 10px;
+        }
+       
+        .cont2 .title{
+            font-family: 'S-CoreDream';
+            width: 100%;
+            height: 300px;
+            float: left;
+            text-align: center;
+        }
+        .cont2 .title h2 {
+            margin-top: 130px;
+            font-size: 40px;
+            text-align: center;
+        }
+        .cont2 .box-wrap {
+          border-radius: 10px;
+        }
+
+
+
+
+        .cont3 .title{
+            font-family: 'S-CoreDream';
+            width: 100%;
+            height: 400px;
+            float: left;
+            text-align: center;
+            background: rgb(228, 227, 227);
+        }
+        .cont3 .title h2 {
+            margin-top: 130px;
+            font-size: 33px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .cont3 .title p {
+            margin-bottom: 30px;
+            color: #a5a2a2;
+        }
+
+        .cont3 .title span {}
+        .cont3 .title span a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            padding: 15px 20px;
+            border-radius: 30px;
+            background: rgb(43, 132, 233);
+        }
+
+
+
+
+
+
+
+
+        .cont1 .cont-box1{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            width: 30%;
+            margin: 20px 20px 20px 35px;
+            height: 650px;
+            float: left;
+        }
+        .cont1 .cont-box2{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+        .cont1 .cont-box3{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px;
+            vertical-align: middle;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+        .cont1 .cont-box4{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px 20px 20px 35px;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+        .cont1 .cont-box5{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+        .cont1 .cont-box6{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+        .cont1 .cont-box7{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px 20px 20px 35px;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+
+
+
+        /* box1 */
+
+        .cont1 .cont-box1 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont1 .cont-box1 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .cont1 .cont-box1 .new {
+            display: inline-block;
+            border: 1px solid #fa615b;
+            background: #fa615b;
+            color: #fff;
+            text-align: center;
+            padding: 0 7px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .cont1 .cont-box1 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+        .cont1 .cont-box1 .buy {
+            border : 1px solid #05D686;
+            background: #05D686;
+            border-radius: 2px;
+            color: #fff;
+            padding: 5px 15px;
+            margin-left: 40px;
+        }
+
+        .cont1 .cont-box1 .button {
+            border : 1px solid #E3E3E3;
+            margin-left: 10px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+            /* box2 */
+
+        .cont1 .cont-box2 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont1 .cont-box2 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .cont1 .cont-box2 .new {
+            display: inline-block;
+            border: 1px solid #fa615b;
+            background: #fa615b;
+            color: #fff;
+            text-align: center;
+            padding: 0 7px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .cont1 .cont-box2 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+
+        .cont1 .cont-box2 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+        .cont1 .cont-box3 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont1 .cont-box3 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .cont1 .cont-box3 .new {
+            display: inline-block;
+            border: 1px solid #fa615b;
+            background: #fa615b;
+            color: #fff;
+            text-align: center;
+            padding: 0 7px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .cont1 .cont-box3 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+
+        .cont1 .cont-box3 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+        .cont1 .cont-box4 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont1 .cont-box4 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .cont1 .cont-box4 .new {
+            display: inline-block;
+            border: 1px solid #fa615b;
+            background: #fa615b;
+            color: #fff;
+            text-align: center;
+            padding: 0 7px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .cont1 .cont-box4 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+
+        .cont1 .cont-box4 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+        .cont1 .cont-box5 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont1 .cont-box5 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .cont1 .cont-box5 .new {
+            display: inline-block;
+            border: 1px solid #fa615b;
+            background: #fa615b;
+            color: #fff;
+            text-align: center;
+            padding: 0 7px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .cont1 .cont-box5 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+
+        .cont1 .cont-box5 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+        .cont1 .cont-box6 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont1 .cont-box6 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .cont1 .cont-box6 .new {
+            display: inline-block;
+            border: 1px solid #fa615b;
+            background: #fa615b;
+            color: #fff;
+            text-align: center;
+            padding: 0 7px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .cont1 .cont-box6 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+
+        .cont1 .cont-box6 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+        .cont1 .cont-box7 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont1 .cont-box7 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .cont1 .cont-box7 .new {
+            display: inline-block;
+            border: 1px solid #fa615b;
+            background: #fa615b;
+            color: #fff;
+            text-align: center;
+            padding: 0 7px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .cont1 .cont-box7 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+
+        .cont1 .cont-box7 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+
+        /* cont2 */
+
+
+        .cont2 .cont-box1{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            width: 30%;
+            margin: 20px 20px 20px 35px;
+            height: 650px;
+            float: left;
+        }
+        .cont2 .cont-box2{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+        .cont2 .cont-box3{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px;
+            vertical-align: middle;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+        .cont2 .cont-box4{
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+            margin: 20px 20px 20px 35px;
+            float: left;
+            width: 30%;
+            height: 650px;
+        }
+
+
+        .cont2 .cont-box1 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont2 .cont-box1 .new {
+            display: block;
+            border: 1px solid #900a05;
+            background: #bd0c06;
+            color: #fff;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 8px;
+            width: 70px;
+            margin-left: 40px;
+        }
+        .cont2 .cont-box1 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+     
+        .cont2 .cont-box1 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+        .cont2 .cont-box1 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+        .cont2 .cont-box2 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont2 .cont-box2 .new {
+            display: block;
+            border: 1px solid #900a05;
+            background: #bd0c06;
+            color: #fff;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 8px;
+            width: 70px;
+            margin-left: 40px;
+        }
+        .cont2 .cont-box2 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+     
+        .cont2 .cont-box2 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+        .cont2 .cont-box2 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+        .cont2 .cont-box3 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont2 .cont-box3 .new {
+            display: block;
+            border: 1px solid #900a05;
+            background: #bd0c06;
+            color: #fff;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 8px;
+            width: 70px;
+            margin-left: 40px;
+        }
+        .cont2 .cont-box3 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+     
+        .cont2 .cont-box3 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+        .cont2 .cont-box3 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+
+        .cont2 .cont-box4 img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 20px;
+        }
+        .cont2 .cont-box4 .new {
+            display: block;
+            border: 1px solid #900a05;
+            background: #bd0c06;
+            color: #fff;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 8px;
+            width: 70px;
+            margin-left: 40px;
+        }
+        .cont2 .cont-box4 .cont-title {
+            padding-left: 40px;
+            padding-right: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+     
+        .cont2 .cont-box4 .cont-desc {
+            padding-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.8;  
+            display: block;
+        }
+        .cont2 .cont-box4 .button1 {
+            border : 1px solid #E3E3E3;
+            margin-left: 40px;
+            color: #000;
+            padding: 5px 15px;
+        }
+
+      
+
+        #footer {
+            float: left;
+            width: 100%;
+            background-color: #000;
+            height: 150px;
+        }
+        #footer h2 {
+            color: #fff;
+        }
+
+
+    </style>
+     <link rel="stylesheet" href="css/fonts.css">
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+
+
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <h2>NAVER <strong>CLOVA</strong></h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">기술 솔루션</a></li>
+                            <li><a href="#">제품</a></li>
+                            <li><a href="#">플랫폼</a></li>
+                            <li><a href="#">파트너</a></li>
+                            <li><a href="#">리서치</a></li>
+                        </ul>
+                    </nav>
+                    <div class="login">
+                        <a href="#" class="biz">Biz Start</a>
+                        <a href="#" class="qa">비즈니스 문의</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+
+        <div class="banner">
+            <div class="banner-box">
+
+            </div>
+        </div>
+        <!-- //banner -->
+
+        <div id="contents">
+            <div class="container">
+                <div class="cont1">
+                    <div class="title">
+                        <h2>AI Devices</h2>
+                        <p>AI 기술이 집약된 제품으로 편리한 일상을 만나보세요.</p>
+                    </div>
+                    <div class="box-wrap">
+                        <div class="cont-box1">
+                            <img src="img/c1.png" alt="사진1">
+                            <em class="cont-title">CLOVA Lamp</em><span class="new">new</span>
+                            <span class="cont-desc">책을 읽어주는 아이 친구<br> 프리미엄 기능의 스마트 램프</span>
+                            <span class="buy">구매하기</span>
+                            <span class="button">알아보기</span>
+                        </div>
+                        <div class="cont-box2">
+                            <img src="img/c2.png" alt="사진2">
+                            <em class="cont-title">CLOVA Clock</em><span class="new">new</span>
+                            <span class="cont-desc">매일의 일상을 편리하게<br> 변화시켜줄 스마트 클락</span>
+                   
+                            <span class="button1">알아보기</span>
+                        </div>
+                        <div class="cont-box3">
+                            <img src="img/c3.png" alt="사진3">
+                            <em class="cont-title">CLOVA Friends</em>
+                            <span class="cont-desc">음악 추천부터 네이버 검색까지 <br> 다재다능한 스마트 스피커</span>
+                            <span class="button1">알아보기</span>
+                        </div>
+                        <div class="cont-box4">
+                            <img src="img/c4.png" alt="사진4">
+                            <em class="cont-title">CLOVA WAVE</em>
+                            <span class="cont-desc">풍부하고 선명한 사운드로 즐기는<br>최적의 스마트홈 스피커</span>
+                            <span class="button1">알아보기</span>
+                        </div>
+                        <div class="cont-box5">
+                                <img src="img/c5.png" alt="사진1">
+                                <em class="cont-title">CLOVA Friends mini</em>
+                                <span class="cont-desc">더 작고 더 가벼워진 <br> 스마트 스피커</span>
+                                <span class="button1">알아보기</span>
+                        </div>
+                        <div class="cont-box6">
+                                <img src="img/c6.png" alt="사진1">
+                                <em class="cont-title">Doraemon edition</em>
+                                <span class="cont-desc">고양이형 만능 로봇 도라에몽을<br> 모티브로 한 스마트 스피커</span>
+                                <span class="button1">알아보기</span>
+                            </div>
+                        </div>
+                        <div class="cont-box7">
+                            <img src="img/c6.png" alt="사진1">
+                            <em class="cont-title">MINIONS edition</em>
+                            <span class="cont-desc">귀여운 악동 미니언즈를<br> 모티브로 한 스마트 스피커</span>
+                            <span class="button1">알아보기</span>
+                        </div>
+                    </div>
+
+                    <div class="cont2">
+                        <div class="title">
+                            <h2>With Partners</h2>
+                            <p>파트너사와 함께 만든 클로바 스마트 디바이스들을 만나보세요.</p>
+                        </div>    
+                            <div class="box-wrap">
+                                <div class="cont-box1">
+                                    <img src="img/c2.png" alt="사진1">
+                                    <span class="new">With LG U+</span>
+                                    <em class="cont-title">CLOVA Clock+2</em>
+                                    <span class="cont-desc">집안을 확장하고 연결하는<br>우리 집 생활 필수품.</span>
+                                    <span class="button1">알아보기</span>
+                                </div>
+                                <div class="cont-box2">
+                                    <img src="img/c2.png" alt="사진2">
+                                    <span class="new">With LG U+</span>
+                                    <em class="cont-title">CLOVA Clock+</em>
+                                    <span class="cont-desc">매일의 일상을 편리하게<br>변화시켜줄 스마트 클락</span>
+                                    <span class="button1">알아보기</span>
+                                </div>
+                                <div class="cont-box3">
+                                    <img src="img/c2.png" alt="사진3">
+                                    <span class="new">With LG U+</span>
+                                    <em class="cont-title">CLOVA Friends+</em>
+                                    <span class="cont-desc">유플러스 전용 기능을<br>더한 스마트 스피커</span>
+                                    <span class="button1">알아보기</span>
+                                </div>
+                                <div class="cont-box4">
+                                    <img src="img/c2.png" alt="사진4">
+                                    <span class="new">With LG U+</span>
+                                    <em class="cont-title">CLOVA ON+</em>
+                                    <span class="cont-desc">미니멀 디자인의<br>컴팩트 스마트 스피커</span>
+                                    <span class="button1">알아보기</span>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+                <div class="cont3">
+                    <div class="title">
+                        <h2>인공지능 플랫폼 클로바와 함께<br>당신의 일상이 더욱 편리해집니다.</h2>
+                        <p>스마트 디바이스를 더욱 스마트하게 이용하는 명령어 가이드</p>
+                        <span><a href="#">클로바 명령어 가이드</a></span>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <h2>dddd</h2>
+            </div>
+            <!-- //footer -->
+        </div>
+        <!-- //contents -->
+</body>
+</html>
