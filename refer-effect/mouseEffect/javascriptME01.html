@@ -365,12 +365,13 @@ tabView.click(function () {
         
         //getAttribute
         document.querySelectorAll(".mouseCont span").forEach((element) => {
-            let style = element.getAttribute("class");
+            //let style = element.getAttribute("class");
+            let style = element.className;
 
-            element.addEventListener("mouseover", () => {
+            element.addEventListener("mouseover", function(){
                 document.querySelector(".cursor").classList.add(style)
             });
-            element.addEventListener("mouseover", () => {
+            element.addEventListener("mouseout", function(){
                 document.querySelector(".cursor").classList.remove(style)
             });
         })      
