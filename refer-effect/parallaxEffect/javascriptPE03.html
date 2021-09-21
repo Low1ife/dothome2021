@@ -46,7 +46,7 @@
 
         <nav class="paraNav">
             <ul>
-                <li><a href="#section1">메뉴1</a></li>
+                <li class="active"><a href="#section1">메뉴1</a></li>
                 <li><a href="#section2">메뉴2</a></li>
                 <li><a href="#section3">메뉴3</a></li>
                 <li><a href="#section4">메뉴4</a></li>
@@ -615,39 +615,39 @@
             document.querySelector("#cont-wrap").classList.add("hide");
         });
 
+        document.querySelectorAll(".paraNav ul li a").forEach((element) => {
+            element.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(element.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        });
+      
 
-        // // 화면 이동
-        // $(".paraNav ul li").click(function(e){
-        //     e.preventDefault();
-        //     let target = $(this);
-        //     let index = target.index(index);
-        //     let section = $(".content-item").eq(index);
-        //     let offset = section.offeset().top;
-        //     $("html, body").animate({ scrollTop : offset }, 600);
-        // });
+        window.addEventListener("scroll" , function(){
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageXOffset;
 
-        // $(window).scroll(function(){
-        //     let scrollTop = $(window).scrollTop();
+            //메뉴
+            if( scrollTop > 0 ){
+                document.querySelector(".paraNav").classList.add("show");
+            } else {
+                document.querySelector(".paraNav").classList.remove("show");
+            }
 
-        //     //숨김 메뉴 -> 한줄로 
-        //     if( scrollTop > 10 ){
-        //         $(".paraNav").addClass("show");
-        //     } else {
-        //         $(".paraNav").removeClass("show");
-        //     }
+            //버튼
+            document.querySelectorAll(".content-item").forEach((item, index) => {
+                if( scrollTop >= item.offsetTop ){
+                    document.querySelectorAll(".paraNav ul li").forEach( li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+                }
+            });
 
-
-        //     //버튼
-        //     $(".content-item").each(function(index, element){
-        //         if( scrollTop >= $(this).offset().top -2){
-        //             $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        //         }
-        //     })
-
-
-        //     // 출력용
-        //     $(".paraScroll span").text(scrollTop);
-        // })
+            //출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+        })
     </script>
 </body>
 
