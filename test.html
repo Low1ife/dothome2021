@@ -8,16 +8,18 @@
 </head>
 <body>
     <script>
-       function func(){
-           let a = [];
-
-           for( i=1; i<=5; i++ ){
-               a += [i];
+       {
+           function func(){
+               let i = 10, j= 10, k= 30;
+               i /= j;
+               j -= i;
+               k %= j;
+               document.write(i);
+               document.write(j);
+               document.write(k);
            }
-           document.write(a);
-           console.log(a[1]);
+           func();
        }
-       func();
     </script>
 </body>
 </html>
