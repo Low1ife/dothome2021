@@ -160,116 +160,151 @@
                     </div>
                     <div class="view-cont">
                         <div>
-<pre><code class="language-html"> &lt;div id="tab-menu"&gt;
-    &lt;div class="tab-btn"&gt;
-        &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Jquery&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;SCSS&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-cont"&gt;
-        &lt;div&gt;
-            &lt;h2&gt;HTML&lt;/h2&gt;
-            &lt;p&gt;HTML (Hypertext Markup Language,하이퍼텍스트 마크업 언어)는 프로그래밍 언어는 아니고, 우리가 보는 웹페이지가 어떻게 구조화되어 있는지 브라우저로
-                하여금 알 수 있도록 하는 마크업 언어입니다&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;CSS&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Javascript&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Jquery&lt;/h2&gt;
-            &lt;p&gt;jQuery는 HTML의 클라이언트 사이드 조작을 단순화 하도록 설계된 크로스 플랫폼의 자바스크립트 라이브러리 입니다.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;SCSS&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<pre><code class="language-html">&lt;!-- contents --&gt;
+&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;div class="cursor-follower"&gt;&lt;/div&gt;
 
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;I’ve &lt;em&gt;failed&lt;/em&gt; over and over and over again in my life and that is why I succeed.&lt;/p&gt;
+        &lt;h2&gt;나는 인생에서 몇 번이고 반복해서 &lt;em&gt;실패&lt;/em&gt;했고 그것이 내가 성공하는 이유이다.&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+&lt;!-- contents --&gt;
+
+
+
+&lt;!-- info --&gt;
+&lt;div class="info"&gt;
+    &lt;h1&gt;&lt;a href="index.html"&gt;Javascript Mouse Effect02&lt;/a&gt;&lt;/h1&gt;
+    &lt;p&gt;마우스 이펙트 - 마우스 따라가기&lt;/p&gt;
+&lt;/div&gt;
+​
+&lt;div class="info right"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="javascriptME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+​
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">  #tab-menu {
-    min-width: 600px;
-    background: rgb(118, 133, 175);
+<pre><code class="language-css"> .bg::before {
+    content: "";
+    left: 0;
+    top: 0;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
+    width: 100%;
+    height: 100vh;
+    background: rgba(129, 116, 116, 0.7);
+    z-index: -1;
+}
+
+
+.mouseCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color : #fff;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
     font-family: 'NEXON Lv1 Gothic OTF';
-    color: #fff;
-
+    cursor: none;
 }
-
-.tab-btn ul {
-    display: flex;
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
 }
-
-.tab-btn li {
-    width: 20%;
-    list-style: none;
-    text-align: center;
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
 }
-
-.tab-btn li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 18px 15px 15px 15px;
-    display: block;
+.mouseCont span {
+    font-style: normal;
+    border-bottom : 0.2vw dashed #fffed7;
 }
-
-.tab-btn li.active a {
-    border-bottom: 3px solid rgb(61, 69, 128);
-    color: #000;
+.mouseCont em {
+    font-style: normal;
+    border-bottom : 0.2vw dashed #e71632;
+    color : #e71632; 
 }
-
-.tab-cont {
-    background: #fff;
-    padding: 20px;
-    color: #222;
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
+    transition : transform 0.3s, opacity 0.2s;
 }
-
-.tab-cont>div {
-    display: none;
+.cursor.active {
+    opacity : .5;
+    transform : scale(0);
 }
-
-.tab-cont>div:first-child {
-    display: block;
+.cursor-follower {
+    position: absolute;
+    width: 30px; height: 30px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    user-select: none;
+    pointer-events: none;
+    transition : transform 0.6s, opacity 0.2s;
 }
-
-.tab-cont>div h2 {
-    margin-bottom: 10px;
+.cursor-follower.active {
+    opacity: .6;
+    transform : scale(8);
+    background: rgb(235, 65, 13);
 }
-
-.tab-cont>div p {
-    line-height: 1.6;
-}
-
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-javascript"> const tabView = $(".view-title ul li")
-const tabCovi = $(".view-cont > div")
+<pre><code class="language-javascript">const cursor = $(".cursor")
+const follower = $(".cursor-follower")
 
-tabView.click(function () {
-    let target = $(this);
-    tabView.removeClass("active");
-    target.addClass("active");
+$(window).mousemove(function(e){
+    // cursor.css({left: e.pageX -5, top:e.pageY -5});
+    // follower.css({left: e.pageX -15, top:e.pageY -15});
+    gsap.to(cursor , {duration: 0.3, left : e.pageX -5, top:e.pageY -5});
+    gsap.to(follower , {duration: 0.8, left : e.pageX -15, top:e.pageY -15});
+});
 
-    let index = target.index();
-    tabCovi.css("display", "none");
-    tabCovi.eq(index).css("display", "block");
+//over
+$(".mouseCont em").hover(function(){
+    cursor.addClass("active");
+    follower.addClass("active");
+}, function(){
+    cursor.removeClass("active");
+    follower.removeClass("active");
+});
+
+
+    // 출력문
+    $(window).mousemove(function(e){
+    $(".pageX").text(e.pageX);      // 페이지 X 좌표
+    $(".pageY").text(e.pageY);
 });
 </code></pre>
                         </div>
