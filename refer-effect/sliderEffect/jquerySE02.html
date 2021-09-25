@@ -127,117 +127,103 @@
                     </div>
                     <div class="view-cont">
                         <div>
-<pre><code class="language-html"> &lt;div id="tab-menu"&gt;
-    &lt;div class="tab-btn"&gt;
-        &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Jquery&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;SCSS&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-cont"&gt;
-        &lt;div&gt;
-            &lt;h2&gt;HTML&lt;/h2&gt;
-            &lt;p&gt;HTML (Hypertext Markup Language,하이퍼텍스트 마크업 언어)는 프로그래밍 언어는 아니고, 우리가 보는 웹페이지가 어떻게 구조화되어 있는지 브라우저로
-                하여금 알 수 있도록 하는 마크업 언어입니다&lt;/p&gt;
+<pre><code class="language-html"> &lt;!-- contents --&gt;
+&lt;main&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img"&gt;
+            &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg1.jpg" alt="이미지1"&gt;&lt;/div&gt;
+            &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg2.jpg" alt="이미지2"&gt;&lt;/div&gt;
+            &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg3.jpg" alt="이미지3"&gt;&lt;/div&gt;
+            &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg4.jpg" alt="이미지4"&gt;&lt;/div&gt;
+            &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg5.jpg" alt="이미지5"&gt;&lt;/div&gt;
         &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;CSS&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Javascript&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Jquery&lt;/h2&gt;
-            &lt;p&gt;jQuery는 HTML의 클라이언트 사이드 조작을 단순화 하도록 설계된 크로스 플랫폼의 자바스크립트 라이브러리 입니다.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;SCSS&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
+    &lt;/div&gt;    
+&lt;/main&gt;
+&lt;!-- contents --&gt;
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">  #tab-menu {
-    min-width: 600px;
-    background: rgb(118, 133, 175);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    overflow: hidden;
-    font-family: 'NEXON Lv1 Gothic OTF';
-    color: #fff;
-
-}
-
-.tab-btn ul {
+<pre><code class="language-css">/* slider */
+.slider-wrap {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider-img img {
+    width: 100%;
+}
+.slider-img {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50% , -50%);
+    width: 800px; height: 480px;
+    overflow: hidden;
+}
+.slider-inner {
+    overflow: hidden;
+    position: relative;
+    width: 4000px;
+    height: 480px;
 }
 
-.tab-btn li {
-    width: 20%;
-    list-style: none;
-    text-align: center;
+.slider-inner .slider {
+    float: left;
+    width: 800px; height: 480px;
+    position: relative;
+}
+.slider-inner .slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    background: rgba(0,0,0,0.4);
+    color : #fff;
+    padding: 5px 10px 3px;
 }
 
-.tab-btn li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 18px 15px 15px 15px;
-    display: block;
-}
 
-.tab-btn li.active a {
-    border-bottom: 3px solid rgb(61, 69, 128);
-    color: #000;
-}
-
-.tab-cont {
-    background: #fff;
-    padding: 20px;
-    color: #222;
-}
-
-.tab-cont>div {
-    display: none;
-}
-
-.tab-cont>div:first-child {
-    display: block;
-}
-
-.tab-cont>div h2 {
-    margin-bottom: 10px;
-}
-
-.tab-cont>div p {
-    line-height: 1.6;
-}
-
+.slider:nth-child(1){z-index: 5;}
+.slider:nth-child(2){z-index: 4;}
+.slider:nth-child(3){z-index: 3;}
+.slider:nth-child(4){z-index: 2;}
+.slider:nth-child(5){z-index: 1;}
+.slider::before{content : attr(data-name);}
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-javascript"> const tabView = $(".view-title ul li")
-const tabCovi = $(".view-cont > div")
+<pre><code class="language-javascript">const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const sliderInner = $(".slider-inner");
+const slider = $(".slider");
 
-tabView.click(function () {
-    let target = $(this);
-    tabView.removeClass("active");
-    target.addClass("active");
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = slider.width();
+let sliderDuration = 600;
+let sliderEasing = "easeOutExpo";
 
-    let index = target.index();
-    tabCovi.css("display", "none");
-    tabCovi.eq(index).css("display", "block");
-});
+setInterval(function(){   //3초에 한번씩 왼쪽으로 이동
+    // sliderInner.animate({ left: "-800px" });
+    // sliderInner.animate({ left: "-1600px" });
+    // sliderInner.animate({ left: "-2400px" });
+    // sliderInner.animate({ left: "-3200px" });
+    // sliderInner.animate({ left: "-4000px" });
+    // sliderInner.animate({ left: "-0px" });
+
+    //currentIndex++;
+
+    // if( currentIndex &lt; 5 ) {
+    //     currentIndex++;
+    // } else {
+    //     currentIndex = 0;
+    // }
+    ( currentIndex &lt; sliderCount -1 ) ? currentIndex++ : currentIndex = 0 
+    (currentIndex &lt; sliderCount -1) ? currentIndex ++ : currentIndex = 0;
+
+    let sliderPosition = currentIndex * -sliderWidth;
+    sliderInner.animate({ left : sliderPosition }, sliderDuration , sliderEasing);
+
+    console.log(currentIndex);
+} , 3000);
 </code></pre>
                         </div>
                     </div>
@@ -254,15 +240,7 @@ tabView.click(function () {
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-
-        document.querySelector(".info button").addEventListener("click" , function(){
-            document.querySelector("#cont-wrap").classList.add("show");
-            document.querySelector("#cont-wrap").classList.remove("hide");
-        });
-     
-        document.querySelector(".cont-box button").addEventListener("click" , function(){
-            document.querySelector("#cont-wrap").classList.add("hide");
-        }); 
+        modal();
      
         const sliderWrap = $(".slider-wrap");
         const sliderImg = $(".slider-img");
@@ -283,20 +261,35 @@ tabView.click(function () {
             // sliderInner.animate({ left: "-4000px" });
             // sliderInner.animate({ left: "-0px" });
 
-            currentIndex++;
+            //currentIndex++;
 
             // if( currentIndex < 5 ) {
             //     currentIndex++;
             // } else {
             //     currentIndex = 0;
             // }
-            (currentIndex < sliderCount) ? currentIndex ++ : currentIndex = 0;
+            ( currentIndex < sliderCount -1 ) ? currentIndex++ : currentIndex = 0 
+            (currentIndex < sliderCount -1) ? currentIndex ++ : currentIndex = 0;
 
             let sliderPosition = currentIndex * -sliderWidth;
             sliderInner.animate({ left : sliderPosition }, sliderDuration , sliderEasing);
 
             console.log(currentIndex);
         } , 3000);
+
+
+          //2초에 한번씩 왼쪽으로 800px 이동 시켜야 함
+            // sliderInner.animate({ left: "-800px"});
+
+            //0 1 2 3 4 0 1 2 3 4
+            // currentIndex++;
+            // currentIndex = currentIndex % 5;
+
+            // if( currentIndex < 4 ){
+            //     currentIndex++;
+            // } else {
+            //     currentIndex = 0;
+            // }
     </script>
 </body>
 
