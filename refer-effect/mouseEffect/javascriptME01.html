@@ -166,122 +166,210 @@
                         <ul>
                             <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Jquery</a></li>
+                            <li><a href="#">Javascript</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div>
-<pre><code class="language-html"> &lt;div id="tab-menu"&gt;
-    &lt;div class="tab-btn"&gt;
-        &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Jquery&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;SCSS&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-cont"&gt;
-        &lt;div&gt;
-            &lt;h2&gt;HTML&lt;/h2&gt;
-            &lt;p&gt;HTML (Hypertext Markup Language,하이퍼텍스트 마크업 언어)는 프로그래밍 언어는 아니고, 우리가 보는 웹페이지가 어떻게 구조화되어 있는지 브라우저로
-                하여금 알 수 있도록 하는 마크업 언어입니다&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;CSS&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Javascript&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Jquery&lt;/h2&gt;
-            &lt;p&gt;jQuery는 HTML의 클라이언트 사이드 조작을 단순화 하도록 설계된 크로스 플랫폼의 자바스크립트 라이브러리 입니다.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;h2&gt;SCSS&lt;/h2&gt;
-            &lt;p&gt;김우석&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<pre><code class="language-html">&lt;!-- contents --&gt;
+&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
 
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;&lt;span class="style1"&gt;열정&lt;/span&gt; &lt;span class="style2"&gt;없이&lt;/span&gt; 사느니 차라리 &lt;em&gt;죽는 게&lt;/em&gt; 낫다.&lt;/p&gt;
+        &lt;h2&gt;&lt;span class="style3"&gt;Rather&lt;/span&gt; be &lt;em&gt;dead&lt;/em&gt; than &lt;span class="style4"&gt;cool&lt;/span&gt;&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+&lt;!-- contents --&gt;
+
+
+
+&lt;!-- info --&gt;
+&lt;div class="info"&gt;
+    &lt;h1&gt;&lt;a href="index.html"&gt;Javascript Mouse Effect01&lt;/a&gt;&lt;/h1&gt;
+    &lt;p&gt;마우스 이펙트 - 마우스 따라가기&lt;/p&gt;
+&lt;/div&gt;
+​
+&lt;div class="info right"&gt;
+    &lt;ul&gt;
+        &lt;li class="active"&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+​
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;clientX : &lt;span class="clientX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;clientY : &lt;span class="clientY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;offsetX : &lt;span class="offsetX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;offsetY : &lt;span class="offsetY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;screenX : &lt;span class="screenX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;screenY : &lt;span class="screenY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">  #tab-menu {
-    min-width: 600px;
-    background: rgb(118, 133, 175);
+<pre><code class="language-css">.bg::before {
+    content: "";
+    left: 0;
+    top: 0;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
+    width: 100%;
+    height: 100vh;
+    background: rgba(129, 116, 116, 0.7);
+    z-index: -1;
+}
+.mouseCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color : #fff;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
     font-family: 'NEXON Lv1 Gothic OTF';
-    color: #fff;
-
+    cursor: none;
 }
-
-.tab-btn ul {
-    display: flex;
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
 }
-
-.tab-btn li {
-    width: 20%;
-    list-style: none;
-    text-align: center;
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
 }
-
-.tab-btn li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 18px 15px 15px 15px;
-    display: block;
+.mouseCont span {
+    font-style: normal;
+    border-bottom : 0.2vw dashed #fffed7;
 }
-
-.tab-btn li.active a {
-    border-bottom: 3px solid rgb(61, 69, 128);
-    color: #000;
+.mouseCont em {
+    font-style: normal;
+    border-bottom : 0.2vw dashed #fffed7;
+    color : #fffed7; 
 }
-
-.tab-cont {
-    background: #fff;
-    padding: 20px;
-    color: #222;
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 9999;
+    background-color: rgba(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
+    transition : 
+        background-color .2s,
+        border-color .2s,
+        border-radius .2s,
+        transform .6s;
 }
-
-.tab-cont>div {
-    display: none;
+.cursor.style1 {
+    background-color: rgba(255,165,0,0.4);
+    border-color : #fffed7;
 }
-
-.tab-cont>div:first-child {
-    display: block;
+.cursor.style2 {
+    background-color: rgba(211, 166, 84, 0.4);
+    border-color : #d8a452;
+    transform : rotateY(7200deg) scale(2);
 }
-
-.tab-cont>div h2 {
-    margin-bottom: 10px;
+.cursor.style3 {
+    background-color: rgba(228, 63, 126, 0.4);
+    border-color : #fff;
+    transform :  scale(3) rotateX(1080deg);
 }
-
-.tab-cont>div p {
-    line-height: 1.6;
+.cursor.style4 {
+    background-color: rgb(154, 224, 219);
+    border-color : rgb(47, 169, 206);
+    transform :  scale(3) ;
 }
-
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-javascript"> const tabView = $(".view-title ul li")
-const tabCovi = $(".view-cont > div")
+<pre><code class="language-javascript">//출력용 
+    window.addEventListener("mousemove" , function(e){
+        document.querySelector(".clientX").innerText = e.clientX +"px";  // 브라우저 X 좌 표 기준
+        document.querySelector(".clientY").innerText = e.clientY +"px";  // 브라우저 Y 좌 표 기준
+        document.querySelector(".offsetX").innerText = e.offsetX +"px";  // 요소 좌표
+        document.querySelector(".offsetY").innerText = e.offsetY +"px";  // 요소 Y 좌표
+        document.querySelector(".pageX").innerText = e.pageX +"px";      // 페이지 X 좌표
+        document.querySelector(".pageY").innerText = e.pageY +"px";
+        document.querySelector(".screenX").innerText = e.screenX +"px";     //디바이스
+        document.querySelector(".screenY").innerText = e.screenY +"px";
+    })
 
-tabView.click(function () {
-    let target = $(this);
-    tabView.removeClass("active");
-    target.addClass("active");
+    //마우스 움직이기
+    window.addEventListener("mousemove" , function(e){
+        // document.querySelector(".cursor").style.left = e.clientX -25 +"px";
+        // document.querySelector(".cursor").style.top = e.clientY -25 +"px";
 
-    let index = target.index();
-    tabCovi.css("display", "none");
-    tabCovi.eq(index).css("display", "block");
-});
+        let x =  e.clientX -25 +"px";
+        let y =  e.clientY -25 +"px";
+
+        document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+
+    //마우스 오버
+    // document.querySelector(".mouseCont .style1").addEventListener("mouseover" , function(){
+    //     document.querySelector(".cursor").classList.add("style1");
+    // });
+    // document.querySelector(".mouseCont .style1").addEventListener("mouseout" , function(){
+    //     document.querySelector(".cursor").classList.add("style1");
+    // });
+
+    // document.querySelector(".mouseCont .style2").addEventListener("mouseover" , function(){
+    //     document.querySelector(".cursor").classList.add("style2");
+    // });
+    // document.querySelector(".mouseCont .style2").addEventListener("mouseout" , function(){
+    //     document.querySelector(".cursor").classList.add("style2");
+    // });
+
+    // for(let i = 1; i&lt;5; i++){
+    //     document.querySelector(".mouseCont .style" + i).addEventListener("mouseover" , function(){
+    //     document.querySelector(".cursor").classList.add("style" + i);
+    // });
+    //     document.querySelector(".mouseCont .style" + i).addEventListener("mouseout" , function(){
+    //  document.querySelector(".cursor").classList.remove("style + i);
+    // });
+    // }
+
+    // //forEach()
+    // document.querySelectorAll(".mouseCont span").forEach((element , index) => {
+    //     element.addEventListener("mouseover", () => {
+    //         document.querySelector(".cursor").classList.add("style" +(index+1))
+    //     });
+    //     element.addEventListener("mouseover", () => {
+    //         document.querySelector(".cursor").classList.remove("style" +(index+1))
+    //     });
+    // })      
+    
+    //getAttribute
+    document.querySelectorAll(".mouseCont span").forEach((element) => {
+        //let style = element.getAttribute("class");
+        let style = element.className;
+
+        element.addEventListener("mouseover", function(){
+            document.querySelector(".cursor").classList.add(style)
+        });
+        element.addEventListener("mouseout", function(){
+            document.querySelector(".cursor").classList.remove(style)
+        });
+    })      
+})
 </code></pre>
                         </div>
                     </div>
