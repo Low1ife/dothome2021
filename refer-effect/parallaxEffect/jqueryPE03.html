@@ -396,8 +396,14 @@ $(window).scroll(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        modal();
+        document.querySelector(".source button").addEventListener("click", function () {
+            document.querySelector("#cont-wrap").classList.add("show");
+            document.querySelector("#cont-wrap").classList.remove("hide");
+        });
 
+        document.querySelector(".cont-box button").addEventListener("click", function () {
+            document.querySelector("#cont-wrap").classList.add("hide");
+        });
 
         // 화면 이동
         $(".paraNav ul li").click(function(e){
