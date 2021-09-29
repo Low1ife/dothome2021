@@ -534,9 +534,7 @@ window.addEventListener("scroll" , scrollProgress);
                 scrollTop > item.offsetTop ? item.classList.add("show") : item.classList.remove("show");
             })
 
-            //출력
-            //document.querySelector(".scroll").innerHTML = parseInt(scrollTop);
-
+       
            //메뉴
             document.querySelectorAll(".content-item").forEach((item , index) => {
                     if( scrollTop >= item.offsetTop ){
@@ -546,6 +544,8 @@ window.addEventListener("scroll" , scrollProgress);
                         document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
                     }
             })
+            //출력
+            document.querySelector(".paraScroll span").innerHTML = parseInt(scrollTop);
         }
 
         window.addEventListener("scroll" , scrollProgress);
