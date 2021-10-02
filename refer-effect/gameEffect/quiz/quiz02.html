@@ -886,21 +886,21 @@
         });
 
         //정답 확인
-        // questionAnswerConfirm.forEach((ask) => {
-        //     ask.addEventListener("click" , function(){
-        //         this.style.display = "none";
-        //         this.nextElementSibling.style.display = "block";
+        questionAnswerConfirm.forEach((ask) => {
+            ask.addEventListener("click" , function(){
+                this.style.display = "none";
+                this.nextElementSibling.style.display = "block";
 
-        //     });
-        // })
-
-        questionAnswerConfirm.forEach((confirm,idx) => {
-            confirm.addEventListener('click',() => {
-                confirm.style.display = 'none';
-                questionAnswerView[idx].style.display = 'block';
-                document.querySelectorAll('.card')[idx].classList.add('good');
             });
-        });
+        })
+
+        // questionAnswerConfirm.forEach((confirm,idx) => {
+        //     confirm.addEventListener('click',() => {
+        //         confirm.style.display = 'none';
+        //         questionAnswerView[idx].style.display = 'block';
+        //         document.querySelectorAll('.card')[idx].classList.add('good');
+        //     });
+        // });
 
          //메뉴
         document.querySelector(".ham").addEventListener("click", () => {
