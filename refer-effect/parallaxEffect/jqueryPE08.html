@@ -548,43 +548,24 @@
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-javascript">// 화면 이동
-        $(".paraNav ul li").click(function(e){
-            e.preventDefault();
-            let target = $(this);
-            let index = target.index();
-            let section = $(".content-item").eq(index);
-            let offset = section.offset().top;
-            $("html, body").animate({ scrollTop : offset }, 600);
-        });
-
-
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() + $(window).height()/2;
-
-            // if( scrollTop >= $("#section1").offset().top ){
-            //     $("#section1").addClass("show");
-            // }      //1번부터 9번까지
-
-            
-            // for(let i = 1; i&lt;=9; i++){
-            //     if( scrollTop>= $("#section" + i).offset().top ){
-            //         $("#section" + i).addClass("show");
-            //     } else {
-            //         $("#section" + i).removeClass("show");
-            //     }
-            // }
-
-            $(".content-item").each(function(index , element){
-                if( scrollTop > $(this).offset().top ){
-                    $(this).addClass("show");
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            })
-
-            //출력
-            $(".paraScroll span").text(parseInt(scrollTop));
-        })
+                            <pre><code class="language-javascript"> $(window).scroll(function(){
+    let scrollTop = $(this).scrollTop();
+    $(".reveal").each(function(){
+        if( scrollTop + $(window).height() >=$(this).offset().top){
+            $(this).delay($(this).data("delay") ).queue(function(){
+                $(this).addClass("show");
+            });
+        }
+    })
+    //메뉴 이동
+    $(".content-item").each(function(index, element){
+        if( scrollTop > $(this).offset().top - 2){
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        }
+    });
+    //출력
+    $(".paraScroll span").text(scrollTop);
+})
 </code></pre>
                         </div>
                     </div>
