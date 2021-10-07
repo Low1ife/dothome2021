@@ -468,6 +468,15 @@ window.addEventListener("scroll" , () => {
             document.querySelector("#cont-wrap").classList.add("hide");
         });
        
+        document.querySelectorAll(".paraNav ul li a").forEach(li => {
+            li.addEventListener("click" , e => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior : "smooth"
+                })
+            })
+        })
+
         
         //글씨 분할
         // let text = document.querySelector("#section1 .desc").innerText;
