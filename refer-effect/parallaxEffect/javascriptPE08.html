@@ -38,8 +38,8 @@
        .reveal > span {
            opacity: 0;
        }
-       .reveal > div,
-       .reveal > span {
+       .reveal.show > div,
+       .reveal.show > span {
            animation : opacity 1000ms 200ms linear forwards;
        }
 
@@ -595,6 +595,15 @@ window.addEventListener("scroll" , scrollReveal);
         document.querySelector(".cont-box button").addEventListener("click", function () {
             document.querySelector("#cont-wrap").classList.add("hide");
         });
+
+        document.querySelectorAll(".paraNav ul li a").forEach(li => {
+            li.addEventListener("click" , e => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior : "smooth"
+                })
+            })
+        })
 
       
         const scrollReveal = function(){
