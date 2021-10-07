@@ -492,16 +492,16 @@
         document.querySelector(".cont-box button").addEventListener("click", function () {
             document.querySelector("#cont-wrap").classList.add("hide");
         });
-       
+
         // 화면 이동
-        // $(".paraNav ul li").click(function(e){
-        //     e.preventDefault();
-        //     let target = $(this);
-        //     let index = target.index();
-        //     let section = $(".content-item").eq(index);
-        //     let offset = section.offset().top;s
-        //     $("html, body").animate({ scrollTop : offset }, 600);
-        // });
+        $(".paraNav ul li").click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            let section = $(".content-item").eq(index);
+            let offset = section.offset().top;
+            $("html, body").animate({ scrollTop : offset }, 600);
+        });
 
 
         //글씨 분할
