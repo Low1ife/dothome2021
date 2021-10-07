@@ -20,7 +20,6 @@
             top: -200px;
         }
         .paraNav li a {
-            width: auto;
             padding: 5px;
             width: 30px; height: 30px;
         }
@@ -38,8 +37,8 @@
        .reveal > span {
            opacity: 0;
        }
-       .reveal > div,
-       .reveal > span {
+       .reveal.show > div,
+       .reveal.show > span {
            animation : opacity 1000ms 200ms linear forwards;
        }
 
@@ -612,6 +611,16 @@
         document.querySelector(".cont-box button").addEventListener("click", function () {
             document.querySelector("#cont-wrap").classList.add("hide");
         });
+
+        // 화면 이동
+        $(".paraNav ul li").click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            let section = $(".content-item").eq(index);
+            let offset = section.offset().top;
+            $("html, body").animate({ scrollTop : offset }, 600);
+        });
       
         // $(window).scroll(function(){
         //     let scrollTop = $(this).scrollTop();
@@ -632,6 +641,14 @@
                     });
                 }
             })
+            //메뉴 이동
+            $(".content-item").each(function(index, element){
+                if( scrollTop > $(this).offset().top - 2){
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            });
+            //출력
+            $(".paraScroll span").text(scrollTop);
         })
     </script>
 </body>
