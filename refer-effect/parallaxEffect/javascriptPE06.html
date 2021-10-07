@@ -346,96 +346,44 @@
 .paraNav li.active a {
     border-radius: 30px;
 }
-
-/* 한번에 나타나기 */
-/* .content-item {
-    opacity: 0;
-    transform : translateY(100px);
-    transition: all 1s;
-}
-.content-item.show {
-    transform : translateY(0);
-    opacity: 1;
-} */
-
-
-/* 개별적으로 나타나기 */
-.content-item .num {
-    opacity: 0 !important;
-    transform: translateY(200px);
-    transition:  all 1s 0.1s cubic-bezier(0, 0.66 , 0.38, 1.01);
-}
-.content-item .title {
-    opacity : 0;
-    transform: translateX(-100px);
-    transition:  all 1s 0.3s cubic-bezier(0, 0.66 , 0.38, 1.01);
-}
-.content-item .img-Wrap {
-    opacity: 0;
-    transform: translateY(200px) rotate(30deg);
-    transition:  all 1s 0.6s cubic-bezier(0, 0.66 , 0.38, 1.01);
-}
-.content-item .desc {
-    opacity: 0;
-    transform: translateX(-200px);
-    transition:  all 1s 0.9s cubic-bezier(0, 0.66 , 0.38, 1.01);
-}
-.content-item.show .num {
-    opacity: 0.07 !important;
-    transform: translateY(0);
-}
-.content-item.show .title {
-    opacity : 1;
-    transform: translateX(0);
-}
-.content-item.show .img-Wrap {
-    opacity: 1;
-    transform: translateY(0) rotate(0);
-}
-.content-item.show .desc {
-    opacity: 1;
-    transform: translateX(0);
-}
 </code></pre>
                         </div>
                         <div>
-                            <pre><code class="language-javascript">// 화면 이동
-        $(".paraNav ul li").click(function(e){
+                            <pre><code class="language-javascript">const scrollMenu = function(){
+    document.querySelectorAll(".paraNav ul li a").forEach(li => {
+        li.addEventListener("click" , e => {
             e.preventDefault();
-            let target = $(this);
-            let index = target.index();
-            let section = $(".content-item").eq(index);
-            let offset = section.offset().top;
-            $("html, body").animate({ scrollTop : offset }, 600);
-        });
-
-
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() + $(window).height()/2;
-
-            // if( scrollTop >= $("#section1").offset().top ){
-            //     $("#section1").addClass("show");
-            // }      //1번부터 9번까지
-
-            
-            // for(let i = 1; i&lt;=9; i++){
-            //     if( scrollTop>= $("#section" + i).offset().top ){
-            //         $("#section" + i).addClass("show");
-            //     } else {
-            //         $("#section" + i).removeClass("show");
-            //     }
-            // }
-
-            $(".content-item").each(function(index , element){
-                if( scrollTop > $(this).offset().top ){
-                    $(this).addClass("show");
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
+            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                behavior : "smooth"
             })
-
-            //출력
-            $(".paraScroll span").text(parseInt(scrollTop));
         })
+    })
+}
+const scrollProgress = function(){
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY ;
+
+document.querySelectorAll(".content-item").forEach(item => {
+    let offset1 = (scrollTop - item.offsetTop) * 0.1;
+    let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+    item.querySelector(".img").style.transform = "translateX("+ offset1 +"px)";
+    item.querySelector(".desc").style.transform = "translateX("+ -offset2 +"px)";
+});
+
+document.querySelectorAll(".content-item").forEach((item , index) => {
+    if( scrollTop >= item.offsetTop -2 ){
+        document.querySelectorAll(".paraNav ul li").forEach(li => {
+            li.classList.remove("active");
+        });
+        document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+    }
+});
+//출력
+document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+}
+
+window.addEventListener("scroll" , scrollProgress);
+scrollMenu();
 </code></pre>
                         </div>
                     </div>
@@ -459,17 +407,16 @@
         document.querySelector(".cont-box button").addEventListener("click", function () {
             document.querySelector("#cont-wrap").classList.add("hide");
         });
- 
-        const scrollMenu = function(){
-            document.querySelectorAll(".paraNav ul li a").forEach(li => {
-                li.addEventListener("click" , e => {
-                    e.preventDefault();
-                    document.querySelector(li.getAttribute("href")).scrollIntoView({
-                        behavior : "smooth"
-                    })
+
+        document.querySelectorAll(".paraNav ul li a").forEach(li => {
+            li.addEventListener("click" , e => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior : "smooth"
                 })
             })
-        }
+        })
+
 
 
 
