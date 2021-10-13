@@ -269,7 +269,6 @@ setInterval(function(){   //3초에 한번씩 왼쪽으로 이동
             //     currentIndex = 0;
             // }
             ( currentIndex < sliderCount -1 ) ? currentIndex++ : currentIndex = 0 
-            (currentIndex < sliderCount -1) ? currentIndex ++ : currentIndex = 0;
 
             let sliderPosition = currentIndex * -sliderWidth;
             sliderInner.animate({ left : sliderPosition }, sliderDuration , sliderEasing);
