@@ -248,12 +248,9 @@ setInterval(function(){   //3초에 한번씩 왼쪽으로 이동
     <script src="../assets/js/highlight.min.js"></script>
     <script>
         modal();
-     
-        const sliderWrap = $(".slider-wrap");
-        const sliderImg = $(".slider-img2");
-        const sliderInner = $(".slider-inner2");
-        const slider = $(".slider.slider2");
+        
 
+        //sample1
         const sliderImg1 = $(".slider-img1");
         const sliderInner1 = $(".slider-inner1");
         const slider1 = $(".slider1");
@@ -261,27 +258,27 @@ setInterval(function(){   //3초에 한번씩 왼쪽으로 이동
         let currentIndex1 = 0;
         let sliderCount = slider1.length;
         let sliderHeight1 = slider1.height();
-        let sliderDuration = 600;
-        let sliderInterval = 2000;
-        let sliderEasing = "easeOutExpo";
+
+        setInterval(() => {
+            ( currentIndex1 < 4 ) ? currentIndex1++ : currentIndex1 = 0;
+
+            let sliderPosition = currentIndex1 * -sliderHeight1;
+            sliderInner1.animate({ top : sliderPosition }, 600 , "easeOutExpo");
+
+        }, 2000);
+
+        const sliderImg = $(".slider-img2");
+        const sliderInner = $(".slider-inner2");
+        const slider = $(".slider.slider2");
 
         let currentIndex = 0;
         let sliderHeight = slider.height();
-
-        setInterval(() => {
-            ( currentIndex1 < sliderCount -1 ) ? currentIndex1++ : currentIndex1 = 0 
-            (currentIndex1 < sliderCount -1) ? currentIndex1 ++ : currentIndex1 = 0;
-
-            let sliderPosition = currentIndex1 * -sliderHeight;
-            sliderInner1.animate({ top : sliderPosition }, sliderDuration , sliderEasing);
-            
-        }, sliderInterval);
 
 
         setInterval(function(){
             sliderInner.animate({top : -sliderHeight} , 400, function(){
                 $(".slider.slider2:first-child").appendTo(sliderInner); //맨뒤로 추가함
-                sliderInner.css("top" , "");
+                sliderInner.css("top" , ""); // 위치 초기화
             });
         } , 2000);
 
