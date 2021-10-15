@@ -53,9 +53,27 @@
             font-size: 20px;
             font-weight: 700;
             padding-left: 30px;
+            position: relative;
         }
 
-
+        /* 2단메뉴 */
+        header li ul {
+            display: none;
+            position: absolute;
+            left: 40px; top: 30px;
+            background-color:rgb(223, 221, 221);
+            border: 1px solid black ;
+            
+            z-index: 1000;
+        }
+        header li ul li {
+            font-size: 20px;
+            text-align: center;
+        }
+        header li:hover > ul {
+            display: block;
+           
+        }
 
 
 
@@ -287,7 +305,15 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#">COOKIT 소개</a></li>
+                        <li><a href="#">COOKIT 소개</a>
+                            <ul class="submenu">
+                                <li><a href="#">테스트</a></li>
+                                <li><a href="#">테스트</a></li>
+                                <li><a href="#">테스트</a></li>
+                                <li><a href="#">테스트</a></li>
+                                <li><a href="#">테스트</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">COOKIT 메뉴</a></li>
                         <li><a href="#">리뷰</a></li>
                         <li><a href="#">이벤트</a></li>
