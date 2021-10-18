@@ -16,4 +16,87 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    br {
+        display: none;
+    }
+}
+
+@media (max-width:800px){
+    #mainCont {
+        font-size: 15vw;
+        br {
+            display: block;
+        }
+    }
+}
+
+#mainCont2 {
+    width: 100%;
+    display: flex;
+    
+    .main-cont1 {
+        white-space: nowrap;
+        width: 50%;
+        height: 100vh;
+        background-color: #000;
+        color : #fff;
+        font-family: $font-main;
+        font-size: 7vw;
+        line-height: .9;
+        text-transform: uppercase;
+        padding-left: 300px;
+        padding-top: 310px;
+        z-index: 10;
+
+        br {
+            display: none;
+        }
+    }
+    .main-cont2 {
+        overflow: hidden;
+        width: 50%;
+        height: 100vh;
+
+        img {
+            width: 700px;
+            height: 600px;
+            margin-top: 200px;
+            border: 7px solid #000;
+        }
+    }
+}
+@media (max-width:1100px){
+    #mainCont2 {
+        background: #000;
+        .main-cont1 {
+            padding-left: 100px;
+            font-size: 10vw;
+            padding-top: 380px;
+        }
+        .main-cont2 {
+            img {
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media (max-width:800px){
+    #mainCont2 {
+        background: #000;
+        .main-cont1 {
+            background: url(../img/reactcat.png) no-repeat center center;
+            background-size: cover;
+            padding-left: 50px;
+            font-size: 12vw;
+            padding-top: 380px;
+        }
+        .main-cont2 {
+            img {
+                display: none;
+            }
+        }
+    }
 }
