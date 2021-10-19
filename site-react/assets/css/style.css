@@ -1041,45 +1041,147 @@ table {
   }
 }
 
+#mainCont {
+  background-color: #000;
+  height: 100vh;
+  color: #fff;
+  font-family: "saol";
+  font-size: 9vw;
+  line-height: .91;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mainCont br {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #mainCont {
+    font-size: 15vw;
+  }
+  #mainCont br {
+    display: block;
+  }
+}
+
+#mainCont2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mainCont2 .main-cont1 {
+  white-space: nowrap;
+  width: 50%;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: "saol";
+  font-size: 7vw;
+  line-height: .9;
+  text-transform: uppercase;
+  padding-left: 300px;
+  padding-top: 310px;
+  z-index: 10;
+}
+
+#mainCont2 .main-cont1 br {
+  display: none;
+}
+
+#mainCont2 .main-cont2 {
+  overflow: hidden;
+  width: 50%;
+  height: 100vh;
+}
+
+#mainCont2 .main-cont2 img {
+  width: 700px;
+  height: 600px;
+  margin-top: 200px;
+  border: 7px solid #000;
+}
+
+@media (max-width: 1100px) {
+  #mainCont2 {
+    background: #000;
+  }
+  #mainCont2 .main-cont1 {
+    padding-left: 100px;
+    font-size: 10vw;
+    padding-top: 380px;
+  }
+  #mainCont2 .main-cont2 img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  #mainCont2 {
+    background: #000;
+  }
+  #mainCont2 .main-cont1 {
+    background: url(../img/reactcat.png) no-repeat center center;
+    background-size: cover;
+    padding-left: 50px;
+    font-size: 12vw;
+    padding-top: 380px;
+  }
+  #mainCont2 .main-cont2 img {
+    display: none;
+  }
+}
+
 .container {
   width: 1300px;
   margin: 0 auto;
 }
 
-#main h2 {
+#about h2 {
   margin-top: 200px;
   font-size: 120px;
   font-family: "saol";
 }
 
 @media (max-width: 1100px) {
-  #main {
+  #about {
     width: 1100px;
   }
-  #main .container {
+  #about .container {
     width: 900px;
   }
-  #main h2 {
+  #about h2 {
     font-size: 150px;
     text-align: center;
   }
-  #main h2 br {
+  #about h2 br {
     display: none;
   }
 }
 
 @media (max-width: 800px) {
-  #main {
+  #about {
     width: 800px;
   }
-  #main .container {
+  #about .container {
     width: 600px;
   }
-  #main h2 {
+  #about h2 {
     font-size: 70px;
     text-align: center;
   }
-  #main h2 br {
+  #about h2 br {
     display: none;
   }
 }
@@ -1272,109 +1374,7 @@ table {
   .start .start .footcon .get {
     font-size: 50px;
   }
-  .start .start .footcon .touch {
+  .start .start .touch {
     font-size: 50px;
-  }
-}
-
-.start #mainCont {
-  background-color: #000;
-  height: 100vh;
-  color: #fff;
-  font-family: "saol";
-  font-size: 9vw;
-  line-height: .91;
-  text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.start #mainCont br {
-  display: none;
-}
-
-@media (max-width: 800px) {
-  .start #mainCont {
-    font-size: 15vw;
-  }
-  .start #mainCont br {
-    display: block;
-  }
-}
-
-.start #mainCont2 {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.start #mainCont2 .main-cont1 {
-  white-space: nowrap;
-  width: 50%;
-  height: 100vh;
-  background-color: #000;
-  color: #fff;
-  font-family: "saol";
-  font-size: 7vw;
-  line-height: .9;
-  text-transform: uppercase;
-  padding-left: 300px;
-  padding-top: 310px;
-  z-index: 10;
-}
-
-.start #mainCont2 .main-cont1 br {
-  display: none;
-}
-
-.start #mainCont2 .main-cont2 {
-  overflow: hidden;
-  width: 50%;
-  height: 100vh;
-}
-
-.start #mainCont2 .main-cont2 img {
-  width: 700px;
-  height: 600px;
-  margin-top: 200px;
-  border: 7px solid #000;
-}
-
-@media (max-width: 1100px) {
-  .start #mainCont2 {
-    background: #000;
-  }
-  .start #mainCont2 .main-cont1 {
-    padding-left: 100px;
-    font-size: 10vw;
-    padding-top: 380px;
-  }
-  .start #mainCont2 .main-cont2 img {
-    width: 400px;
-    height: 400px;
-  }
-}
-
-@media (max-width: 800px) {
-  .start #mainCont2 {
-    background: #000;
-  }
-  .start #mainCont2 .main-cont1 {
-    background: url(../img/reactcat.png) no-repeat center center;
-    background-size: cover;
-    padding-left: 50px;
-    font-size: 12vw;
-    padding-top: 380px;
-  }
-  .start #mainCont2 .main-cont2 img {
-    display: none;
   }
 }
