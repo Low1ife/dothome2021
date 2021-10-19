@@ -1223,7 +1223,7 @@ table {
   }
 }
 
-footer {
+.start {
   margin-top: 420px;
   width: 100%;
   height: 1000px;
@@ -1231,28 +1231,28 @@ footer {
   color: #fff;
 }
 
-footer .footcon {
+.start .footcon {
   margin: 0 auto;
   text-align: center;
 }
 
-footer .footcon .new {
+.start .footcon .new {
   padding-top: 260px;
   padding-bottom: 80px;
   font-size: 20px;
 }
 
-footer .footcon .get {
+.start .footcon .get {
   font-size: 100px;
   white-space: nowrap;
 }
 
-footer .footcon .touch {
+.start .footcon .touch {
   font-size: 100px;
   padding-bottom: 60px;
 }
 
-footer .footcon .us {
+.start .footcon .us {
   border: 1px solid #fff;
   border-radius: 50px;
   width: 250px;
@@ -1260,24 +1260,24 @@ footer .footcon .us {
   height: 70px;
 }
 
-footer .footcon .us a {
+.start .footcon .us a {
   font-size: 25px;
   line-height: 65px;
 }
 
 @media (max-width: 800px) {
-  footer footer {
+  .start .start {
     margin-top: 100px;
   }
-  footer footer .footcon .get {
+  .start .start .footcon .get {
     font-size: 50px;
   }
-  footer footer .footcon .touch {
+  .start .start .footcon .touch {
     font-size: 50px;
   }
 }
 
-footer #mainCont {
+.start #mainCont {
   background-color: #000;
   height: 100vh;
   color: #fff;
@@ -1296,27 +1296,27 @@ footer #mainCont {
           justify-content: center;
 }
 
-footer #mainCont br {
+.start #mainCont br {
   display: none;
 }
 
 @media (max-width: 800px) {
-  footer #mainCont {
+  .start #mainCont {
     font-size: 15vw;
   }
-  footer #mainCont br {
+  .start #mainCont br {
     display: block;
   }
 }
 
-footer #mainCont2 {
+.start #mainCont2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-footer #mainCont2 .main-cont1 {
+.start #mainCont2 .main-cont1 {
   white-space: nowrap;
   width: 50%;
   height: 100vh;
@@ -1331,17 +1331,17 @@ footer #mainCont2 .main-cont1 {
   z-index: 10;
 }
 
-footer #mainCont2 .main-cont1 br {
+.start #mainCont2 .main-cont1 br {
   display: none;
 }
 
-footer #mainCont2 .main-cont2 {
+.start #mainCont2 .main-cont2 {
   overflow: hidden;
   width: 50%;
   height: 100vh;
 }
 
-footer #mainCont2 .main-cont2 img {
+.start #mainCont2 .main-cont2 img {
   width: 700px;
   height: 600px;
   margin-top: 200px;
@@ -1349,32 +1349,32 @@ footer #mainCont2 .main-cont2 img {
 }
 
 @media (max-width: 1100px) {
-  footer #mainCont2 {
+  .start #mainCont2 {
     background: #000;
   }
-  footer #mainCont2 .main-cont1 {
+  .start #mainCont2 .main-cont1 {
     padding-left: 100px;
     font-size: 10vw;
     padding-top: 380px;
   }
-  footer #mainCont2 .main-cont2 img {
+  .start #mainCont2 .main-cont2 img {
     width: 400px;
     height: 400px;
   }
 }
 
 @media (max-width: 800px) {
-  footer #mainCont2 {
+  .start #mainCont2 {
     background: #000;
   }
-  footer #mainCont2 .main-cont1 {
+  .start #mainCont2 .main-cont1 {
     background: url(../img/reactcat.png) no-repeat center center;
     background-size: cover;
     padding-left: 50px;
     font-size: 12vw;
     padding-top: 380px;
   }
-  footer #mainCont2 .main-cont2 img {
+  .start #mainCont2 .main-cont2 img {
     display: none;
   }
 }
