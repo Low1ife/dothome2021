@@ -8,6 +8,72 @@
     <title>굿밤 | 수면 데이터</title>
 
     <style>
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 300;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 100;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 500;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 600;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 700;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 800;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 900;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream';
+            font-weight: 200;
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+            font-style: normal;
+        }
+
+
+
         * {
             margin: 0;
             padding: 0;
@@ -19,11 +85,12 @@
             background: #000;
         }
 
-        #wrap {
-            background: url() no-repeat center center;
+        main {
+            background: url(assets/img/mainggg.png) no-repeat center center;
             background-size: cover;
             width: 100%;
             height: 100vh;
+            font-family: 'S-CoreDream';
         }
 
         .container {
@@ -33,8 +100,8 @@
 
         .date {
             width: 100%;
-            height: 500px;
-            margin-top: 130px;
+            height: 450px;
+            padding-top: 130px;
             overflow: hidden;
         }
 
@@ -46,48 +113,63 @@
         .date .date1 {
             width: 30%;
             height: 400px;
- 
+
             float: left;
             margin-right: 5%;
         }
+
         .date .date1 h4 {
             font-size: 25px;
             text-align: center;
             margin-bottom: 10px;
+            color: #fff;
         }
+
+        .date .date1 h4.active {
+            text-decoration: underline;
+        }
+
         .date .date2 h4 {
             font-size: 25px;
             text-align: center;
             margin-bottom: 10px;
+            color: #fff;
         }
+
         .date .date3 h4 {
             font-size: 25px;
             text-align: center;
             margin-bottom: 10px;
+            color: #fff;
         }
 
         .date .date1 .date-box1 {
-            width: 100%;
-            height: 300px;
+            width: 70%;
+            height: 100px;
+            margin: 0 auto;
             background-color: #ccc;
-            border : 1px solid #ccc;
-            border-radius : 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
         }
+
         .date .date2 .date-box2 {
-            width: 100%;
-            height: 300px;
+            width: 70%;
+            height: 100px;
             background-color: #ccc;
-            border : 1px solid #ccc;
-            border-radius : 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 0 auto;
         }
+
         .date .date3 .date-box3 {
-            width: 100%;
-            height: 300px;
+            width: 70%;
+            height: 100px;
+            margin: 0 auto;
             background-color: #ccc;
-            border : 1px solid #ccc;
-            border-radius : 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
         }
-        
+
 
         .date .date2 {
             width: 30%;
@@ -103,9 +185,7 @@
 
 
         .graph {
-            width: 100%;
-            height: 700px;
-            margin-top: 30px;
+            margin-top: 10px;
         }
 
         .chart {
@@ -120,34 +200,38 @@
     </header>
 
     <div id="wrap">
-        <div class="container">
-            <div class="date">
-                <h3>수면 데이터</h3>
-                <div class="date1">
-                    <h4>주</h4>
-                    <div class="date-box1">
-                        
+        <main>
+            <div class="container">
+                <div class="date">
+                    <h3>수면 데이터</h3>
+                    <div class="date1">
+                        <h4 class="active">주</h4>
+                        <div class="date-box1">
+
+                        </div>
+                    </div>
+                    <div class="date2">
+                        <h4>개월</h4>
+                        <div class="date-box2">
+
+                        </div>
+                    </div>
+                    <div class="date3">
+                        <h4>모두</h4>
+                        <div class="date-box3">
+
+                        </div>
                     </div>
                 </div>
-                <div class="date2">
-                    <h4>개월</h4>
-                    <div class="date-box2">
-                
-                    </div>
-                </div>
-                <div class="date3">
-                    <h4>모두</h4>
-                    <div class="date-box3">
-                      
+                <div class="graph">
+                    <div class="chart">
+                        <canvas id="myChart1" width="400" height="50vh"></canvas>
+                        <!-- <canvas id="myChart2" width="400" height="200"></canvas>
+                        <canvas id="myChart3" width="400" height="200"></canvas> -->
                     </div>
                 </div>
             </div>
-            <div class="graph">
-                <div class="chart">
-                    <canvas id="myChart" width="400" height="200"></canvas>
-                </div>
-            </div>
-        </div>
+        </main>
     </div>
 
 
@@ -159,52 +243,106 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
     <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var chart = new Chart(ctx, {
-	// The type of chart we want to create
-	type: 'line', // also try bar or other graph types
+        {
+            var ctx = document.getElementById('myChart1').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line', // also try bar or other graph types
 
-	// The data for our dataset
-	data: {
-		labels: ["20.10", "20.11", "20.12", "21.01", "21.02", "21.03", "21.04", "21.05", "21.06", "21.07", "21.08", "21.09"],
-		// Information about the dataset
-    datasets: [{
-			label: "Rainfall",
-			backgroundColor: '',
-			borderColor: 'rgb(210, 184, 226)',
-			data: [26.4, 39.8, 66.8, 66.4, 40.6, 55.2, 77.4, 69.8, 57.8, 76, 110.8, 142.6],
-		}]
-	},
+                // The data for our dataset
+                data: {
+                    labels: ["20.10", "20.11", "20.12", "21.01", "21.02", "21.03", "21.04", "21.05", "21.06",
+                        "21.07", "21.08", "21.09"
+                    ],
+                    // Information about the dataset
+                    datasets: [{
+                        label: "Sleep Time",
+                        backgroundColor: '',
+                        borderColor: 'rgb(210, 184, 226)',
+                        data: [66.4, 69.8, 66.8, 66.4, 65.6, 64.2, 65.4, 69.8, 65.8, 66, 66.8, 65.6],
+                    }]
+                },
 
-	// Configuration options
-	options: {
-    layout: {
-      padding: 10,
-    },
-		legend: {
-			position: 'bottom',
-		},
-		title: {
-			display: true,
-			text: '굿밤 수면데이터'
-		},
-		scales: {
-			yAxes: [{
-				scaleLabel: {
-					display: true,
-					labelString: 'Precipitation in mm'
-				}
-			}],
-			xAxes: [{
-				scaleLabel: {
-					display: true,
-					labelString: '최근 1년간'
-				}
-			}]
-		}
-	}
-});
+                // Configuration options
+                options: {
+                    layout: {
+                        padding: 10,
+                    },
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: '굿밤 수면데이터'
+                    },
+                    scales: {
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Precipitation in mm'
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: '최근 1년간'
+                            }
+                        }]
+                    }
+                }
+            });
+        }
 
+
+        // {
+        //     var ctx = document.getElementById('myChart2').getContext('2d');
+        //     var chart = new Chart(ctx, {
+        //         // The type of chart we want to create
+        //         type: 'line', // also try bar or other graph types
+
+        //         // The data for our dataset
+        //         data: {
+        //             labels: ["20.10", "20.11", "20.12", "21.01", "21.02", "21.03", "21.04", "21.05", "21.06",
+        //                 "21.07", "21.08", "21.09"
+        //             ],
+        //             // Information about the dataset
+        //             datasets: [{
+        //                 label: "Sleep Time",
+        //                 backgroundColor: '',
+        //                 borderColor: 'rgb(210, 184, 226)',
+        //                 data: [66.4, 69.8, 66.8, 66.4, 65.6, 64.2, 65.4, 69.8, 65.8, 66, 66.8, 65.6],
+        //             }]
+        //         },
+
+        //         // Configuration options
+        //         options: {
+        //             layout: {
+        //                 padding: 10,
+        //             },
+        //             legend: {
+        //                 position: 'bottom',
+        //             },
+        //             title: {
+        //                 display: true,
+        //                 text: '굿밤 수면데이터'
+        //             },
+        //             scales: {
+        //                 yAxes: [{
+        //                     scaleLabel: {
+        //                         display: true,
+        //                         labelString: 'Precipitation in mm'
+        //                     }
+        //                 }],
+        //                 xAxes: [{
+        //                     scaleLabel: {
+        //                         display: true,
+        //                         labelString: '최근 1년간'
+        //                     }
+        //                 }]
+        //             }
+        //         }
+        //     });
+        // }
     </script>
 </body>
 
