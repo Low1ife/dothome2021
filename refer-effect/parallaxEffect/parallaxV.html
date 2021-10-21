@@ -208,13 +208,9 @@
 <body class="parallax">
 
     <div class="info">
+        <div class="scrollTop">scrollTop() : <span>0</span>px</div>
         <ul>
-            <li class="scrollTop">scrollTop() : <span>0</span>px</li>
-            <li class="contentWrapWidth">가로 전체 길이() : <span>0</span>px</li>
-
-
-            <li class="paraScrollTop">scrollTop() : <span>0</span>px</li>
-            <li class="paraScrollLeft">scrollLeft() : <span>0</span>px</li>
+            <li>전체 가로 값: <span class="scrollTotalWidth">0</span>px</div>
         </ul>
     </div>
     <!-- //info -->
@@ -319,35 +315,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script>
-        const contentWrap = $(".contentWrap").width();
-        $("body").css("height" , contentWrap);
-        const scrollHeigth = $(window).height();
+        const contentWrap = $(".contentWrap");
+        const contentItem = $(".content__item");
         let lastScrollTop = 0;
-
+        let scrollTotalWidth = contentWrap.width();
+        $("body").height(scrollTotalWidth);
+            
         $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop() - scrollHeigth;
+            let scrollTop = $(window).scrollTop();
 
-            $(".contentWrap").css({"transform" : "translateX(" + -scrollTop +"px)"});
+            let wWidth = $(window).width();
+            let wHeight = $(window).height();
 
-            clearTimeout($.data(this, "scrollCheck"));
+            let nWidth = scrollTotalWidth - $(window).width();
+            let nHeight = $("body").height() - $(window).height();
 
-            $.data(this, "scrollCheck", setTimeout(function(){
-                $(".character").removeClass("walking");
-            }, 500)) 
+            let ratio = nWidth / nHeight;
+            let goLeft = scrollTop * ratio;
 
-            if(scrollTop > lastScrollTop){
-                $(".character").removeClass("left")
-                $(".character").addClass("walking")
-            } else {
-                $(".character").addClass("left")
-                $(".character").addClass("walking")
-            }
-            lastScrollTop = scrollTop;
+            contentWrap.css("left" , -goLeft);
+
+
+
 
             //출력
-            $(".scrollTop span").text(parseInt(scrollTop));
-            $(".contentWrapWidth span").text(parseInt(contentWrap));
-        })
+            $(".ratio").text(ratio);
+            $(".goLeft").text(goLeft);
+        });
+        //출력
+        $(".scrollTotalWidth").text(scrollTotalWidth);
+        $(".paraScroll span").text(scrollTop);
+        $(".bHeight").text($("body").height());
     </script>
 </body>
 </html>
