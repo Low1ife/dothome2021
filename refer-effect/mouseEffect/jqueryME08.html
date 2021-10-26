@@ -440,22 +440,29 @@ $(".info.left.list li").click(function(){
     <script>
         modal();
         
-        $(window).mousemove(function(e){
+        $(window).mousemove(function (e){
+            let pageX = e.pageX;
+            let pageY = e.pageY;
+
             const mouseX = e.clientX;
             const mouseY = e.clientY;
 
-            $(".item").each(function(index , item){
+            $(".item").each(function(index, item){
                 const itemX = $(this).offset().left + 25;
-                const itemY = $(this).offset().top + 25;
+                const itemY = $(this).offset().top + 25;    //가운데로 맞춰주기 위해 초기화
                 const diffX = mouseX - itemX;
                 const diffY = mouseY - itemY;
-                const radians = Math.atan2(diffX , diffY);
-                const angle = radians * 180 / Math.PI;
-
-                $(this).css({"transform" : "rotate("+angle+"deg)"})
-
-                gsap.to(".cursor", {duration:0.4 , left : e.pageX -w, top : e.pageY -h});
+                const radians = Math.atan2(diffY, diffX);
+                const angel = radians * 180 / Math.PI;
+                
+                $(this).css({"transform": "rotate(" + angel + "deg)"});
             })
+
+            //커서
+            gsap.to(".cursor", {duration: .3, left: pageX, top: pageY});
+
+            $(".pageX").text(pageX);
+            $(".pageY").text(pageY);
         })
     </script>
 </body>
