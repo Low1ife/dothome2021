@@ -718,39 +718,47 @@
 
         <style>
             .s3Text1 {
+                text-align: center;
                 font-size: 8vw;
-                font-weight: 300;
-                font-family: 'NEXONLv1Gothic';
+                font-weight: 400;
                 text-transform: uppercase;
-                white-space: nowrap;
-                color: red;
-                font-weight: 500;
+                font-family: 'NEXONLv1Gothic';
             }
-            .s3Text1 span {
+            .textBox {
+                width: 0vw;
+                height: 0vw;
+                opacity: 0;
+                transform : translate(0vw , 2vw);
+                padding-top: 20px;
+                background-color: rgb(226, 61, 166);
+                display: inline-block;
+            }
+            .s3Text1 > div {
                 display: inline-block;
             }
             .s3Text1 .s1 {
-                /* transform: translate(-20vw, -10vw); */
+                opacity: 1;
+                transform: translate(0vw , 0vw);
             }
             .s3Text1 .s2 {
-                /* transform: translate(-20vw, 20vw); */
+                opacity: 1;
+                transform: translate(0vw , 0vw);
             }
             .s3Text1 .s3 {
-                /* transform: translate(-10vw, -20vw); */
+                opacity: 1;
+                transform: translate(0vw , 0vw);
             }
             .s3Text1 .s4 {
-                /* transform: translate(10vw, -20vw); */
+                opacity: 1;
+                transform: translate(0vw , 0vw);
             }
             .s3Text1 .s5 {
-                /* transform: translate(10vw, 20vw); */
+                opacity: 1;
+                transform: translate(0vw , 0vw);
             }
             .s3Text1 .s6 {
-                /* transform: translate(30vw, 10vw); */
-            }
-            .s3Text1 .s7 {
-                width: 100vw;
-                height: 1px;
-                background: #000;
+                opacity: 1;
+                transform: translate(0vw , 0vw);
             }
             /* s3Text2 */
             .s3Text2 {
@@ -783,48 +791,62 @@
             
         </style>
         <section id="section3">
-            <div class="s3Text1 fixed"
-                data-32500="top: 50%;"
-                data-33500="top: 10%;"
-                data-40000="top: 10%;"
-                data-41000="top: -10%;"
-            >         
-                <span class="s1"
-                    data-26000="font-size:200vw; opacity:0;"
-                    data-28000="font-size:8vw; opacity:1; transform:translatey(0%);"
-                    data-28500="font-size:8vw; opacity:1; transform:translatey(-20%);"
-                    data-29000="font-size:8vw; opacity:1; transform:translatey(0%);"
-                >s</span><span class="s2"
-                    data-26000="font-size:200vw; opacity:0;" 
-                    data-28000="font-size:8vw; opacity:1;"
-                    data-28500="font-size:8vw; opacity:1; transform:translatey(0%);"
-                    data-29000="font-size:8vw; opacity:1; transform:translatey(-20%);"
-                    data-29500="font-size:8vw; opacity:1; transform:translatey(0%);"
-                >c</span><span class="s3"
-                    data-26000="font-size:200vw; opacity:0;" 
-                    data-28000="font-size:8vw; opacity:1;"
-                    data-29000="font-size:8vw; opacity:1; transform:translatey(0%);"
-                    data-29500="font-size:8vw; opacity:1; transform:translatey(-20%);"
-                    data-30000="font-size:8vw; opacity:1; transform:translatey(0%);"
-                >r</span><span class="s4"
-                    data-26000="font-size:200vw; opacity:0;" 
-                    data-28000="font-size:8vw; opacity:1;"
-                    data-29500="font-size:8vw; opacity:1; transform:translatey(0%);"
-                    data-30500="font-size:8vw; opacity:1; transform:translatey(-20%);"
-                    data-31000="font-size:8vw; opacity:1; transform:translatey(0%);"
-                >i</span><span class="s5"
-                    data-26000="font-size:200vw; opacity:0;" 
-                    data-28000="font-size:8vw; opacity:1;"
-                    data-30500="font-size:8vw; opacity:1; transform:translatey(0%);"
-                    data-31000="font-size:8vw; opacity:1; transform:translatey(-20%);"
-                    data-31500="font-size:8vw; opacity:1; transform:translatey(0%);"
-                >p</span><span class="s6"
-                    data-26000="font-size:200vw; opacity:0;" 
-                    data-28000="font-size:8vw; opacity:1;"
-                    data-31000="font-size:8vw; opacity:1; transform:translatey(0%);"
-                    data-31500="font-size:8vw; opacity:1; transform:translatey(-20%);"
-                    data-32000="font-size:8vw; opacity:1; transform:translatey(0%);"
-                >t</span>
+            <div class="s3Text1 fixed">
+                <div class="textBox"
+                    data-26000 = "width : 1.5vw; height : 0vw;  transform : translate(0vw , 2vw); opacity : 0;"
+                    data-27000 = "width : 1.5vw; height : 10vw;  transform : translate(3vw , 2vw); opacity : 1;"
+                    data-31000 = "width : 1.5vw; height : 10vw;  transform : translate(50vw , 2vw); opacity : 1;"
+                    data-32000 = "width : 1.5vw; height : 0vw;  transform : translate(50vw , 2vw); opacity : 0;"
+                ></div>
+            
+                    <div class="s1"
+                        data-27500 = "opacity: 0; transform: translate(0vw , 0vw);"
+                        data-27600 = "opacity: 1;"
+                        data-32000 = "transform: translate(0vw , 0vw);"
+                        data-35000 = "transform: translate(0vw , -22vw);"
+                    >
+                        s
+                    </div>
+                    <div class="s2"
+                        data-28000 = "opacity: 0;"
+                        data-28200 = "opacity: 1;"
+                        data-32000 = "transform: translate(0vw , 0vw);"
+                        data-35000 = "transform: translate(0vw , -22vw);"
+                    >
+                        c
+                    </div>
+                    <div class="s3"
+                        data-28600 = "opacity: 0;"
+                        data-28800 = "opacity: 1;"
+                        data-32000 = "transform: translate(0vw , 0vw);"
+                        data-35000 = "transform: translate(0vw , -22vw);"
+                    >
+                        r
+                    </div>
+                    <div class="s4"
+                        data-29200 = "opacity: 0;"
+                        data-29400 = "opacity: 1;"
+                        data-32000 = "transform: translate(0vw , 0vw);"
+                        data-35000 = "transform: translate(0vw , -22vw);"
+                    >
+                        i
+                    </div>
+                    <div class="s5"
+                        data-29800 = "opacity: 0;"
+                        data-30200 = "opacity: 1;"
+                        data-32000 = "transform: translate(0vw , 0vw);"
+                        data-35000 = "transform: translate(0vw , -22vw);"
+                    >
+                        p
+                    </div>
+                    <div class="s5"
+                        data-30600 = "opacity: 0;"
+                        data-30800 = "opacity: 1;"
+                        data-32000 = "transform: translate(0vw , 0vw);"
+                        data-35000 = "transform: translate(0vw , -22vw);"
+                    >
+                        t
+                    </div>
             </div>
             <div class="s3Text2 fixed">
                 <iframe class="i1" src="../mouseEffect/javascriptME01.html" alt="mouse"
