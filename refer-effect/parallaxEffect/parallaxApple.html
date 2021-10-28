@@ -267,6 +267,309 @@
             transform: translatey(0px) rotate(90deg);
         }
         }
+
+        /* ani2 */
+        .container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #173c57;
+  border: 10px solid white;
+  margin: 100px auto;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.planet {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #70dec1 0%, #70dec1 30%, #7db9e8 100%);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: planet-pulse 5s infinite linear;
+          animation: planet-pulse 5s infinite linear;
+}
+
+.sub-planet {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #AEE69B 1%, #498DA4 50%, #0A404A 100%);
+  position: absolute;
+  top: 25%;
+  left: 70%;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  transform: scale(2);
+  z-index: 10;
+}
+.wave.wave-1 {
+  left: 60px;
+  bottom: 106px;
+  z-index: 11;
+}
+.wave.wave-2 {
+  left: -61px;
+  bottom: 78px;
+  z-index: 12;
+}
+.wave.wave-3 {
+  left: 100px;
+  bottom: 54px;
+  z-index: 13;
+}
+.wave.wave-4 {
+  left: 40px;
+  bottom: 29px;
+  z-index: 14;
+}
+.wave.wave-5 {
+  left: -71px;
+  bottom: 2px;
+  z-index: 15;
+}
+
+.orbit {
+  width: 1px;
+  height: 1px;
+  background: #fff;
+  border-radius: 50%;
+  positioN: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.02), 0 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.wave-1 {
+  -webkit-animation: wave 2s 1s ease-out infinite;
+          animation: wave 2s 1s ease-out infinite;
+}
+
+.wave-2 {
+  -webkit-animation: wave 2s 2s ease-out infinite;
+          animation: wave 2s 2s ease-out infinite;
+}
+
+.wave-3 {
+  -webkit-animation: wave 2s 3s ease-out infinite;
+          animation: wave 2s 3s ease-out infinite;
+}
+
+.wave-4 {
+  -webkit-animation: wave 2s 4s ease-out infinite;
+          animation: wave 2s 4s ease-out infinite;
+}
+
+.wave-5 {
+  -webkit-animation: wave 2s 5s ease-out infinite;
+          animation: wave 2s 5s ease-out infinite;
+}
+
+.orbit-1 {
+  -webkit-animation: orbit-1 10s linear infinite;
+          animation: orbit-1 10s linear infinite;
+}
+
+@-webkit-keyframes orbit-1 {
+  from {
+    transform: rotate(0deg) translateX(115px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(115px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-1 {
+  from {
+    transform: rotate(0deg) translateX(115px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(115px) rotate(-360deg);
+  }
+}
+.orbit-2 {
+  -webkit-animation: orbit-2 20s linear infinite;
+          animation: orbit-2 20s linear infinite;
+}
+
+@-webkit-keyframes orbit-2 {
+  from {
+    transform: rotate(0deg) translateX(130px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(130px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-2 {
+  from {
+    transform: rotate(0deg) translateX(130px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(130px) rotate(-360deg);
+  }
+}
+.orbit-3 {
+  -webkit-animation: orbit-3 30s linear infinite;
+          animation: orbit-3 30s linear infinite;
+}
+
+@-webkit-keyframes orbit-3 {
+  from {
+    transform: rotate(0deg) translateX(145px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(145px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-3 {
+  from {
+    transform: rotate(0deg) translateX(145px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(145px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes wave {
+  0% {
+    transform: translate(0, 0) scale(2);
+  }
+  50% {
+    transform: translate(10px, 10px) scale(2);
+  }
+  100% {
+    transform: translate(0, 0) scale(2);
+  }
+}
+@keyframes wave {
+  0% {
+    transform: translate(0, 0) scale(2);
+  }
+  50% {
+    transform: translate(10px, 10px) scale(2);
+  }
+  100% {
+    transform: translate(0, 0) scale(2);
+  }
+}
+@-webkit-keyframes anim {
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+@keyframes anim {
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+.star {
+  z-index: 50;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 1px;
+  height: 1px;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.02), 0 0 0 10px rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  background-color: white;
+  -webkit-animation: shooting 5s linear infinite;
+          animation: shooting 5s linear infinite;
+}
+.star:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  right: 1px;
+  top: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+.star-2 {
+  top: 100px;
+  left: -100px;
+  -webkit-animation: shooting 8s 1s linear infinite;
+          animation: shooting 8s 1s linear infinite;
+}
+
+.star-3 {
+  top: 250px;
+  left: -250px;
+  -webkit-animation: shooting 3s 2s linear infinite;
+          animation: shooting 3s 2s linear infinite;
+}
+
+.star-4 {
+  top: 50px;
+  left: -50px;
+  -webkit-animation: shooting 3s 2s linear infinite;
+          animation: shooting 3s 2s linear infinite;
+}
+
+.star-5 {
+  top: 150px;
+  left: -150px;
+  -webkit-animation: shooting 3s 2s linear infinite;
+          animation: shooting 3s 2s linear infinite;
+}
+
+@-webkit-keyframes shooting {
+  0% {
+    transform: translate(-100px, -100px) rotate(45deg) scale(1);
+  }
+  100% {
+    transform: translate(calc(100% + 300px), calc(100% + 300px)) rotate(45deg) scale(1.5);
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(-100px, -100px) rotate(45deg) scale(1);
+  }
+  100% {
+    transform: translate(calc(100% + 300px), calc(100% + 300px)) rotate(45deg) scale(1.5);
+  }
+}
+@-webkit-keyframes planet-pulse {
+  0% {
+    box-shadow: 0 0 0 15px rgba(112, 191, 188, 0.1), 0 0 0 30px rgba(112, 191, 188, 0.1), 0 0 0 45px rgba(112, 191, 188, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 30px rgba(112, 191, 188, 0.1), 0 0 0 45px rgba(112, 191, 188, 0.1), 0 0 0 60px rgba(112, 191, 188, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(112, 191, 188, 0.1), 0 0 0 30px rgba(112, 191, 188, 0.1), 0 0 0 45px rgba(112, 191, 188, 0.1);
+  }
+}
+@keyframes planet-pulse {
+  0% {
+    box-shadow: 0 0 0 15px rgba(112, 191, 188, 0.1), 0 0 0 30px rgba(112, 191, 188, 0.1), 0 0 0 45px rgba(112, 191, 188, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 30px rgba(112, 191, 188, 0.1), 0 0 0 45px rgba(112, 191, 188, 0.1), 0 0 0 60px rgba(112, 191, 188, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(112, 191, 188, 0.1), 0 0 0 30px rgba(112, 191, 188, 0.1), 0 0 0 45px rgba(112, 191, 188, 0.1);
+  }
+}
     </style>
 </head>
 <body>
@@ -582,7 +885,7 @@
                 left: 0; top: 0;
                 transform : translate(-35.9vw, 25vw);
                 background-image: linear-gradient(45deg, #16a085, #f4d03f);
-                width: 35vw; height: 40vh;
+                width: 35vw; height: 65vh;
             }
 
            
@@ -591,8 +894,8 @@
                 position: absolute;
                 right: 0; top: 0;
                 transform : translate(35.9vw, -25vw);
-                background: #000;
-                width: 35vw; height: 40vh;
+                background: rgb(47, 101, 110);
+                width: 35vw; height: 65vh;
             }
 
         </style>
@@ -643,8 +946,44 @@
                 <div class="ani2"
                     data-41500 = "transform : translate(35.9vw, -40vw);"
                     data-42500 = "transform : translate(35.9vw, 40vw);"
-                ></div> 
-                <div class="ani3"></div> 
+                >
+                    <div class="container">
+                        <div class="star star-1"></div>
+                        <div class="star star-2"></div>
+                        <div class="star star-3"></div>
+                        <div class="star star-4"></div>
+                        <div class="star star-5"></div>
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
+                        <div class="orbit orbit-3"></div>
+                        <div class="planet"></div>
+                        <div class="waves">  
+                        <svg class="wave wave-1" viewbox="7.5 0 60 10">
+                            <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#174A69" />
+                                <stop offset="65%" stop-color="#3D9C94" />
+                            </linearGradient>
+                            </defs>
+                            <path fill="url(#gradient)" d="M0 10 V5 Q2.5 2.5 5 5 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 V10" />
+                        </svg>
+                        <svg class="wave wave-2" viewbox="7.5 0 60 10">
+                            <path fill="url(#gradient)" d="M0 10 V5 Q2.5 2.5 5 5 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 V10" />
+                        </svg>
+                        <svg class="wave wave-3" viewbox="7.5 0 60 10">
+                            <path fill="url(#gradient)" d="M0 10 V5 Q2.5 2.5 5 5 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 V10" />
+                        </svg>
+                        <svg class="wave wave-4" viewbox="7.5 0 60 10">
+                            <path fill="url(#gradient)" d="M0 10 V5 Q2.5 2.5 5 5 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 V10" />
+                        </svg>
+                        <svg class="wave wave-5" viewbox="7.5 0 60 10">
+                            <path fill="url(#gradient)" d="M0 10 V5 Q2.5 2.5 5 5 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 t5 0 V10" />
+                        </svg>
+                        </div>
+                        <div class="sub-planet"></div>
+                    </div>
+                    </div> 
+                    <div class="ani3"></div> 
             </div>
         </section> 
         <!-- //section4 -->
