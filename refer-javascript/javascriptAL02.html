@@ -166,8 +166,8 @@
     <h1>javascript 알고리즘</h1>
     <ol>
         <li><a href="javascriptAl01.html">01</a></li>
-        <li><a href="javascriptAl02.html">02</a></li>
-        <li class="active"><a href="javascriptAl03.html">03</a></li>
+        <li class="active"><a href="javascriptAl02.html">02</a></li>
+        <li><a href="javascriptAl03.html">03</a></li>
         <li><a href="javascriptAl04.html">04</a></li>
         <li><a href="javascriptAl05.html">05</a></li>
         <li><a href="javascriptAl06.html">06</a></li>
@@ -178,25 +178,25 @@
     </ol>
 
     <div id="sample1" class="sample">
-        <h2>1부터 n까지의 합<span class="dot"></span></h2>
+        <h2>세 숫자 중 최소값<span class="dot"></span></h2>
         <p class="problem">
-            Q : 자연수 N이 입력되면 1부터 N까지의 합을 출력하는 프로그램을 작성하시오.        
+            Q : 연필 한다스는 12자루 학생 1인당 1자루씩 나누어 준다고 할 때 N명의 학생수를 입력하면 필요한 연필의 다스 수를 계산하는 프로그램을 작성하시오.         
         </p>
         <div class="desc">
             <dl>
                 <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 입력 설명</dt>
-                <dd>20이하의 자연수 N이 입력됩니다.</dd>
+                <dd>첫 번째 줄에 1000이하의 세 자연수가 입력된다.</dd>
                 <dt> <i class="fa fa-bullhorn" aria-hidden="true"></i>출력 설명</dt>
-                <dd>1부터 n 까지의 합이 출력됩니다.</dd>
+                <dd>첫 번째 줄에 필요한 다스수를 출력한다.</dd>
                 <!-- 정의형 목록형 태그 -->
             </dl>
         </div>
         <div class="sam">
             <dl>
                 <dt><i class="fa fa-keyboard-o" aria-hidden="true"></i>입력 예제</dt>
-                <dd>10</dd>
+                <dd>178</dd>
                 <dt><i class="fa fa-line-chart" aria-hidden="true"></i>출력 예제</dt>
-                <dd>55</dd>
+                <dd>15</dd>
             </dl>
         </div>
         <div class="code">
@@ -212,13 +212,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js" integrity="sha512-axJX7DJduStuBB8ePC8ryGzacZPr3rdLaIDZitiEgWWk2gsXxEFlm4UW0iNzj2h3wp5mOylgHAzBzM4nRSvTZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-        let sum = 0;
-
-        for(i=1; i<=10; i++){
-            sum += i;
+        function solution(num){
+            let answer = Math.ceil(num/12);
+            return answer;
         }
-        console.log(sum);
+        console.log(solution(178));
     </script>
 </body>
 </html>
