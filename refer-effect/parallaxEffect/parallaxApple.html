@@ -155,7 +155,7 @@
         }
 
         .s1Text2 {
-            font-size: 8vw;
+            font-size: 3vw;
             font-weight: 700;
             white-space: nowrap;
             /* 텍스트 일자로 */
@@ -686,11 +686,11 @@
         <section id="section1">
             <div class="s1Text1 fixed" data-0="transform: translate(-50%, 0%); opacity:0;"
                 data-500="transform: translate(-50%, -50%); opacity:1;"
-                data-1000="transform: translate(-50%, -100%); opacity:0;">안녕하세요.</div>
+                data-1000="transform: translate(-50%, -100%); opacity:0;">안녕하세요!</div>
             <div class="s1Text2 fixed" data-1500="transform: translate(-50%, 0%); opacity:0;"
                 data-2000="transform: translate(-50%, -50%); opacity:1;"
                 data-2500="transform: translate(-50%, -50%); opacity:1; font-size: 8vw;"
-                data-3500="transform: translate(-50%, -50%); opacity:1; font-size: 0vw;">프론트앤드 개발자입니다.
+                data-3500="transform: translate(-50%, -50%); opacity:1; font-size: 0vw;">프론트앤드 개발자입니다!
             </div>
             <div class="s1Text3 fixed" data-3200="width:0vw;" data-4200="width:100vw;"
                 data-10200="width:100vw; display: block;" data-10201="width:100vw;  display: none;"><img
@@ -984,34 +984,36 @@
                 height: 65vh;
             }
 
-            .s4Text3 {
-                color: #fff;
-                background: #000;
-                width: 10vw;
-                height: 10vw;
-                font-size: 3vw;
-                transform: translate(-50%, -50%);
-                position: absolute;
-                left: 50%;
-                top: 50%;
-            }
+            
         </style>
         <section id="section4">
-            <div class="s4Text1" data-39999="display: none" data-40000="display: block" data-41500="display: block">
-                <div class="circle1 fixed" data-40000="width: 0vw; height: 0vw;"
+            <div class="s4Text1" 
+                data-39999="display: none"
+                data-40000="display: block" 
+                data-41500="display: block">
+                <div class="circle1 fixed" 
+                    data-40000="width: 0vw; height: 0vw;"
                     data-41000="width: 200vw; height: 200vw;"></div>
-                <div class="circle2 fixed" data-40050="width: 0vw; height: 0vw;"
+                <div class="circle2 fixed" 
+                    data-40050="width: 0vw; height: 0vw;"
                     data-41500="width: 200vw; height: 200vw;"></div>
-                <div class="circle3 fixed" data-40100="width: 0vw; height: 0vw;"
+                <div class="circle3 fixed" 
+                    data-40100="width: 0vw; height: 0vw;"
                     data-41500="width: 200vw; height: 200vw;"></div>
-                <div class="circle4 fixed" data-40150="width: 0vw; height: 0vw;"
+                <div class="circle4 fixed" 
+                    data-40150="width: 0vw; height: 0vw;"
                     data-41500="width: 200vw; height: 200vw;"></div>
-                <div class="circle5 fixed" data-40200="width: 0vw; height: 0vw;"
+                <div class="circle5 fixed" 
+                    data-40200="width: 0vw; height: 0vw;"
                     data-41500="width: 200vw; height: 200vw;"></div>
-                <div class="circle6 fixed" data-40250="width: 0vw; height: 0vw;"
+                <div class="circle6 fixed" 
+                    data-40250="width: 0vw; height: 0vw;"
                     data-41500="width: 200vw; height: 200vw;"></div>
             </div>
-            <div class="s4Text2 fixed" data-41500="opacity : 0;" data-42000="opacity : 1;" data-42500="opacity : 0;">
+            <div class="s4Text2 fixed" 
+                data-40500="opacity : 0;" 
+                data-42000="opacity : 1;" 
+                data-42500="opacity : 0;">
                 animation
                 <div class="ani1" data-41500="transform : translate(-35.9vw, 40vw);"
                     data-42500="transform : translate(-35.9vw, -40vw);">
@@ -1066,11 +1068,34 @@
 
 
         <style>
-            .s5Text1 {}
+            #section5 {
+                
+            }
+            .s5Text1 {
+                perspective: 1000px;
+            }
+           .s5Text1 h2{
+               color : #fff;
+               font-size: 4vw;
+               white-space: nowrap;
+               transform: rotate3d(1,0,0,-90deg); transform-origin: 20% 100%;
+               opacity : 0;
+           }
+           .s5Text2 {
+                color : #000;
+           }
         </style>
         <section id="section5">
-            <div class="s5Text1">
-                <h4>Want to see more?</h4>
+            <div class="s5Text1 fixed">
+                <h2
+                    data-43000 = "opacity : 0; transform: rotate3d(1,0,0,-90deg); transform-origin: 20% 0%;"
+                    data-44500 = "opacity : 1; transform: rotate3d(1,0,0,0deg); transform-origin: 20% 0%;"
+                    data-45500 = "opacity : 0; transform: rotate3d(1,0,0,90deg); transform-origin: 20% 0%;"
+                    
+                >Want to see more?</h2>
+            </div>
+            <div class="s5Text2">
+                <h2>Contact Me!</h2>
             </div>
         </section> <!-- //section5 -->
     </div>
@@ -1080,7 +1105,7 @@
         window.addEventListener("scroll", () => {
             let scrollTop = document.documentElement.scrollTop || window.scrollY || window.PageYOffset;
             document.querySelector(".scroll").innerHTML = scrollTop;
-        })
+        });
     </script>
 </body>
 
