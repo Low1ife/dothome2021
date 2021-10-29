@@ -149,6 +149,19 @@
     &lt;/div&gt;    
 &lt;/main&gt;
 &lt;!-- contents --&gt;
+&lt;!-- contents --&gt;
+&lt;main&gt;
+    &lt;div class="slider-wrap"&gt;
+        &lt;div class="slider-img"&gt;
+            &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg1.jpg" alt="이미지1"&gt;&lt;/div&gt;
+            &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg2.jpg" alt="이미지2"&gt;&lt;/div&gt;
+            &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg3.jpg" alt="이미지3"&gt;&lt;/div&gt;
+            &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg4.jpg" alt="이미지4"&gt;&lt;/div&gt;
+            &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg5.jpg" alt="이미지5"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;    
+&lt;/main&gt;
+&lt;!-- contents --&gt;
 </code></pre>
                         </div>
                         <div>
@@ -199,40 +212,53 @@
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-javascript">const sliderWrap = $(".slider-wrap");
-const sliderImg = $(".slider-img");
-const sliderInner = $(".slider-inner");
-const slider = $(".slider");
+<pre><code class="language-javascript">//sample1
+const sliderImg1 = document.querySelector(".slider-img1");
+const sliderInner1 = document.querySelector(".slider-inner1");
+const slider1 = document.querySelector(".slider1");
 
-let currentIndex = 0;
-let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+let currentIndex1 = 0;
+let sliderHeight1 = slider1.offsetHeight;
 
-setInterval(function(){   //3초에 한번씩 왼쪽으로 이동
-    // sliderInner.animate({ left: "-800px" });
-    // sliderInner.animate({ left: "-1600px" });
-    // sliderInner.animate({ left: "-2400px" });
-    // sliderInner.animate({ left: "-3200px" });
-    // sliderInner.animate({ left: "-4000px" });
-    // sliderInner.animate({ left: "-0px" });
+sliderInner1.style.transition = "all 0.3s";
+sliderInner1.style.top = "0px";
 
-    //currentIndex++;
+setInterval(() => {
+    currentIndex1 &lt; 4 ? currentIndex1++ : currentIndex1 = 0;
 
-    // if( currentIndex &lt; 5 ) {
-    //     currentIndex++;
-    // } else {
-    //     currentIndex = 0;
-    // }
-    ( currentIndex &lt; sliderCount -1 ) ? currentIndex++ : currentIndex = 0 
-    (currentIndex &lt; sliderCount -1) ? currentIndex ++ : currentIndex = 0;
+    let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
 
-    let sliderPosition = currentIndex * -sliderWidth;
-    sliderInner.animate({ left : sliderPosition }, sliderDuration , sliderEasing);
+    sliderInner1.style.transition = "all 0.3s";
+    sliderInner1.style.top = sliderPosition;
 
-    console.log(currentIndex);
-} , 3000);
+} , 2000);
+
+
+//sample2
+const sliderImg2 = document.querySelector(".slider-img2");
+const sliderInner2 = document.querySelector(".slider-inner2");
+const slider2 = document.querySelector(".slider2");
+
+let currentIndex2 = 0;
+let sliderHeight2 = slider2.offsetHeight;
+let sliderCount = document.querySelectorAll(".slider2").length;
+
+let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
+sliderInner2.appendChild(sliderClone)
+
+setInterval(() => {
+    currentIndex2++;
+    sliderInner2.style.transition = "all 0.3s";
+    sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 + "px)";
+
+    if( currentIndex2 == sliderCount ){
+        setTimeout(() => {
+            sliderInner2.style.transition = "0s";
+            sliderInner2.style.transform = "translateY(0)";
+        }, 300);
+        currentIndex2 = 0;
+    }
+}, 2000);
 </code></pre>
                         </div>
                     </div>
