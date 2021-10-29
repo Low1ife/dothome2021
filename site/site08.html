@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코딩 테스트 8</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        em {
+            font-style: normal;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            font-family: 'S-CoreDream';
+        }
+
+        .side {
+            width: 20%;
+            height: 1500px;
+            /* background: #000; */
+            float: left;
+            padding-top: 70px;
+        }
+
+        .side .logo img {
+            width: 175px;
+            height: 70px;
+            margin-bottom: 90px;
+        }
+
+        .side .info {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .side .info li {
+            margin-bottom: 10px;
+        }
+
+
+        .main {
+            width: 80%;
+            height: 1500px;
+            float: left;
+            margin-top: 70px;
+        }
+
+        .main .content1 {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+
+
+
+        .main .content2 {
+            width: 100%;
+            height: 500px;
+            text-align: center;
+        }
+
+        .main .content2 .menubox {
+            margin-top: 70px;
+        }
+
+        .main .content2 .menubox img {
+            width: 130px;
+            height: 130px;
+            margin-bottom: 20px;
+        }
+
+        .main .content2 .menubox2 {
+            margin-top: 70px;
+            display: none;
+        }
+
+        .main .content2 .menubox2 img {
+            width: 130px;
+            height: 130px;
+            margin-bottom: 20px;
+        }
+
+        .main .content2 .menu1 {
+            width: 150px;
+            height: 180px;
+
+            float: left;
+            margin-right: 1.5%;
+        }
+
+        .main .content2 .menu2 {
+            width: 150px;
+            height: 180px;
+            float: left;
+            margin-right: 1.5%;
+        }
+
+        .main .content2 .menu3 {
+            width: 150px;
+            height: 180px;
+            float: left;
+            margin-right: 1.5%;
+        }
+
+        .main .content2 .menu4 {
+            width: 150px;
+            height: 180px;
+            float: left;
+            margin-right: 1.5%;
+        }
+
+        .main .content2 .menu5 {
+            width: 150px;
+            height: 180px;
+            float: right;
+        }
+
+        /* cont2 tab-menu */
+
+        .main .content2 .tab-btn {
+            padding-top: 80px;
+        }
+
+        .main .content2 .tab-btn li {
+            font-size: 30px;
+            font-weight: 600;
+            display: inline;
+        }
+
+        .main .content2 .tab-btn li a {
+            color: #c2c2c2;
+        }
+
+        .main .content2 .tab-btn li.active a {
+            color: #000;
+        }
+
+
+
+
+        .main .content3 {
+            width: 100%;
+            height: 500px;
+            text-align: center;
+            background: #f7f7f7;
+        }
+
+        .main .content3 .boxWrap {
+            padding-top: 60px;
+        }
+
+        .main .content3 .boxWrap li {
+            white-space: nowrap;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .main .content3 .cont-box1 {
+            width: 220px;
+            height: 380px;
+            border: 1px solid #dadfe6;
+            background: #fff;
+            float: left;
+            margin-left: 30px;
+            margin-right: 40px;
+        }
+
+        .main .content3 .cont-box1 h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main .content3 .cont-box1 img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 40px;
+        }
+
+        .main .content3 .cont-box2 h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main .content3 .cont-box2 img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 40px;
+        }
+
+        .main .content3 .cont-box3 h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main .content3 .cont-box3 img {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 40px;
+        }
+
+
+
+
+        .main .content3 .cont-box2 {
+            width: 220px;
+            height: 380px;
+            border: 1px solid #dadfe6;
+            background: #fff;
+            float: left;
+        }
+
+        .main .content3 .cont-box3 {
+            width: 220px;
+            height: 380px;
+            border: 1px solid #dadfe6;
+            background: #fff;
+            float: right;
+            margin-right: 30px;
+        }
+
+
+
+        .footer {
+            width: 100%;
+            height: 150px;
+            background: #edf2f8;
+            clear: both;
+        }
+
+        .footer .logo {
+            float: left;
+        }
+
+        .footer .logo img {
+            width: 80px;
+            height: 100px;
+            margin-left: 35px;
+            margin-right: 45px;
+            margin-top: 25px;
+        }
+
+        .footer .footerInfo {
+            float: left;
+            margin-top: 60px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .footer .sns {
+            float: right;
+        }
+
+        .footer .sns img {
+            width: 300px;
+            height: 75px;
+            margin-top: 35px;
+            margin-right: 35px;
+        }
+
+
+
+        /* slider */
+        .main .content1 img {
+            width: 100%;
+            height: 500px;
+        }
+
+        .slider:nth-child(1) {
+            z-index: 5;
+        }
+
+        .slider:nth-child(2) {
+            z-index: 4;
+        }
+
+
+        /* arcodian */
+        .mainMenu {
+            width: 100%;
+            display: block;
+            overflow: hidden;
+        }
+
+        .nav {
+            overflow: hidden;
+        }
+
+        .btn {
+            display: block;
+            padding: 15px 20px;
+            
+            color: #000;
+            position: relative;
+
+        }
+
+        .subMenu {
+            overflow: hidden;
+            transition: max-height 0.7s;
+            max-height: 0;
+        }
+
+        .subMenu a {
+            display: block;
+            padding: 15px 20px;
+            color: #222;
+            font-size: 14px;
+            border-bottom: 1px solid #eaeaea;
+            position: relative;
+
+        }
+
+        .subMenu a:after {
+            content: '';
+            opacity: 0;
+            transition: opacity 0.3s;
+
+        }
+
+        .subMenu a:hover {
+            background: #fafafa;
+            transition: all 0.3s;
+            border-bottom: 1px solid #c8c8c8;
+        }
+
+        .subMenu a:last-child {
+            border: none;
+        }
+
+        .nav:target .subMenu {
+            max-height: 10em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="container">
+            <div class="side">
+                <div class="logo">
+                    <img src="img/8번-1.jpg" alt="">
+                </div>
+                <div class="info">
+                    <ul class="mainMenu">
+                        <li class="nav" id="account">
+                            <a href="#account" class="btn">서비스</a>
+                            <div class="subMenu">
+                                <a href="">분야별 정책정보</a>
+                                <a href="">정책뉴스</a>
+                                <a href="">연구보고서</a>
+                                <a href="">간행물</a>
+                                <a href="">정책자료</a>
+                            </div>
+                        </li>
+                        <li class="nav" id="about">
+                            <a href="#about" class="btn">정책정보</a>
+
+                        </li>
+                        <li class="nav" id="support">
+                            <a href="#support" class="btn">기관정보</a>
+
+                        </li>
+                        <li class="nav">
+                            <a href="#" class="btn">고객센터</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+                <div class="content1">
+                    <div class="slider-inner slider-inner2">
+                        <div class="slider slider2" data-name="이미지1"><img src="img/8번-2.jpg" alt="이미지1"></div>
+                        <div class="slider slider2" data-name="이미지1"><img src="img/banner.jpg" alt="이미지1"></div>
+                    </div>
+                </div>
+
+
+
+                <div class="content2">
+                    <div class="tab-btn">
+                        <ul>
+                            <li class="active"><a href="#">자주 찾는 서비스 </a></li>
+                            <li><a href="#">키워드 서비스</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont">
+                        <div class="menubox">
+                            <div class="menu1">
+                                <img src="img/cont1.jpg" alt="">
+                                <p>주민등록표등본<br>(초본)발부</p>
+                            </div>
+                            <div class="menu2">
+                                <img src="img/cont1.jpg" alt="">
+                                <p>주민등록표등본<br>(초본)발부</p>
+                            </div>
+                            <div class="menu3">
+                                <img src="img/cont1.jpg" alt="">
+                                <p>주민등록표등본<br>(초본)발부</p>
+                            </div>
+                            <div class="menu4">
+                                <img src="img/cont1.jpg" alt="">
+                                <p>주민등록표등본<br>(초본)발부</p>
+                            </div>
+                            <div class="menu5">
+                                <img src="img/cont1.jpg" alt="">
+                                <p>주민등록표등본<br>(초본)발부</p>
+                            </div>
+                        </div>
+                        <div class="menubox2">
+                            <div class="menu1">
+                                <img src="img/tab2.jpg" alt="">
+                                <p>토지(임야)대장<br>열람/등본 발급신청</p>
+                            </div>
+                            <div class="menu2">
+                                <img src="img/tab2.jpg" alt="">
+                                <p>토지(임야)대장<br>열람/등본 발급신청</p>
+                            </div>
+                            <div class="menu3">
+                                <img src="img/tab2.jpg" alt="">
+                                <p>토지(임야)대장<br>열람/등본 발급신청</p>
+                            </div>
+                            <div class="menu4">
+                                <img src="img/tab2.jpg" alt="">
+                                <p>토지(임야)대장<br>열람/등본 발급신청</p>
+                            </div>
+                            <div class="menu5">
+                                <img src="img/tab2.jpg" alt="">
+                                <p>토지(임야)대장<br>열람/등본 발급신청</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="content3">
+                    <div class="boxWrap">
+                        <div class="cont-box1">
+                            <h3>공지사항</h3>
+                            <img src="img/content3box1.jpg" alt="">
+                            <ul>
+                                <li>[어디서나 대학민원]호서대학교 팩스</li>
+                                <li>[전라북도 고창군]새올행정시스템 D</li>
+                                <li>교육부 행정전자서명인증센터 시스템</li>
+                            </ul>
+                        </div>
+                        <div class="cont-box2">
+                            <h3>자료실</h3>
+                            <img src="img/content3box1.jpg" alt="">
+                            <ul>
+                                <li>[어디서나 대학민원]호서대학교 팩스</li>
+                                <li>[전라북도 고창군]새올행정시스템 D</li>
+                                <li>교육부 행정전자서명인증센터 시스템</li>
+                            </ul>
+                        </div>
+                        <div class="cont-box3">
+                            <h3>FAQ</h3>
+                            <img src="img/content3box1.jpg" alt="">
+                            <ul>
+                                <li>[어디서나 대학민원]호서대학교 팩스</li>
+                                <li>[전라북도 고창군]새올행정시스템 D</li>
+                                <li>교육부 행정전자서명인증센터 시스템</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="footer">
+                <div class="logo">
+                    <img src="img/footerlogo.jpg" alt="">
+                </div>
+                <div class="footerInfo">
+                    <p>03171 서울특별시 세종대로 209(세종로) 행정안전부</p>
+                    <p>정부24콜센터 1588-2188 정부민원안내콜센터 국번없이 110</p>
+                    <p>Copyright Ministy of the interior and Safety. All Rights reserved</p>
+                </div>
+                <div class="sns">
+                    <img src="img/footerSns.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const sliderImg2 = document.querySelector(".slider-img2");
+        const sliderInner2 = document.querySelector(".slider-inner2");
+        const slider2 = document.querySelector(".slider2");
+
+        let currentIndex2 = 0;
+        let sliderHeight2 = slider2.offsetHeight;
+        let sliderCount = document.querySelectorAll(".slider2").length;
+
+        let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
+        sliderInner2.appendChild(sliderClone)
+
+        setInterval(() => {
+            currentIndex2++;
+            sliderInner2.style.transition = "all 0.3s";
+            sliderInner2.style.transform = "translateY(" + -sliderHeight2 * currentIndex2 + "px)";
+
+            if (currentIndex2 == sliderCount) {
+                setTimeout(() => {
+                    sliderInner2.style.transition = "0s";
+                    sliderInner2.style.transform = "translateY(0)";
+                }, 300);
+                currentIndex2 = 0;
+            }
+        }, 2000);
+
+
+
+        //tab menu
+        const tabBtn = document.querySelectorAll(".tab-btn ul li")
+        const tabCont = document.querySelectorAll(".tab-cont > div")
+
+        tabBtn.forEach((elem, index) => {
+            elem.addEventListener("click", function () {
+
+                tabBtn.forEach(el => {
+                    el.classList.remove("active");
+                });
+                elem.classList.add("active");
+
+                tabCont.forEach(element => {
+                    element.style.display = "none";
+                })
+                tabCont[index].style.display = "block";
+            });
+        })
+    </script>
+</body>
+
+</html>
