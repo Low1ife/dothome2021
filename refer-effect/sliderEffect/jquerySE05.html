@@ -217,6 +217,30 @@
 .slider:nth-child(4){z-index: 2;}
 .slider:nth-child(5){z-index: 1;}
 .slider::before{content : attr(data-name);}
+
+.slider-btn a {
+    position: absolute;
+    top: 50%;
+    transform : translateY(-50%);
+    z-index: 1000;
+    width: 50px; height: 50px;
+    line-height: 50px;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    transition: all 0.2s;
+    display: block;
+    text-decoration: none;
+    color : #fff;
+}
+.slider-btn a:hover {
+    background: rgba(241,96,86,1);
+}
+.slider-btn .prev {
+    left: 0;
+}
+.slider-btn .next {
+    right: 0;
+}
 </code></pre>
                         </div>
                         <div>
@@ -224,36 +248,34 @@
 const sliderImg = $(".slider-img");
 const sliderInner = $(".slider-inner");
 const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
 
-let currentIndex = 0;
-let sliderCount = slider.length;
 let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+let sliderCount = slider.length;
 
-setInterval(function(){   //3초에 한번씩 왼쪽으로 이동
-    // sliderInner.animate({ left: "-800px" });
-    // sliderInner.animate({ left: "-1600px" });
-    // sliderInner.animate({ left: "-2400px" });
-    // sliderInner.animate({ left: "-3200px" });
-    // sliderInner.animate({ left: "-4000px" });
-    // sliderInner.animate({ left: "-0px" });
+sliderInner.css({ marginLeft : -sliderWidth }); 
+$(".slider:last-chlid").prependTo(sliderInner);
 
-    //currentIndex++;
+function movePrev(){
+    sliderInner.animate({ left: sliderWidth } , 400, function(){
+        $(".slider:last-child").prependTo(sliderInner);
+        sliderInner.css("left","")
+    });
+}
 
-    // if( currentIndex &lt; 5 ) {
-    //     currentIndex++;
-    // } else {
-    //     currentIndex = 0;
-    // }
-    ( currentIndex &lt; sliderCount -1 ) ? currentIndex++ : currentIndex = 0 
-    (currentIndex &lt; sliderCount -1) ? currentIndex ++ : currentIndex = 0;
+function moveNext(){
+    sliderInner.animate({ left: -sliderWidth } , 400, function(){
+        $(".slider:first-child").appendTo(sliderInner);
+        sliderInner.css("left","")
+    });
+}
 
-    let sliderPosition = currentIndex * -sliderWidth;
-    sliderInner.animate({ left : sliderPosition }, sliderDuration , sliderEasing);
-
-    console.log(currentIndex);
-} , 3000);
+sliderBtn.find(".prev").click(function(){
+    movePrev();
+});
+sliderBtn.find(".next").click(function(){
+    moveNext();
+});
 </code></pre>
                         </div>
                     </div>
