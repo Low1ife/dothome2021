@@ -1015,12 +1015,12 @@
                 data-42000="opacity : 1;" 
                 data-42500="opacity : 0;">
                 animation
-                <div class="ani1" data-41500="transform : translate(-35.9vw, 40vw);"
-                    data-42500="transform : translate(-35.9vw, -40vw);">
+                <div class="ani1" data-41500="transform : translate(-35.9vw, 80vw);"
+                    data-42500="transform : translate(-35.9vw, -80vw);">
                     <div class="box"></div>
                 </div>
-                <div class="ani2" data-41500="transform : translate(35.9vw, -40vw);"
-                    data-42500="transform : translate(35.9vw, 40vw);">
+                <div class="ani2" data-41500="transform : translate(35.9vw, -80vw);"
+                    data-42500="transform : translate(35.9vw, 80vw);">
                     <div class="container">
                         <div class="star star-1"></div>
                         <div class="star star-2"></div>
@@ -1081,6 +1081,24 @@
                transform: rotate3d(1,0,0,-90deg); transform-origin: 20% 100%;
                opacity : 0;
            }
+           .contactBox {
+
+           }
+           .contactBox h1 {
+               font-size: 5vw;
+               white-space: nowrap;
+               text-transform: uppercase;
+               transform: translate(-100vw, 0vw);
+               color :#fff;
+           }
+
+           .contactBox h3 {
+               font-size: 2.5vw;
+               white-space: nowrap;
+               transform: translate(-100vw, 0vw);
+               margin-top: 50px;
+               color : #ffff;
+           }
         </style>
         <section id="section5">
             <div class="s5Text1 fixed">
@@ -1091,13 +1109,15 @@
                     
                 >Want to see more?
             </h2>
-            <div class="contactBox"
-                data-46000 = "opacity : 0; transform: rotate3d(1,0,0,-90deg); transform-origin: 20% 0%;"
-                data-46500 = "opacity : 1; transform: rotate3d(1,0,0,0deg); transform-origin: 20% 0%;"
-                data-47500 = "opacity : 0; transform: rotate3d(1,0,0,90deg); transform-origin: 20% 0%;"
-            >
-                <h1>Contact Me!</h1>
-                <h1>kws7902@naver.com</h1>
+            <div class="contactBox">
+                <h1
+                    data-46000 = "transform: translate(-100vw, 0vw);"
+                    data-47000 = "transform: translate(0vw, 0vw);"
+                >Contact Me!</h1>
+                <h3
+                    data-47000 = "transform: translate(-100vw, 0vw);"
+                    data-48000 = "transform: translate(4vw, 0vw);"
+                >kws7902@naver.com</h3>
             </div>
             </div>
         </section> <!-- //section5 -->
