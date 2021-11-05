@@ -250,7 +250,7 @@
 }
 .nav_container li a {padding: 3px; color: #333;}
 .nav_container li a:hover {background-color:#25a2d0; color:#fff;  }
-.nav_container li:before {content:''; position:absolute; top:50%; left:1px; width:3px; height:3px; background:#499ce2; }
+.nav_container li:before {content:''; position:absolute; top:50%; left:1px; width:3px; height:3px; background:#a1a4a7; }
 .nav_container {display: none;}
 .nav_container.on {display: block;}
 
