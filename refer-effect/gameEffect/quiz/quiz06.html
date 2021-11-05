@@ -394,7 +394,7 @@
             align-items: center;
             justify-content: center;
         }
-        .question_result .buttons .restart {
+        .question_result .buttons .question_restart {
             margin: 10px;
             width: 100px; height: 50px;
             border-radius: 10px;
@@ -645,20 +645,28 @@
             let userAnswer = answer.textContent.trim();
             let currentAnswer = quizInfo[quizCount].quizAnswer.trim();
             let allChoices = questionSelect.children.length;
+            let iconYes = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+            let iconNo = '<i class="fa fa-times-circle" aria-hidden="true"></i>';
 
             if( userAnswer == currentAnswer ){
                 console.log("정답입니다.");
                 //클래스 추가 correct
                 answer.parentNode.classList.add("correct");
+                answer.insertAdjacentHTML("beforeend" , iconYes);
+                userScore++;
             } else {
                 console.log("틀렸습니다.")
                 //클래스 추가 incorrect
                 answer.parentNode.classList.add("incorrect");
+                answer.insertAdjacentHTML("beforeend" , iconNo);
+                const p =  document.createElement("p");
+                questionSelect.appendChild(p).innerHTML = quizInfo[quizCount].quizEx;
 
                 //틀렸을 때 정답 알려주기
                 for (let i=0; i<allChoices; i++) {
                     if (questionSelect.children[i].querySelector(".choice").textContent == currentAnswer){
                         questionSelect.children[i].classList.add("correct");
+                        questionSelect.children[i].querySelector(".choice").answer.insertAdjacentHTML("beforeend" , iconYes);
                     }
                 }
             }
@@ -679,7 +687,6 @@
             if( quizCount < quizInfo.length -1 ){
                 quizCount++;
                 quizNum++;
-                userScore++;
                 showQuestion(quizCount);
                 questionCount(quizNum);
 
