@@ -72,7 +72,7 @@
   margin-bottom: 1%;
   float: left;
 
-  border-bottom: 3px solid #a5d5fa;
+  border-bottom: 3px solid #98db95;
   background-color: #fff;
 }
 
@@ -158,7 +158,7 @@
 .shape1 .shape_box .shape_box_t1 {
 	display: block;
 	text-align: right;
-	color: #4a9abf;
+	color: #4abf4a;
 } 
 .shape1 .shape_box .shape_box_t2 {
 	display: block;
