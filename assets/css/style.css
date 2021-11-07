@@ -1,5 +1,5 @@
 /* ==================================================
-   Info Block
+   Info Block  
 ================================================== */
 .info-block {
     border-left: 4px solid #DE5E60;
@@ -274,21 +274,21 @@
 }
 .gridly li a {
 	text-decoration: none; 
-	color:#494e51; 
+	color:#8fc861; 
 	display: block; 
 	margin-right: 20px; 
 }
 
 .gridly .webstandard a {
-	color: #157ed3;
+	color: #8fc861;
 	display: block;
-	border-bottom: 3px solid #a5d5fa;
+	border-bottom: 3px solid #8fc861;
 	margin-right: 20px;
 } 
 .gridly .html5 a {
-	color: #8432c4;
+	color: #8fc861;
 	display: block;
-	border-bottom: 3px solid #8432c4;
+	border-bottom: 3px solid #6cc432;
 	margin-right: 20px;
 	
 }
@@ -384,7 +384,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #f2a1d1;
+	background: #d2e2b9;
 	color: #FFFFFF;
 	font-size: 25px;
 	font-weight: 300;
@@ -407,7 +407,7 @@
 	width: 100%;
 	height: 32px;
 	top: 50%;
-	color: #a92c76;
+	color: #0f9721;
 	font-size: 20px;
 	text-transform: uppercase;
 	line-height: 20px;
