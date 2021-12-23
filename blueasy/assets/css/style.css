@@ -64,7 +64,6 @@
     width: 100%;
     height: 150px;
     display: flex;
-    font-family: 'Segoe UI' , sans-serif;
 }
 
 .header .logo {
@@ -74,6 +73,7 @@
 .header .logo h1 {
     line-height: 150px;
     font-size: 30px;
+    font-family: 'Segoe UI' , sans-serif;
 }
 .header .logo h1 i {
     color : #4bcaff;
@@ -91,10 +91,12 @@
     display: inline-block;
     margin-left: 50px;
     line-height: 150px;
+
 }
 .header .list li a{
     color : #fff;
     padding: 10px;
+    font-family: 'Segoe UI' , sans-serif;
 }
 .header .list li:hover a {
     color : #4bcaff;
