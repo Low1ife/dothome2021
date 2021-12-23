@@ -1,0 +1,631 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('/surface/Assets/css/fonts/all/normal/segoeui.eot');
+    src: url('/surface/Assets/css/fonts/all/normal/segoeui.eot?#iefix') format('embedded-opentype'),
+         url('/surface/Assets/css/fonts/all/normal/segoeui.woff') format('woff'),
+         url('/surface/Assets/css/fonts/all/normal/segoeui.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Semibold';
+    src: url('/surface/Assets/css/fonts/all/semibold/seguisb.eot');
+    src: url('/surface/Assets/css/fonts/all/semibold/seguisb.eot?#iefix') format('embedded-opentype'),
+         url('/surface/Assets/css/fonts/all/semibold/seguisb.woff') format('woff'),
+         url('/surface/Assets/css/fonts/all/semibold/seguisb.svg#SegoeUISemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Bold';
+    src: url('/surface/Assets/css/fonts/all/bold/segoeuib.eot');
+    src: url('/surface/Assets/css/fonts/all/bold/segoeuib.eot?#iefix') format('eot'), /* Wrong format will tell IE9+ to ignore and use WOFF instead. MSHAR-2822 */
+         url('/surface/Assets/css/fonts/all/bold/segoeuib.woff') format('woff'),
+         url('/surface/Assets/css/fonts/all/bold/segoeuib.svg#SegoeUIBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Light';
+    src: url('/surface/Assets/css/fonts/all/light/segoeuil.eot');
+    src: url('/surface/Assets/css/fonts/all/light/segoeuil.eot?#iefix') format('embedded-opentype'),
+         url('/surface/Assets/css/fonts/all/light/segoeuil.woff') format('woff'),
+         url('/surface/Assets/css/fonts/all/light/segoeuil.svg#SegoeUILight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrap {
+    width: 1920px;
+    margin: 0 auto;
+    position : relative;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    width: 1920px;
+    height: 150px;
+    background-color : rgba(0,0,0,0.5);
+    position: fixed;
+    left: 50%; top: 0;
+    transform : translateX(-50%);
+    color : #fff;
+    z-index: 1;
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+}
+
+.header .logo {
+    width: 30%;
+    height: 100%
+}
+.header .logo h1 {
+    line-height: 150px;
+    font-size: 30px;
+}
+.header .logo h1 i {
+    color : #4bcaff;
+}
+
+.header .list {
+    width: 70%;
+    height: 100%;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+.header .list li {
+    display: inline-block;
+    margin-left: 50px;
+    line-height: 150px;
+}
+.header .list li a{
+    color : #fff;
+    padding: 10px;
+}
+.header .list li:hover a {
+    color : #4bcaff;
+    border : 3px solid #4bcaff;
+    transition : color 0.3s;
+}
+
+
+/* section1 */
+#section1 {
+    width: 100%;
+    height: 800px;
+    background: url(../img/mainBg.jpg) no-repeat center;
+    background-size: cover;
+    font-family: 'Segoe UI Light';
+    position: relative;
+}
+#section1 .titleDesc {
+    color : #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 42px;
+    padding-top: 350px;
+}
+#section1 .titleDesc .desc1 {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,0.4);
+    display: inline-block;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform : translate(-50%, -50%);
+}
+#section1 .titleDesc .desc2 {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,0.4);
+    display: inline-block;
+    position: absolute;
+    left: 50%; top: 60%;
+    transform : translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+
+/* section2 */
+#section2 {
+    width: 100%;
+    height: 400px;
+    background-color: #4bcaff;
+}
+#section2 h2 {
+    font-family: 'Segoe UI Light';
+    color : #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding-top: 60px;
+    padding-bottom: 35px;
+}
+#section2 h2 em {
+    border-bottom: 2px solid #fff;
+}
+
+#section2 .content {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    justify-content: space-between;
+}
+#section2 .content .cont{
+    width: 23%;
+    height: 100%;
+    font-family: 'Segoe UI Light';
+    color : #fff;
+}
+
+.cont .icon img {
+    width: 50px; height: 60px;
+}
+.cont .sTitle {
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.cont .sDesc {
+    font-size: 12px;
+}
+
+/* section3 */
+#section3 {
+    width: 100%;
+    height: 800px;
+}
+
+#section3 .pHeader {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    line-height: 100px;
+    text-transform: uppercase;
+    color : #676c6f;
+    padding-top: 40px;
+}
+.pHeader .pTitle {
+    width: 30%;
+    height: 100px;
+    font-size: 20px;
+    font-family: 'Segoe UI Light';
+    font-weight: lighter;
+    font-style: normal;
+}
+#section3 .pTitle h2 em {
+    border-bottom: 2px solid #676c6f;
+}
+
+.pHeader .pList {
+    width: 70%;
+    height: 100px;
+    text-align: right;
+}
+.pHeader .pList li {
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 50px;
+}
+.pHeader .pList li a {
+    color : #676c6f;
+    font-size: 16px;
+    padding: 5px 15px;
+}
+.pHeader .pList li:hover a {
+    border : 2px solid #4bcaff;
+    transition: color 0.3s;
+    color : #4bcaff;
+}
+
+
+#section3 .pCont {
+    width: 100%;
+    height: 700px;
+}
+#section3 .photoBox {
+    width: 100%; height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#section3 .photo:nth-child(1) {
+    background: url(../img/port1.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .photo:nth-child(2) {
+    background: url(../img/port2.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .photo:nth-child(3) {
+    background: url(../img/port3.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .photo:nth-child(4) {
+    background: url(../img/port4.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .photo:nth-child(5) {
+    background: url(../img/port5.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .photo:nth-child(6) {
+    background: url(../img/port6.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .photo:nth-child(7) {
+    background: url(../img/port7.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .photo:nth-child(8) {
+    background: url(../img/port8.jpg) no-repeat center;
+    background-size: cover;
+}
+#section3 .photo {
+    width: 270px; height: 270px;
+    margin-bottom: 40px;
+    position: relative;
+    color : #fff;
+    font-size: 72px;
+    font-family: 'Segoe UI Light';
+    font-weight: lighter;
+    line-height: 270px;
+    text-align: center;
+}
+#section3 .photo:hover:before {
+    content : '+';
+    width: 100%; height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    background: #48515a;
+    opacity: 0.7;
+}
+
+/* section4 */
+#section4 {
+    width: 100%;
+    height: 480px;
+    background-color: #516067;
+}
+#section4 .sec4 {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    color : #fff;
+}
+.sec4 .secTitle {
+    width: 50%;
+    height: 310px;
+    margin-top: 80px;
+}
+.secTitle h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.secTitle h2 em {
+    border-bottom: 2px solid #fff;
+}
+
+.secTitle p {
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+.secTitle .btn {
+    font-weight: bold;
+    width: 140px; height: 35px;
+    border: 2.5px solid #353f46;
+    text-align: center;
+}
+.secTitle .btn a {
+    color : #353f46;
+    line-height: 35px;
+}
+.secTitle .btn:hover {
+    border: 2.5px solid #fff;
+    background-color: #353f46;
+    transition : all 0.3s;
+}
+.secTitle .btn:hover a {
+    color : #fff;
+    transition : all 0.3s;
+}
+
+.sec4 .secVideo {
+    width: 50%;
+    height: 100%;
+    margin-top: 80px;
+}
+.secVideo .video {
+    background: url(../img/video.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 310px;
+}
+
+/* section5 */
+#section5 {
+    width: 100%;
+    height: 300px;
+    background-color: #4bcaff;
+    color : #fff;
+    font-weight: lighter;
+    font-family: 'Segoe UI Light';
+    font-size: 30px;
+}
+#section5 .sec5_title {
+    width: 100%; height: 40px;
+    padding-top: 60px;
+    text-transform: uppercase;
+}
+#section5 .sec5_title p em {
+    border-bottom: 2px solid #fff;
+}
+#section5 .sec5_title p i {
+    float : right;
+    padding-top: 5px;
+}
+
+#section5 .sec5_desc {
+    width: 100%; height: 100px;
+    padding-top: 40px;
+    font-size: 27px;
+}
+#section5 .sec5_desc em {
+    font-weight: bold;
+}
+
+
+
+/* section6 */
+#section6 {
+    width: 100%;
+    height: 500px;
+    background: url(../img/photoBg.jpg) no-repeat center;
+    background-size: cover;
+    color : #fff;
+    font-weight: lighter;
+    font-family: 'Segoe UI Light';
+} 
+#section6 .sec6 {
+    width: 100%; height: 500px;
+}
+#section6 .sec6 .sec6_title {
+    width: 100%; height: 40px;
+    padding-top: 60px;
+    font-size: 30px;
+}
+#section6 .sec6 .sec6_title p em {
+    border-bottom: 2px solid #fff;
+}
+
+#section6 .sec6 .sec6_desc {
+    width: 100%; height: 200px;
+    display: flex;
+    font-size: 14px;
+    padding-top: 50px;
+    line-height: 1.8;
+}
+#section6 .sec6 .sec6_desc .sec6_desc1 p {
+    margin-bottom: 30px;
+}
+#section6 .sec6 .sec6_desc .sec6_desc1 {
+    width: 50%; height: 100%;
+}
+#section6 .sec6 .sec6_desc .sec6_desc2 {
+    width: 50%; height: 100%;
+}
+#section6 .sec6 .sec6_desc .sec6_desc2 p {
+    width: 100%; height: 50%;
+}
+#section6 .sec6 .sec6_desc .sec6_desc2 .icons {
+    width: 100%; height: 50%;
+    display: flex;
+}
+.sec6_desc2 .icons .icon {
+    width: 64px; height: 64px;
+    margin-right: 20px;
+    margin-top: 13px;
+    border : 2px solid #fff;
+}
+.sec6_desc2 .icons .icon i {
+    line-height: 64px;
+    margin-left: 16px;
+}
+
+
+/* section7 */
+#section7 {
+    width: 100%;
+    height: 360px;
+    color : #515f67;
+    font-family: 'Segoe UI Light';
+    font-weight: lighter;
+}
+
+#section7 .sec7_title {
+    width: 100%; height: 40px;
+    padding-top: 80px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#section7 .sec7_title p em {
+    float: right;
+    font-family: 'Bitter', serif;
+    font-size: 84px;
+    margin-top: -60px;
+}
+#section7 .sec7_title p i {
+    border-bottom: 2px solid #515f67;
+}
+
+#section7 .sec7_desc {
+    width: 100%; height: 100px;
+    padding-top: 40px;
+    font-size: 27px;
+    font-weight: lighter;
+}
+#section7 .sec7_desc h2 {
+    color : #4bcaff;
+    font-family: 'Segoe UI Bold';
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 35px;
+}
+
+/* section8 */
+#section8 {
+    width: 100%;
+    height: 810px;
+    background: url(../img/contactBg.jpg) no-repeat center;
+    background-size: cover;
+    color : #fff;
+}
+#section8 .sec8 {}
+#section8 .sec8 .sec8_title {
+    width: 100%; height: 100px;
+}
+#section8 .sec8 .sec8_title h3 {
+    padding-top: 60px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+#section8 .sec8 .sec8_title h3 em {
+    border-bottom: 2px solid #fff;
+}
+
+#section8 .sec8 .sec8_msg {
+    width: 100%; height: 510px;
+}
+#section8 .sec8 .sec8_msg fieldset {
+    border: none;
+    width: 100%;
+}
+.sec8_msg .contact_info {
+    display: flex;
+}
+
+.sec8_msg .contact_info .infoWrite {
+    width: 50%; height: 200px;
+    margin-top: 50px;
+}
+.sec8_msg .contact_info .infoWrite label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Segoe UI Bold';
+    margin-bottom: 10px;
+}
+.sec8_msg .contact_info .infoWrite input {
+    background: transparent;
+    border: 2px solid #fff;
+    width: 470px; height: 60px;
+    margin-bottom: 10px;
+    color : #fff;
+    font-size: 17px;
+    text-indent: 15px;
+}
+
+.sec8_msg .contact_info .infoText {
+    display: inline-block;
+    width: 50%; height: 200px;
+    margin-top: 50px;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: normal;
+    font-family: 'Segoe UI Semibold';
+}
+.sec8_msg .contact_info .infoText .text1 {
+    margin-bottom: 18px;
+}
+.sec8_msg .contact_info .infoText .text2 {}
+
+
+.sec8_msg .boardText {
+    width: 100%; height: 300px;
+    margin-top: 40px;
+}
+.sec8_msg .boardText label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI Bold';
+    font-weight: bold;
+}
+.sec8_msg .boardText textarea {
+    resize: none;
+    width: 100%;
+    height: 220px;
+    resize: none;
+    display: block;
+    background: transparent;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    color : #fff;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.8;
+    text-indent: 15px;
+}
+
+.sec8_msg button {
+    width: 370px; height: 60px;
+    background: #4bcaff;
+    border : none;
+    color : #fff;
+    font-family: 'Segoe UI Bold';
+    font-weight: bold;
+    font-size: 14px;
+}
+.sec8_msg button:hover {
+    background: #fff;
+    color : #4bcaff;
+    transition : all 0.3s;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    height: 170px;
+    background-color: #353f48;
+}
+#footer .footer {
+    width: 100%; height: 170px;
+    color : #425861;
+}
+
+#footer .footer .fList {
+    float : left;
+    margin-top: 80px;
+}
+
+#footer .footer .fList li {
+    display: inline-block;
+    padding: 0 10px 0 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-right : 1px solid #425861;
+}
+#footer .footer .fList li:nth-child(4){
+    border: none;
+}
+#footer .footer .copy {
+    float : right;
+    margin-top: 80px;
+}
