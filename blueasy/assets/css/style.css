@@ -221,7 +221,6 @@
     text-align: right;
 }
 .pHeader .pList li {
-    font-weight: bold;
     display: inline-block;
     margin-left: 50px;
 }
@@ -229,6 +228,8 @@
     color : #676c6f;
     font-size: 16px;
     padding: 5px 15px;
+    font-family: 'Segoe UI' , sans-serif;
+    font-weight: bold;
 }
 .pHeader .pList li:hover a {
     border : 2px solid #4bcaff;
@@ -320,6 +321,7 @@
     font-size: 30px;
     font-weight: normal;
     margin-bottom: 20px;
+    font-family: 'Segoe UI' , sans-serif;
 }
 .secTitle h2 em {
     border-bottom: 2px solid #fff;
@@ -329,6 +331,7 @@
     margin-bottom: 30px;
     line-height: 1.8;
     font-size: 14px;
+    font-family: 'Segoe UI' , sans-serif;
 }
 .secTitle .btn {
     font-weight: bold;
@@ -339,6 +342,7 @@
 .secTitle .btn a {
     color : #353f46;
     line-height: 35px;
+    font-family: 'Segoe UI' , sans-serif;
 }
 .secTitle .btn:hover {
     border: 2.5px solid #fff;
@@ -509,6 +513,7 @@
     padding-top: 60px;
     font-size: 30px;
     font-weight: lighter;
+    font-family: 'Segoe UI' , sans-serif;
 }
 #section8 .sec8 .sec8_title h3 em {
     border-bottom: 2px solid #fff;
