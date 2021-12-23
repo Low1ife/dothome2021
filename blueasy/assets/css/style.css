@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI' , sans-serif;
     src: url('/surface/Assets/css/fonts/all/normal/segoeui.eot');
     src: url('/surface/Assets/css/fonts/all/normal/segoeui.eot?#iefix') format('embedded-opentype'),
          url('/surface/Assets/css/fonts/all/normal/segoeui.woff') format('woff'),
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'Segoe UI Semibold';
+    font-family: 'Segoe UI Semibold', sans-serif;
     src: url('/surface/Assets/css/fonts/all/semibold/seguisb.eot');
     src: url('/surface/Assets/css/fonts/all/semibold/seguisb.eot?#iefix') format('embedded-opentype'),
          url('/surface/Assets/css/fonts/all/semibold/seguisb.woff') format('woff'),
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-    font-family: 'Segoe UI Bold';
+    font-family: 'Segoe UI Bold', sans-serif;
     src: url('/surface/Assets/css/fonts/all/bold/segoeuib.eot');
     src: url('/surface/Assets/css/fonts/all/bold/segoeuib.eot?#iefix') format('eot'), /* Wrong format will tell IE9+ to ignore and use WOFF instead. MSHAR-2822 */
          url('/surface/Assets/css/fonts/all/bold/segoeuib.woff') format('woff'),
@@ -29,7 +29,7 @@
 }
 
 @font-face {
-    font-family: 'Segoe UI Light';
+    font-family: 'Segoe UI Light', sans-serif;
     src: url('/surface/Assets/css/fonts/all/light/segoeuil.eot');
     src: url('/surface/Assets/css/fonts/all/light/segoeuil.eot?#iefix') format('embedded-opentype'),
          url('/surface/Assets/css/fonts/all/light/segoeuil.woff') format('woff'),
