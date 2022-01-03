@@ -1,0 +1,70 @@
+#wrap{width: 100%;min-width: 320px;margin: 0 auto;background-color: #eee;}
+.container{width: 312px;min-width: 272px;margin: 0 auto;}
+section{background-color: #fff;}
+section h2{color:#000;padding-top: 56px;padding-bottom: 28px;}
+button{display: block;margin: 26px auto 0;background: transparent;border: none;font-family: 'Spoqa Han Sans Neo', 'sans-serif';}
+
+.benefit .tabCont2 .benefitBox > div{height: 92px;background-color: #f1f3f5;border-radius: 8px;margin-bottom: 17px;font-size: 0.667rem;position: relative;}
+.benefit .tabCont2 .benefitBox:nth-child(1) > div:nth-child(1)::before{content: '';position: absolute;right: 0;top: 0;width: 156px;height: 92px;background: url(../images/img-banner-bike.png)no-repeat center;background-size: cover;}
+.benefit .tabCont2 .benefitBox:nth-child(1) > div:nth-child(2)::before{content: '';position: absolute;right: 0;top: 0;width: 156px;height: 92px;background: url(../images/img-banner-money.png)no-repeat center;background-size: cover;}
+.benefit .tabCont2 .benefitBox:nth-child(1) > div:nth-child(3)::before{content: '';position: absolute;right: 0;top: 0;width: 156px;height: 92px;background: url(../images/img-banner-pig.png)no-repeat center;background-size: cover;}
+
+/* header */
+header{height: 88px;background-color: #fff;}
+header h1{float: left;padding-top: 50px;}
+header nav{float: right;margin-top: 63px;}
+header nav{width: 18px;height: 2px;background-color: #000;position: relative;}
+header nav::before{content:'';width: 18px;height: 2px;background-color: #000;position: absolute;left: 0;top: 5px;}
+header nav::after{content:'';width: 18px;height: 2px;background-color: #000;position: absolute;left: 0;bottom: 5px;}
+
+/* tabAccount */
+.tabAccount{border-bottom: 1px solid #eee;background-color: #fff;}
+.tabAccount strong{padding: 34px 0;display: block;font-size: 1.222rem;color:#000;font-weight: bold;}
+.tabAccount ul li{display: inline-block; font-size: 0.78rem;margin-top: -9px;margin-right: 20px;padding-bottom: 9px;color:#6e6e6e;}
+.tabAccount ul li.on{color:#000;border-bottom: 2px solid #000;}
+.tabAccount ul p{font-size:0.67rem;;line-height: 3;float: right;}
+
+/* accountInfo */
+.accountInfo{background-color: #fff;padding-top: 24px;padding-bottom: 56px;}
+.accountInfo .tabCont{height: 244px;background-color: #ff832e;border-radius: 15px;}
+.accountInfo .tabCont >div a{display: block;padding-top: 25px;margin-bottom: 21px;font-size: 0.833rem;}
+.accountInfo .tabCont >div strong{text-align: right;display: block;font-size: 1.778rem;color:#fff;}
+.accountInfo .tabCont >div p{border-bottom: 1px solid #ffab72;text-align: right;font-size: 0.667rem;color:#fff;padding-bottom: 24px;}
+
+.accountInfo .earnings{height: 48px;margin-top: 24px;background: #eff0f5;border-radius: 8px;display: flex;justify-content: space-evenly;}
+.accountInfo .earnings i{padding-top: 7px;color:#e3e3e6}
+.accountInfo .earnings a{display: inline-block;font-size: 0.667rem;color: #494f60;padding-top: 14px;}
+
+.accountInfo .way{color:#000;font-size: 0.667rem; letter-spacing: -0.6px;display: block;text-align: center;margin-top: 32px;}
+
+.accountInfo .tabCont > div{width: 264px;margin: 0 auto;}
+.accountInfo .tabCont>div {display: none;}
+.accountInfo .tabCont>div:first-child {display: block;}
+
+/* creditScore */
+.creditScore{margin-top: 12px;margin-bottom: 12px;}
+.creditScore a{color:#000;font-size: 0.889rem;font-weight: bold;display: inline-block;margin: 30px 0;letter-spacing: -0.53px;}
+.creditScore img{float: right;margin: 30px 0;}
+
+/* platform */
+.platform{padding-bottom: 57px;}
+.platform ul{display: flex;flex-wrap: wrap;text-align: center;}
+.platform li{width: 33%;font-size: 0.778rem;}
+.platform li img{display:block;margin: 0 auto 11px;}
+
+/* notice */
+.notice{margin-bottom: 12px;margin-top: 12px;}
+.notice ul{padding-bottom: 51px;}
+.notice li{white-space: nowrap;font-size: 0.667rem;line-height: 2.14;letter-spacing: -0.6px;}
+.notice time{float: right;}
+
+/* benefit */
+.benefit ul{display: flex;white-space: nowrap;}
+.benefit ul li{display: inline-block;width: 48px;height: 20px;border-radius: 20px;background-color: #f8f8f8;font-size: 0.775rem; padding: 11px 16px 11px 17px; margin: 0 4px 19px 0;}
+.benefit ul li.on{background-color: #383b5a;color:#fff;}
+
+.benefit .tabCont2 .benefitBox{height: 320px;overflow-y: hidden;position: relative;}
+.benefit .tabCont2 .benefitBox > div p{color:#000;padding: 26px 24px 0;}
+.benefit .tabCont2 >div {display: none;}
+.benefit .tabCont2 >div:first-child {display: block;}
+.benefit button{margin-bottom: 60px;}
