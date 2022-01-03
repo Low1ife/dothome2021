@@ -24,8 +24,8 @@
             <?php
                 include "../include/header.php"
             ?>
-        </header>
-        <!-- //header -->
+    </header>
+    <!-- //header -->
 
         <main id="contents">
             <section id="mainCont"  class="gray">
