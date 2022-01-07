@@ -57,7 +57,7 @@ select:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}
   }
 
 /* switch */
-.switch{width: 56px;height: 26px;float: right;}
+.switch{width: 56px;height: 26px;float: right;display: none;}
 .switch_label {
     position: absolute;
     right: 0; top: 50%;
