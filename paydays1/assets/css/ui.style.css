@@ -70,6 +70,8 @@ section{background-color: #fff;}
 .joinSave fieldset ul li label{margin-bottom: 10px;}
 .joinSave fieldset ul li input{width: 100%;border: none;padding: 10px;}
 .joinSave fieldset ul ul{display: flex; justify-content: space-between;}
+
+.joinSave fieldset ul .user{margin-bottom: 0;border: none;}
 .joinSave fieldset ul .birth{width: 49%;}
 .joinSave fieldset ul .jender{width: 49%;}
 
