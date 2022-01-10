@@ -27,8 +27,8 @@
                 <p><strong>본인명의의 휴대폰</strong>으로<br>인증해주세요.</p>
                 <div class="allAgree">
                     <div>
-                        <input type="checkbox" id="allAgree"/>
-                        <label for="allAgree"></label>
+                        <input type="checkbox" id="check_all">
+                        <label for="check_all"></label>
                     </div>
                     <span>[필수] 전체약관동의</span>
                 </div>
@@ -137,6 +137,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+        // 더보기 슬라이드 , 화살표
         $(".agree .allAgree").click(function() {
             $(".agree ul").stop().slideToggle(300);
             $(this).toggleClass("down");
@@ -146,6 +147,7 @@
                 $(this).toggleClass("down");
         });
 
+        // 통신사 선택 탭 메뉴
         const tabBtn = $(".joinSave .agencyList li")
         const tabCont = $(".joinSave .agencyList li:last-child")
         const salePhone = $(".joinSave .salePhone li")
@@ -160,7 +162,7 @@
             if(tabCont.hasClass("on")){
                 salePhone.css("display", "inline-block");
             }else {
-                salePhone.css("display", "none");
+                salePhone.css("display", "none");0000
             }
         })
         
@@ -168,6 +170,34 @@
             let target = $(this);
             salePhone.removeClass("on");
             target.addClass("on");
+        })
+
+
+        // 모두 동의 버튼
+        $("#check_all").click(function(){
+            let checked = $(".check").prop("checked");
+
+            $(".check").prop("checked", this.checked);
+        })
+
+        // 하나 이상 해제했을때 , 모두동의 해제
+        $(".check").click("click", function() {
+            let checked = $(this).is(":checked");
+
+            if (!checked) {
+                $("#check_all").prop("checked", false);
+            }
+        });
+
+        // 해제 후, 모두 체크했을 때 모두동의 활성화
+        $(".check").click("click" , function(){
+            let is_checked = true;
+
+            $(".check").each(function(){
+                is_checked = is_checked && $(this).is(":checked");
+            });
+
+            $("#check_all").prop("checked", is_checked);
         })
     </script>
 </body>
