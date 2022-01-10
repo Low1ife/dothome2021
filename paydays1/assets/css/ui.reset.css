@@ -27,14 +27,14 @@ a:hover{text-decoration:unterline;}
 /* Form */
 legend{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polgon(0 0, 0 0, 0 0);} 
 select, textarea, input, label{vertical-align:middle;}
-/* select, textarea, input{-webkit-appearance:none;-moz-appearance:none;-o-appearance:none;appearance:none} */
+select, textarea, input{-webkit-appearance:none;-moz-appearance:none;-o-appearance:none;appearance:none}
 input[type=search]{-webkit-appearance:textfield}						
 input[type=checkbox], input[type=radio]{box-sizing:border-box;padding:0}
 button::-moz-focus-inner, input::-moz-focus-inner{border:0;padding:0}
 select:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}
 
 :root{color:#5e6372;font-size:18px;line-height:1.7; letter-spacing: .0278rem;font-family: 'Spoqa Han Sans Neo', 'sans-serif';}
-:focus{outline-style: dotted; outline-width: 2px;}
+/* :focus{outline-style: dotted; outline-width: 2px;} */
 
 .swiper-slide {
 	text-align: center;
