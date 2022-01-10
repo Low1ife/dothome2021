@@ -39,8 +39,11 @@ section{background-color: #fff;}
 
 .agree ul{display: none;}
 .agree ul.down{display: block;}
-.agree ul li a{font-size: 0.78rem;display: inline-block;width: 100%;padding: 16px 0;box-sizing: border-box;position: relative;margin-left: 5px;}
-.agree ul li a input{width: 24px;height: 24px;background: url(../images/icon-flat-agree-unselect@3x.png)no-repeat center;background-size: cover;}
+.agree ul li{font-size: 0.78rem;display: inline-block;width: 100%;padding: 16px 0;box-sizing: border-box;position: relative;margin-left: 5px;color:#000;}
+.agree ul li a{position: absolute;right: 10px;top: 50%;transform: translateY(-50%);}
+.agree ul li a img{width: 6px;height: 9px;}
+.agree ul li input{display: none;}
+.agree ul li label{width: 24px;height: 24px;background: url(../images/icon-flat-agree-unselect@3x.png)no-repeat center;background-size: cover;}
 
 .agree .container .allAgree::before{
     content:'';
@@ -55,15 +58,6 @@ section{background-color: #fff;}
     transform: rotate(180deg);
     transition: all 0.2s;
 }
-.agree ul li a::before{
-    content:'';
-    position: absolute;
-    right: 10px;top: 50%;
-    transform: translateY(-50%);
-    width: 6px;height: 9px;
-    background: url(../images/icon-flat-more-right-s@3x.png)no-repeat center;background-size: cover;
-}
-
 
 /* joinSave */
 .joinSave fieldset ul li{margin-bottom: 32px;border-bottom: 1px solid #f4f4f4;}
