@@ -76,12 +76,25 @@ section{background-color: #fff;}
 .joinSave fieldset ul .jender{width: 49%;}
 
 .joinSave fieldset ul .agency{border: none;}
-.joinSave fieldset ul .agency .agencyList li{border: 1px solid #f4f4f4;border-radius:2px;width: 23%;height: 40px;text-align: center;line-height: 2.8;font-size: 0.78rem;color: #000;margin: 0;}
-.joinSave fieldset ul .agency .agencyList li.on{background: #383b5a;color:#fff;}
+.joinSave fieldset ul .agency input[type="radio"]{display: none;}
+.joinSave fieldset ul .agency .agencyList li{border: 1px solid #f4f4f4;border-radius:2px;width: 23%;height: 40px;margin: 0;border-radius: 2px;}
+.joinSave fieldset ul .agency .agencyList .agencyTitle.on{background: #383b5a;color:#fff;}
+.joinSave fieldset ul .agency .agencyTitle{line-height: 2.8;font-size: 0.78rem;color: #000;text-align: center;font-weight: normal;}
 
-.joinSave fieldset ul .agency .salePhone{}
-.joinSave fieldset ul .agency .salePhone li{width: 30%;height: 32px;border-radius: 20px;border:1px solid #f4f4f4;margin: 16px 0 0;text-align: center;font-size: 0.72rem;line-height: 2.5;display: none;}
-.joinSave fieldset ul .agency .salePhone li.on{border: 1px solid #fb802d;color:#fb802d;}
+.joinSave fieldset ul .agency .salePhone li{width: 30%;border: none;display: none;margin: 16px 0 0 0;}
+.joinSave fieldset ul .agency .salePhone li .sale{
+    border: 1px solid #f4f4f4;
+    width: 100%;
+    height: 32px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 2.3;
+    font-size: 0.72rem;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 0.72rem;
+}
+.joinSave fieldset ul .agency .salePhone li .sale.on{border: 1px solid #fb802d;color:#fb802d;}
 
 .joinSave button{width: 100%;height: 48px;background-color: #ddd;border-radius: 4px;margin: 24px 0;color:#fff;}
 
