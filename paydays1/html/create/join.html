@@ -106,20 +106,39 @@
                             </ul>
                         </li>
                         <li class="agency">
-                            <label for="youAgency">
-                                통신사 선택
-                                <input type="hidden" id="youAgency">
-                            </label>
+                            <label for="youAgency">통신사 선택</label>
+                            <input type="radio" id="youAgency">
                             <ul class="agencyList">
-                                <li>SKT</li>
-                                <li>KT</li>
-                                <li>LG U+</li>
-                                <li>알뜰폰</li>
+                                <li>
+                                    <input type="radio" id="a1">
+                                    <label for="a1" class="agencyTitle">SKT</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="a2">
+                                    <label for="a2" class="agencyTitle">KT</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="a3">
+                                    <label for="a3" class="agencyTitle">LG U+</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="a4">
+                                    <label for="a4" class="agencyTitle">알뜰폰</label>
+                                </li>
                             </ul>
                             <ul class="salePhone">
-                                <li class="on">SKT 알뜰폰</li>
-                                <li>KT 알뜰폰</li>
-                                <li>LG U+ 알뜰폰</li>
+                                <li>
+                                    <input type="radio" id="a5">
+                                    <label for="a5" class="sale">SKT 알뜰폰</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="a6">
+                                    <label for="a6" class="sale">KT 알뜰폰</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="a7">
+                                    <label for="a7" class="sale">LG U+ 알뜰폰</label>
+                                </li>
                             </ul>
                         </li>
                         <li class="phoneNumber">
@@ -148,9 +167,10 @@
         });
 
         // 통신사 선택 탭 메뉴
-        const tabBtn = $(".joinSave .agencyList li")
-        const tabCont = $(".joinSave .agencyList li:last-child")
+        const tabBtn = $(".joinSave .agencyList li .agencyTitle")
+        const tabCont = $(".joinSave .agencyList li:last-child .agencyTitle")
         const salePhone = $(".joinSave .salePhone li")
+        const saleAgency = $(".joinSave .salePhone li .sale")
 
         tabBtn.click(function () {
             let target = $(this);
@@ -162,13 +182,13 @@
             if(tabCont.hasClass("on")){
                 salePhone.css("display", "inline-block");
             }else {
-                salePhone.css("display", "none");0000
+                salePhone.css("display", "none");
             }
         })
         
-        salePhone.click(function(){
+        saleAgency.click(function(){
             let target = $(this);
-            salePhone.removeClass("on");
+            saleAgency.removeClass("on");
             target.addClass("on");
         })
 
