@@ -62,7 +62,7 @@ section{background-color: #fff;}
 /* joinSave */
 .joinSave fieldset ul li{margin-bottom: 32px;border-bottom: 1px solid #f4f4f4;}
 .joinSave fieldset ul li label{margin-bottom: 10px;}
-.joinSave fieldset ul li input{width: 100%;border: none;padding: 10px;}
+.joinSave fieldset ul li input{width: 100%;border: none;padding: 10px;outline-style: none;}
 .joinSave fieldset ul ul{display: flex; justify-content: space-between;}
 
 .joinSave fieldset ul .user{margin-bottom: 0;border: none;}
